@@ -39,40 +39,6 @@ from bs4 import BeautifulSoup
 import asyncio
 import aiohttp
 
-def clean_display_name(name):
-    """清理顯示名稱中的特殊字符"""
-    if not name:
-        return "未知節目"
-    
-    # 替換常見的問題字符
-    replacements = {
-        '｀': "'",  # 全角反引號轉半角單引號
-        '`': "'",   # 半角反引號轉半角單引號
-        '，': ",",   # 全角逗號轉半角逗號
-        '；': ";",   # 全角分號轉半角分號
-        '：': ":",   # 全角冒號轉半角冒號
-        '？': "?",   # 全角問號轉半角問號
-        '！': "!",   # 全角感嘆號轉半角感嘆號
-        '（': "(",   # 全角左括號轉半角
-        '）': ")",   # 全角右括號轉半角
-        '【': "[",   # 全角左方括號轉半角
-        '】': "]",   # 全角右方括號轉半角
-        '「': "[",   # 全角左書名號轉半角
-        '」': "]",   # 全角右書名號轉半角
-        '《': "[",   # 全角左書名號轉半角
-        '》': "]",   # 全角右書名號轉半角
-    }
-    
-    cleaned_name = name
-    for old, new in replacements.items():
-        cleaned_name = cleaned_name.replace(old, new)
-    
-    # 移除可能導致M3U格式問題的字符
-    cleaned_name = re.sub(r'[\n\r\t]', ' ', cleaned_name)  # 移除換行符和制表符
-    cleaned_name = re.sub(r'\s+', ' ', cleaned_name)  # 合併多個空格
-    
-    return cleaned_name.strip()
-
 async def get_build_id():
     """動態獲取 Next.js 構建版本號"""
     try:
@@ -313,42 +279,35 @@ def cleanup_json_files(json_dir):
 def get_display_name(title, subtitle):
     """根據標題和副標題生成顯示名稱"""
     if title and subtitle:
-        display_name = f"{title}-{subtitle}"
+        return f"{title}-{subtitle}"
     elif title and not subtitle:
-        display_name = title
+        return title
     elif not title and subtitle:
-        display_name = subtitle
+        return subtitle
     else:
-        display_name = "未知節目"
-    
-    # 清理顯示名稱中的特殊字符
-    return clean_display_name(display_name)
+        return "未知節目"
 
 def generate_m3u_vod_content(channel_id, channel_details, group_name):
     """生成 M3U 選集類內容"""
     content = ""
     programs = channel_details.get('programs', [])
     
-    # 清理分組名稱
-    cleaned_group = clean_display_name(group_name)
-    
     for program in programs:
         asset_id = program.get('asset_id')
         title = program.get('title', '')
         subtitle = program.get('subtitle', '')
         
+        # 合併標題和副標題
+        if title and subtitle:
+            program_name = f"{title}-{subtitle}"
+        else:
+            program_name = title or subtitle or '未知節目'
+        
         # 獲取節目圖片，如果沒有則使用頻道圖片
         program_picture = program.get('picture', '') or channel_details.get('picture', '')
         
-        # 生成並清理節目名稱
-        program_name = get_display_name(title, subtitle)
-        
-        # 確保所有字段都不包含可能破壞M3U格式的字符
-        safe_program_name = program_name.replace('"', "'")  # 替換雙引號為單引號
-        safe_group = cleaned_group.replace('"', "'")
-        
-        content += (f'#EXTINF:-1 tvg-id="{safe_program_name}" tvg-name="{safe_program_name}" '
-                   f'tvg-logo="{program_picture}" group-title="{safe_group}",{program_name}\n'
+        content += (f'#EXTINF:-1 tvg-id="{program_name}" tvg-name="{program_name}" '
+                   f'tvg-logo="{program_picture}" group-title="{group_name}",{program_name}\n'
                    f'http://localhost:5000/{channel_id}/index.m3u8?episode_id={asset_id}\n')
     
     return content
@@ -358,11 +317,9 @@ def generate_txt_vod_by_name(channels_by_name):
     content = ""
     
     for channel_name, programs in sorted(channels_by_name.items()):
-        # 清理頻道名稱
-        cleaned_channel_name = clean_display_name(channel_name)
-        content += f"{cleaned_channel_name},#genre#\n"
+        content += f"{channel_name},#genre#\n"
         for program_info in programs:
-            program_name = clean_display_name(program_info.get("program_name", "未知節目"))
+            program_name = program_info.get("program_name", "未知節目")
             channel_id = program_info.get("channel_id")
             asset_id = program_info.get("asset_id")
             
@@ -391,13 +348,7 @@ def generate_m3u_content(channel_data, channel_id, asset_seen):
         channel_type = channel_details.get('type', 'live')
         group = channel_details.get('group', '默認分組')
         
-        # 清理名稱和分組
-        cleaned_name = clean_display_name(name)
-        cleaned_group = clean_display_name(group)
-        safe_name = cleaned_name.replace('"', "'")
-        safe_group = cleaned_group.replace('"', "'")
-        
-        print(f"📺 處理頻道: {cleaned_name} ({channel_id}) - 類型: {channel_type} - 分組: {cleaned_group}")
+        print(f"📺 處理頻道: {name} ({channel_id}) - 類型: {channel_type} - 分組: {group}")
         
         # 根據頻道類型生成不同的內容
         if channel_type == 'vod':
@@ -405,7 +356,7 @@ def generate_m3u_content(channel_data, channel_id, asset_seen):
             programs = channel_details.get('programs', [])
             
             if not programs:
-                print(f"ℹ️  頻道 {cleaned_name} 沒有節目列表，跳過")
+                print(f"ℹ️  頻道 {name} 沒有節目列表，跳過")
                 return m3u_lines, added_programs, duplicate_assets
             
             vod_content = generate_m3u_vod_content(channel_id, channel_details, group)
@@ -414,24 +365,24 @@ def generate_m3u_content(channel_data, channel_id, asset_seen):
                 vod_lines = vod_content.strip().split('\n')
                 m3u_lines.extend(vod_lines)
                 added_programs = len([line for line in vod_lines if line.startswith('#EXTINF:')])
-                print(f"✅ 添加 {cleaned_name} - {added_programs} 個節目")
+                print(f"✅ 添加 {name} - {added_programs} 個節目")
             else:
-                print(f"⚠️ 頻道 {cleaned_name} 沒有可用的點播內容")
+                print(f"⚠️ 頻道 {name} 沒有可用的點播內容")
             
         else:
             # 直播頻道：生成整個頻道的條目
-            display_name = cleaned_name
+            display_name = name
             
             # 生成M3U條目
-            extinf_line = (f'#EXTINF:-1 tvg-id="{safe_name}" tvg-name="{safe_name}" '
-                          f'tvg-logo="{picture}" group-title="{safe_group}",{display_name}')
+            extinf_line = (f'#EXTINF:-1 tvg-id="{name}" tvg-name="{name}" '
+                          f'tvg-logo="{picture}" group-title="{group}",{display_name}')
             url_line = f'http://localhost:5000/{channel_id}/index.m3u8'
             
             m3u_lines.append(extinf_line)
             m3u_lines.append(url_line)
             added_programs = 1
             
-            print(f"✅ 添加直播頻道: {cleaned_name}")
+            print(f"✅ 添加直播頻道: {name}")
             
     except Exception as e:
         print(f"❌ 處理頻道 {channel_id} 資料時發生錯誤: {e}")
@@ -454,12 +405,9 @@ def generate_txt_content(channel_data, channel_id, asset_seen, channels_by_name)
         name = channel_details.get('name', 'Unknown')
         channel_type = channel_details.get('type', 'live')
         
-        # 清理頻道名稱
-        cleaned_name = clean_display_name(name)
-        
         # 初始化頻道名稱的列表
-        if cleaned_name not in channels_by_name:
-            channels_by_name[cleaned_name] = []
+        if name not in channels_by_name:
+            channels_by_name[name] = []
         
         # 根據頻道類型生成不同的內容
         if channel_type == 'vod':
@@ -486,7 +434,7 @@ def generate_txt_content(channel_data, channel_id, asset_seen, channels_by_name)
                 program_name = get_display_name(title, subtitle)
                 
                 # 將節目信息添加到頻道名稱下
-                channels_by_name[cleaned_name].append({
+                channels_by_name[name].append({
                     "channel_id": channel_id,
                     "program_name": program_name,
                     "asset_id": asset_id
@@ -495,10 +443,10 @@ def generate_txt_content(channel_data, channel_id, asset_seen, channels_by_name)
                 
         else:
             # 直播頻道：生成整個頻道的條目
-            display_name = cleaned_name
+            display_name = name
             
             # 將直播頻道信息添加到頻道名稱下
-            channels_by_name[cleaned_name].append({
+            channels_by_name[name].append({
                 "channel_id": channel_id,
                 "program_name": display_name,
                 "asset_id": None  # 直播頻道沒有asset_id
@@ -522,16 +470,12 @@ def get_channel_info(channel_data, channel_id):
         group = channel_details.get('group', '默認分組')
         channel_type = channel_details.get('type', 'live')
         
-        # 清理名稱
-        cleaned_name = clean_display_name(name)
-        cleaned_group = clean_display_name(group)
-        
         return {
-            'name': cleaned_name,
+            'name': name,
             'picture': picture,
-            'group_title': cleaned_group,
+            'group_title': group,
             'content_id': channel_id,
-            'category': cleaned_group,
+            'category': group,
             'type': channel_type
         }
     except Exception as e:
