@@ -532,14 +532,9 @@ def generate_ofiii_channel_ids(start=13, end=255):
     """動態生成ofiii頻道ID列表"""
     return [f"ofiii{i}" for i in range(start, end + 1)]
 
-async def process_channel(channel_id, json_dir, asset_seen, channels_by_name, m3u_content, exclude_channel_ids):
+async def process_channel(channel_id, json_dir, asset_seen, channels_by_name, m3u_content, exclude_from_m3u_txt):
     """處理單個頻道 - 異步版本"""
     print(f"📋 處理頻道: {channel_id}")
-    
-    # 檢查是否在排除列表中
-    if channel_id in exclude_channel_ids:
-        print(f"🚫 跳過頻道 (排除列表): {channel_id}")
-        return 0, 0, 0, 0, None
     
     # 獲取 build_id
     build_id = await get_build_id()
@@ -556,28 +551,32 @@ async def process_channel(channel_id, json_dir, asset_seen, channels_by_name, m3
     channel_info = None
     
     if channel_json:
-        # 儲存頻道JSON資料
+        # 儲存頻道JSON資料 - 所有頻道都儲存
         if save_channel_json(channel_id, channel_json, json_dir):
             saved_json = 1
             print(f"💾 已儲存 {channel_id}.json")
         
-        # 獲取頻道基本資訊
+        # 獲取頻道基本資訊 - 所有頻道都獲取
         channel_info = get_channel_info(channel_json, channel_id)
         
-        # 生成M3U內容
-        channel_lines, programs_added, assets_duplicated = generate_m3u_content(channel_json, channel_id, asset_seen)
-        added_programs = programs_added
-        duplicate_assets = assets_duplicated
-        
-        if channel_lines:
-            # 直接將內容添加到 m3u_content 中
-            m3u_content.extend(channel_lines)
-            print(f"✅ 成功添加頻道 {channel_id} ({added_programs} 個節目)")
-        else:
-            print(f"⚠️ 跳過頻道 {channel_id} (無有效節目)")
+        # 檢查是否要從 M3U 和 TXT 中排除
+        if channel_id not in exclude_from_m3u_txt:
+            # 生成M3U內容 - 只對非排除頻道
+            channel_lines, programs_added, assets_duplicated = generate_m3u_content(channel_json, channel_id, asset_seen)
+            added_programs = programs_added
+            duplicate_assets = assets_duplicated
             
-        # 生成TXT內容
-        txt_programs, txt_duplicates = generate_txt_content(channel_json, channel_id, asset_seen.copy(), channels_by_name)
+            if channel_lines:
+                # 直接將內容添加到 m3u_content 中
+                m3u_content.extend(channel_lines)
+                print(f"✅ 成功添加頻道 {channel_id} 到 M3U ({added_programs} 個節目)")
+            else:
+                print(f"⚠️ 跳過頻道 {channel_id} (無有效節目)")
+                
+            # 生成TXT內容 - 只對非排除頻道
+            txt_programs, txt_duplicates = generate_txt_content(channel_json, channel_id, asset_seen.copy(), channels_by_name)
+        else:
+            print(f"🚫 頻道 {channel_id} 從 M3U/TXT 中排除，但仍儲存 JSON 數據")
         
     else:
         print(f"❌ 無法獲取頻道 {channel_id} 資料")
@@ -596,8 +595,8 @@ async def main():
     # 動態生成ofiii頻道ID列表（13-255）
     ofiii_channels = generate_ofiii_channel_ids(13, 255)
     
-    # 要排除的頻道ID列表
-    exclude_channel_ids = [
+    # 要從 M3U 和 TXT 中排除的頻道ID列表
+    exclude_from_m3u_txt = [
         "nnews-zh",
         "4gtv-4gtv009",
         "4gtv-4gtv066",
@@ -631,7 +630,7 @@ async def main():
         "daystar"
     ]
     
-    # 頻道ID列表（包含動態生成的ofiii頻道，但排除指定的頻道）
+    # 所有頻道ID列表（包含所有頻道，包括要從 M3U/TXT 中排除的）
     all_channel_ids = ofiii_channels + [
         "nnews-zh",
         "4gtv-4gtv009",
@@ -666,9 +665,6 @@ async def main():
         "daystar"
     ]
     
-    # 過濾掉要排除的頻道
-    channel_ids = [channel_id for channel_id in all_channel_ids if channel_id not in exclude_channel_ids]
-    
     # M3U檔案頭
     m3u_content = ['#EXTM3U']
     
@@ -681,12 +677,11 @@ async def main():
     asset_seen = set()
     
     print("🚀 開始獲取頻道資料...")
-    print(f"📊 總共 {len(channel_ids)} 個頻道需要處理")
-    print(f"🚫 排除 {len(exclude_channel_ids)} 個頻道: {', '.join(exclude_channel_ids)}")
+    print(f"📊 總共 {len(all_channel_ids)} 個頻道需要處理")
+    print(f"🚫 從 M3U/TXT 中排除 {len(exclude_from_m3u_txt)} 個頻道: {', '.join(exclude_from_m3u_txt)}")
     
     successful_channels = 0
     failed_channels = 0
-    skipped_channels = 0
     total_programs = 0
     total_duplicate_assets = 0
     saved_json_files = 0
@@ -696,10 +691,10 @@ async def main():
     
     async def process_with_semaphore(channel_id):
         async with semaphore:
-            return await process_channel(channel_id, json_dir, asset_seen, channels_by_name, m3u_content, exclude_channel_ids)
+            return await process_channel(channel_id, json_dir, asset_seen, channels_by_name, m3u_content, exclude_from_m3u_txt)
     
     # 建立所有任務
-    tasks = [process_with_semaphore(channel_id) for channel_id in channel_ids]
+    tasks = [process_with_semaphore(channel_id) for channel_id in all_channel_ids]
     
     # 直接執行所有任務，不再分批和延遲
     print(f"\n🔄 開始處理所有頻道...")
@@ -725,7 +720,7 @@ async def main():
         else:
             failed_channels += 1
         
-        # 儲存頻道信息
+        # 儲存頻道信息 - 所有頻道都儲存
         if channel_info:
             channel_data[channel_info['content_id']] = [
                 channel_info['name'],
@@ -741,9 +736,9 @@ async def main():
     print("\n🔄 檢查並移除重複頻道...")
     unique_channel_data = remove_duplicate_channels(channel_data)
     
-    # 生成ofiii_playout-channel.json
+    # 生成ofiii_playout-channel.json - 包含所有頻道
     print("\n🔄 生成ofiii_playout-channel.json...")
-    playout_channel_data = generate_playout_channel_json(channel_ids)
+    playout_channel_data = generate_playout_channel_json(all_channel_ids)
     
     # 寫入M3U檔案
     with open(m3u_file, 'w', encoding='utf-8') as f:
@@ -753,15 +748,15 @@ async def main():
     with open(txt_file, 'w', encoding='utf-8') as f:
         f.write(txt_content)
     
-    # 寫入channel.json檔案
+    # 寫入channel.json檔案 - 包含所有頻道
     with open(channel_json_file, 'w', encoding='utf-8') as f:
         json.dump(unique_channel_data, f, ensure_ascii=False, indent=2)
     
-    # 寫入ofiii_playout-channel.json檔案
+    # 寫入ofiii_playout-channel.json檔案 - 包含所有頻道
     with open(playout_channel_json_file, 'w', encoding='utf-8') as f:
         json.dump(playout_channel_data, f, ensure_ascii=False, indent=2)
     
-    # 建立頻道JSON壓縮檔
+    # 建立頻道JSON壓縮檔 - 包含所有頻道
     print(f"\n🗜️ 建立頻道JSON壓縮檔...")
     if create_channel_zip(json_dir, output_dir):
         print(f"✅ 成功建立 ofiii_channel.zip，包含 {saved_json_files} 個頻道JSON檔案")
@@ -774,18 +769,18 @@ async def main():
     print(f"📊 統計資訊:")
     print(f"   ✅ 成功處理: {successful_channels} 個頻道")
     print(f"   ❌ 處理失敗: {failed_channels} 個頻道")
-    print(f"   🚫 排除頻道: {len(exclude_channel_ids)} 個")
-    print(f"   📺 總節目數: {total_programs} 個節目")
+    print(f"   🚫 從 M3U/TXT 中排除: {len(exclude_from_m3u_txt)} 個頻道")
+    print(f"   📺 M3U/TXT 中節目數: {total_programs} 個節目")
     print(f"   🔄 唯一頻道數: {len(unique_channel_data)} 個頻道")
     print(f"   🔄 跳過重複asset_id: {total_duplicate_assets} 個")
     print(f"   💾 儲存JSON檔案: {saved_json_files} 個")
     print(f"   🧹 清理暫存檔案: {cleaned_files} 個")
     print(f"   📁 輸出檔案:")
-    print(f"      - {m3u_file}")
-    print(f"      - {txt_file}")
-    print(f"      - {channel_json_file}")
-    print(f"      - {playout_channel_json_file}")
-    print(f"      - {output_dir / 'ofiii_channel.zip'}")
+    print(f"      - {m3u_file} (排除指定頻道)")
+    print(f"      - {txt_file} (排除指定頻道)")
+    print(f"      - {channel_json_file} (包含所有頻道)")
+    print(f"      - {playout_channel_json_file} (包含所有頻道)")
+    print(f"      - {output_dir / 'ofiii_channel.zip'} (包含所有頻道)")
 
 if __name__ == "__main__":
     asyncio.run(main())
