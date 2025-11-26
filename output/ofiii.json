@@ -12,12 +12,6 @@
     "description": ""
   },
   {
-    "channelName": "台視《11/26即將下架》",
-    "id": "4gtv-4gtv066",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv066_mobile.png",
-    "description": ""
-  },
-  {
     "channelName": "中視",
     "id": "4gtv-4gtv040",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv040_mobile.png",
@@ -27,12 +21,6 @@
     "channelName": "華視",
     "id": "4gtv-4gtv041",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv041_mobile.png",
-    "description": ""
-  },
-  {
-    "channelName": "台視新聞《11/26即將下架》",
-    "id": "4gtv-4gtv051",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv051_mobile.png",
     "description": ""
   },
   {
@@ -468,7 +456,7 @@
     "description": ""
   },
   {
-    "channelName": "鳳囚凰",
+    "channelName": "鳳囚凰《12/3即將下架》",
     "id": "ofiii112",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3721_ofiii112_mobile_20250506.png",
     "description": ""
@@ -516,7 +504,7 @@
     "description": ""
   },
   {
-    "channelName": "有你的時光裡",
+    "channelName": "有你的時光裡《12/3即將下架》",
     "id": "ofiii120",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3722_ofiii120_mobile_20250506.png",
     "description": ""
@@ -540,7 +528,7 @@
     "description": ""
   },
   {
-    "channelName": "月嫂先生",
+    "channelName": "月嫂先生《12/3即將下架》",
     "id": "ofiii124",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3693_ofiii124_mobile_20250331.png",
     "description": ""
@@ -816,7 +804,7 @@
     "description": ""
   },
   {
-    "channelName": "關於我轉生變成史萊姆這檔事(國)",
+    "channelName": "關於我轉生變成史萊姆這檔事(國)《12/3即將下架》",
     "id": "ofiii173",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3170_ofiii173_mobile_20250221.png",
     "description": ""
@@ -912,7 +900,7 @@
     "description": ""
   },
   {
-    "channelName": "劣人傳之詭計",
+    "channelName": "劣人傳之詭計《11/27即將下架》",
     "id": "ofiii200",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3783_ofiii200_mobile_20250626.png",
     "description": ""
