@@ -330,6 +330,12 @@
     "description": ""
   },
   {
+    "channelName": "徐海莉 Hailey",
+    "id": "ofiii86",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3922_ofiii86_mobile_20251126.png",
+    "description": ""
+  },
+  {
     "channelName": "啦啦隊獨家專訪",
     "id": "ofiii88",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3690_ofiii88_mobile_20250328.png",
@@ -456,9 +462,9 @@
     "description": ""
   },
   {
-    "channelName": "鳳囚凰《12/3即將下架》",
+    "channelName": "宴遇永安",
     "id": "ofiii112",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3721_ofiii112_mobile_20250506.png",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3923_ofiii112_mobile_20251126.png",
     "description": ""
   },
   {
@@ -504,9 +510,9 @@
     "description": ""
   },
   {
-    "channelName": "有你的時光裡《12/3即將下架》",
+    "channelName": "愛上你治癒我",
     "id": "ofiii120",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3722_ofiii120_mobile_20250506.png",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3924_ofiii120_mobile_20251126.png",
     "description": ""
   },
   {
@@ -525,12 +531,6 @@
     "channelName": "三十而已",
     "id": "ofiii123",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3748_ofiii123_mobile_20250529.png",
-    "description": ""
-  },
-  {
-    "channelName": "月嫂先生《12/3即將下架》",
-    "id": "ofiii124",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3693_ofiii124_mobile_20250331.png",
     "description": ""
   },
   {
@@ -804,9 +804,9 @@
     "description": ""
   },
   {
-    "channelName": "關於我轉生變成史萊姆這檔事(國)《12/3即將下架》",
+    "channelName": "一拳超人(中文版)",
     "id": "ofiii173",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3170_ofiii173_mobile_20250221.png",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3925_ofiii173_mobile_20251126.png",
     "description": ""
   },
   {
@@ -891,6 +891,12 @@
     "channelName": "轉角遇到愛",
     "id": "ofiii197",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3906_ofiii197_mobile_20251028.png",
+    "description": ""
+  },
+  {
+    "channelName": "白袍之戀",
+    "id": "ofiii198",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3926_ofiii198_mobile_20251126.png",
     "description": ""
   },
   {
