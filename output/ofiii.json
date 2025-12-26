@@ -204,9 +204,9 @@
     "description": ""
   },
   {
-    "channelName": "TVBS食尚玩家《12/26即將下架》",
-    "id": "ofiii31",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_2984_ofiii31_mobile_20230720.png",
+    "channelName": "毛茸茸親子台",
+    "id": "ofiii25",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3952_ofiii25_mobile_20251223.png",
     "description": ""
   },
   {
@@ -534,6 +534,12 @@
     "description": ""
   },
   {
+    "channelName": "小丈夫",
+    "id": "ofiii124",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3953_ofiii124_mobile_20251216.png",
+    "description": ""
+  },
+  {
     "channelName": "綜藝大集合",
     "id": "ofiii125",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3809_ofiii125_mobile_20250729.png",
@@ -564,15 +570,21 @@
     "description": ""
   },
   {
+    "channelName": "金頭腦",
+    "id": "ofiii130",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3954_ofiii130_mobile_20251216.png",
+    "description": ""
+  },
+  {
     "channelName": "全民星攻略",
     "id": "ofiii131",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_2594_ofiii131_mobile_20250221.png",
     "description": ""
   },
   {
-    "channelName": "健康2.0《12/26即將下架》",
+    "channelName": "醫學大聯盟",
     "id": "ofiii132",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3600_ofiii132_mobile_20250221.png",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3955_ofiii132_mobile_20251216.png",
     "description": ""
   },
   {
@@ -594,21 +606,21 @@
     "description": ""
   },
   {
-    "channelName": "一步一腳印 發現新台灣《12/26即將下架》",
+    "channelName": "天才答不答",
     "id": "ofiii136",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3601_ofiii136_mobile_20250221.png",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3956_ofiii136_mobile_20251216.png",
     "description": ""
   },
   {
-    "channelName": "女人我最大《12/26即將下架》",
+    "channelName": "我愛大小姐",
     "id": "ofiii137",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3571_ofiii137_mobile_20250221.png",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3957_ofiii137_mobile_20251216.png",
     "description": ""
   },
   {
-    "channelName": "威廉沈歡樂送《12/26即將下架》",
+    "channelName": "名模出任務",
     "id": "ofiii139",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3603_ofiii139_mobile_20250221.png",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3958_ofiii139_mobile_20251216.png",
     "description": ""
   },
   {
@@ -630,9 +642,9 @@
     "description": ""
   },
   {
-    "channelName": "11點熱吵店《12/26即將下架》",
+    "channelName": "超級同學會",
     "id": "ofiii143",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3234_ofiii143_mobile_20250221.png",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3959_ofiii143_mobile_20251216.png",
     "description": ""
   },
   {
@@ -870,6 +882,12 @@
     "description": ""
   },
   {
+    "channelName": "科學小飛俠",
+    "id": "ofiii185",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3966_ofiii185_mobile_20251216.png",
+    "description": ""
+  },
+  {
     "channelName": "城市獵人",
     "id": "ofiii186",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3751_ofiii186_mobile_20250529.png",
@@ -900,21 +918,15 @@
     "description": ""
   },
   {
+    "channelName": "我的老師叫小賀",
+    "id": "ofiii199",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3960_ofiii199_mobile_20251216.png",
+    "description": ""
+  },
+  {
     "channelName": "大新聞大爆卦",
     "id": "ofiii201",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_2939_ofiii201_mobile_20250221.png",
-    "description": ""
-  },
-  {
-    "channelName": "新聞大白話《12/26即將下架》",
-    "id": "ofiii202",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3239_ofiii202_mobile_20250221.png",
-    "description": ""
-  },
-  {
-    "channelName": "文茜的世界周報《12/26即將下架》",
-    "id": "ofiii203",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3269_ofiii203_mobile_20250221.png",
     "description": ""
   },
   {
@@ -924,21 +936,15 @@
     "description": ""
   },
   {
-    "channelName": "文茜的世界財經周報《12/26即將下架》",
-    "id": "ofiii205",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3480_ofiii205_mobile_20250221.png",
-    "description": ""
-  },
-  {
-    "channelName": "少康戰情室《12/26即將下架》",
+    "channelName": "大大平評理",
     "id": "ofiii207",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3520_ofiii207_mobile_20250221.png",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3961_ofiii207_mobile_20251216.png",
     "description": ""
   },
   {
-    "channelName": "國民大會《12/26即將下架》",
+    "channelName": "政治琳龍SAY",
     "id": "ofiii208",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3573_ofiii208_mobile_20250221.png",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3962_ofiii208_mobile_20251216.png",
     "description": ""
   },
   {
@@ -990,27 +996,21 @@
     "description": ""
   },
   {
-    "channelName": "食尚玩家-Hello腹餓代《12/26即將下架》",
-    "id": "ofiii225",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3574_ofiii225_mobile_20250221.png",
+    "channelName": "歡迎光琳",
+    "id": "ofiii230",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3963_ofiii230_mobile_20251216.png",
     "description": ""
   },
   {
-    "channelName": "食尚玩家-天菜就醬吃《12/26即將下架》",
-    "id": "ofiii226",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3575_ofiii226_mobile_20250221.png",
+    "channelName": "咱的城 咱的市 咱台灣的味",
+    "id": "ofiii231",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3964_ofiii231_mobile_20251216.png",
     "description": ""
   },
   {
-    "channelName": "食尚玩家-2天1夜go《12/26即將下架》",
-    "id": "ofiii227",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3554_ofiii227_mobile_20250221.png",
-    "description": ""
-  },
-  {
-    "channelName": "食尚玩家-熱血48小時《12/26即將下架》",
-    "id": "ofiii228",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3558_ofiii228_mobile_20250221.png",
+    "channelName": "舌尖之福",
+    "id": "ofiii232",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3965_ofiii232_mobile_20251216.png",
     "description": ""
   },
   {
