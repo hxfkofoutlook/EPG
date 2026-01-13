@@ -316,7 +316,7 @@ class LiTVEPGCrawler:
         }
     
     def convert_to_xmltv(self, channels: List[Dict], epg_data: Dict, output_file: str = 'litv_epg.xml') -> bool:
-        """將 EPG 數據轉換為 XMLTV 格式，使用上海時區"""
+        """將 EPG 數據轉換為 XMLTV 格式"""
         
         try:
             # 建立根元素
@@ -329,7 +329,7 @@ class LiTVEPGCrawler:
             # 添加頻道信息
             for channel in channels:
                 channel_elem = ET.SubElement(tv, 'channel')
-                channel_elem.set('id', channel['id'])  # 使用 cdn 作為頻道 ID
+                channel_elem.set('id', channel['id'])
                 
                 # 顯示名稱
                 display_name = ET.SubElement(channel_elem, 'display-name')
@@ -350,13 +350,13 @@ class LiTVEPGCrawler:
                 for program in programs:
                     programme = ET.SubElement(tv, 'programme')
                     
-                    # 設置時間格式: YYYYMMDDHHMMSS +0800 (上海時區)
+                    # 設置時間格式: YYYYMMDDHHMMSS +0800
                     start_str = program['starttime'].strftime('%Y%m%d%H%M%S +0800')
                     end_str = program['endtime'].strftime('%Y%m%d%H%M%S +0800')
                     
                     programme.set('start', start_str)
                     programme.set('stop', end_str)
-                    programme.set('channel', channel_id)  # 使用 cdn 作為頻道 ID
+                    programme.set('channel', channel_id)
                     
                     # 標題
                     title_elem = ET.SubElement(programme, 'title')
@@ -462,7 +462,7 @@ async def main():
     )
     
     if success:
-        # 檢查輸出文件大小
+        # 檢查輸出檔案大小
         if output_file.exists():
             file_size = output_file.stat().st_size
             logging.info(f"EPG 數據已儲存到 {output_file}")
@@ -472,13 +472,13 @@ async def main():
             try:
                 with open(output_file, 'r', encoding='utf-8') as f:
                     lines = [next(f).strip() for _ in range(5)]
-                    logging.info("XML 文件前5行:")
+                    logging.info("XML 檔案前5行:")
                     for line in lines:
                         logging.info(f"  {line}")
             except Exception as e:
-                logging.warning(f"讀取XML文件失敗: {e}")
+                logging.warning(f"讀取XML檔案失敗: {e}")
         else:
-            logging.error("輸出文件不存在!")
+            logging.error("輸出檔案不存在!")
             return 1
         
         # 獲取頻道數量
