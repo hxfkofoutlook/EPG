@@ -18,6 +18,8 @@ from typing import List, Dict, Optional
 import time
 from pathlib import Path
 import sys
+import tempfile
+import shutil
 
 # 配置日誌
 logging.basicConfig(
@@ -30,7 +32,8 @@ logging.basicConfig(
 
 class LiTVEPGCrawler:
     def __init__(self, db_path: str = 'epg.db'):
-        self.db_path = db_path
+        # 使用絕對路徑確保檔案位置正確
+        self.db_path = os.path.join(os.getcwd(), db_path)
         self.epg_url = None
         self.headers = {
             "Content-Type": "application/json; charset=UTF-8",
@@ -46,6 +49,7 @@ class LiTVEPGCrawler:
         """下載 LiTV EPG 資料庫（GitHub Actions 總是強制更新）"""
         
         logging.info("開始下載 LiTV EPG 資料庫...")
+        logging.info(f"資料庫將儲存到: {self.db_path}")
         
         try:
             # 獲取 EPG SQLite URL
@@ -82,7 +86,7 @@ class LiTVEPGCrawler:
                 response = await client.get(self.epg_url)
                 response.raise_for_status()
                 
-                # 解壓縮資料庫
+                # 解壓縮資料庫到臨時目錄
                 with zipfile.ZipFile(io.BytesIO(response.content)) as zip_file:
                     # 列出 ZIP 中的檔案
                     file_list = zip_file.namelist()
@@ -94,20 +98,36 @@ class LiTVEPGCrawler:
                         logging.error("ZIP 中沒有找到 .db 檔案")
                         return False
                     
-                    # 解壓縮第一個 .db 檔案
-                    db_file_name = db_files[0]
-                    zip_file.extract(db_file_name, ".")
-                    
-                    # 移動或重命名到目標位置
-                    if os.path.exists(self.db_path):
-                        os.remove(self.db_path)
-                    
-                    os.rename(db_file_name, self.db_path)
-                    
-                    logging.info(f"已解壓並重命名資料庫: {db_file_name} -> {self.db_path}")
+                    # 使用臨時目錄解壓縮
+                    with tempfile.TemporaryDirectory() as tmpdir:
+                        db_file_name = db_files[0]
+                        logging.info(f"正在解壓 {db_file_name} 到臨時目錄")
+                        
+                        # 解壓縮到臨時目錄
+                        zip_file.extract(db_file_name, tmpdir)
+                        temp_db_path = os.path.join(tmpdir, db_file_name)
+                        
+                        # 檢查解壓縮是否成功
+                        if not os.path.exists(temp_db_path):
+                            logging.error(f"解壓縮失敗: {temp_db_path} 不存在")
+                            return False
+                        
+                        # 移動檔案到目標位置
+                        if os.path.exists(self.db_path):
+                            os.remove(self.db_path)
+                            logging.info(f"已刪除舊的資料庫檔案: {self.db_path}")
+                        
+                        shutil.move(temp_db_path, self.db_path)
+                        logging.info(f"已移動資料庫檔案到: {self.db_path}")
             
-            logging.info(f"EPG資料庫下載成功: {self.db_path} (大小: {os.path.getsize(self.db_path)} bytes)")
-            return True
+            # 檢查最終檔案
+            if os.path.exists(self.db_path):
+                file_size = os.path.getsize(self.db_path)
+                logging.info(f"EPG資料庫下載成功: {self.db_path} (大小: {file_size:,} bytes)")
+                return True
+            else:
+                logging.error("資料庫檔案不存在，下載失敗")
+                return False
             
         except httpx.RequestError as e:
             logging.error(f"網路請求失敗: {e}")
@@ -442,20 +462,23 @@ async def main():
     )
     
     if success:
-        # 檢查輸出檔案大小
+        # 檢查輸出文件大小
         if output_file.exists():
             file_size = output_file.stat().st_size
             logging.info(f"EPG 數據已儲存到 {output_file}")
             logging.info(f"檔案大小: {file_size:,} bytes ({file_size/1024/1024:.2f} MB)")
             
             # 讀取前幾行確認內容
-            with open(output_file, 'r', encoding='utf-8') as f:
-                lines = [next(f).strip() for _ in range(5)]
-                logging.info("XML 檔案前5行:")
-                for line in lines:
-                    logging.info(f"  {line}")
+            try:
+                with open(output_file, 'r', encoding='utf-8') as f:
+                    lines = [next(f).strip() for _ in range(5)]
+                    logging.info("XML 文件前5行:")
+                    for line in lines:
+                        logging.info(f"  {line}")
+            except Exception as e:
+                logging.warning(f"讀取XML文件失敗: {e}")
         else:
-            logging.error("輸出檔案不存在!")
+            logging.error("輸出文件不存在!")
             return 1
         
         # 獲取頻道數量
