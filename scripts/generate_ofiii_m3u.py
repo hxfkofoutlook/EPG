@@ -599,10 +599,8 @@ async def main():
     exclude_from_m3u_txt = [
         "nnews-zh",
         "4gtv-4gtv009",
-        "4gtv-4gtv066",
         "4gtv-4gtv040",
         "4gtv-4gtv041",
-        "4gtv-4gtv051",
         "4gtv-4gtv052",
         "4gtv-4gtv074",
         "4gtv-4gtv084",
@@ -634,10 +632,8 @@ async def main():
     all_channel_ids = ofiii_channels + [
         "nnews-zh",
         "4gtv-4gtv009",
-        "4gtv-4gtv066",
         "4gtv-4gtv040",
         "4gtv-4gtv041",
-        "4gtv-4gtv051",
         "4gtv-4gtv052",
         "4gtv-4gtv074",
         "4gtv-4gtv084",
