@@ -69,13 +69,13 @@ jobs:
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         
-        # 創建或清空輸出目錄
+        # 建立或清空輸出目錄
         mkdir -p output
         
         # 複製檔案
         cp scripts/output/litv.xml output/
         
-        # 檢查文件是否與上次提交不同
+        # 檢查檔案是否與上次提交不同
         if git diff --quiet HEAD output/litv.xml 2>/dev/null; then
           echo "No changes to commit"
         else
