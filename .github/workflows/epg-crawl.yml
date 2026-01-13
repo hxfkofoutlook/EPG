@@ -1,0 +1,90 @@
+name: LiTV EPG Daily Crawler
+
+on:
+  schedule:
+    # 每日 UTC 時間 12:00 (台灣時間 20:00) 執行
+    - cron: '0 12 * * *'
+  workflow_dispatch:  # 允許手動觸發
+  push:
+    branches: [ main ]
+    paths:
+      - 'scripts/**'
+
+jobs:
+  crawl-epg:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        persist-credentials: false
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+        cache: 'pip'
+
+    - name: Install dependencies
+      run: |
+        cd scripts
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run EPG crawler
+      run: |
+        cd scripts
+        python litv_github.py
+      continue-on-error: true  # 即使失敗也繼續執行後續步驟
+
+    - name: Check if output file exists
+      id: check_file
+      run: |
+        if [ -f "scripts/output/litv.xml" ]; then
+          echo "file_exists=true" >> $GITHUB_OUTPUT
+          echo "File size: $(ls -lh scripts/output/litv.xml | awk '{print $5}')"
+        else
+          echo "file_exists=false" >> $GITHUB_OUTPUT
+          echo "Output file not found!"
+        fi
+
+    - name: Upload EPG file as artifact
+      if: steps.check_file.outputs.file_exists == 'true'
+      uses: actions/upload-artifact@v4
+      with:
+        name: litv-epg
+        path: scripts/output/litv.xml
+        retention-days: 7
+
+    - name: Create release commit
+      if: steps.check_file.outputs.file_exists == 'true'
+      run: |
+        # 配置 Git
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+        # 移動檔案到根目錄的 output 文件夾
+        mkdir -p output
+        cp scripts/output/litv.xml output/
+        
+        # 添加和提交
+        git add output/litv.xml
+        git commit -m "Auto-update: LiTV EPG data $(date +'%Y-%m-%d %H:%M:%S')" || echo "No changes to commit"
+        
+        # 推送到 GitHub
+        git push origin HEAD:${GITHUB_REF#refs/heads/}
+
+    - name: Send success notification (Optional)
+      if: success() && steps.check_file.outputs.file_exists == 'true'
+      run: |
+        echo "🎉 LiTV EPG 更新成功!"
+        echo "📅 更新時間: $(date)"
+        echo "📁 檔案: output/litv.xml"
+
+    - name: Send failure notification (Optional)
+      if: failure()
+      run: |
+        echo "❌ LiTV EPG 更新失敗!"
+        echo "📅 失敗時間: $(date)"
+        echo "請檢查 GitHub Actions 日誌以獲取詳細信息。"
