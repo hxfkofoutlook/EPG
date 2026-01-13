@@ -37,10 +37,8 @@ def parse_channel_list():
     other_channels = [
         "nnews-zh",
         "4gtv-4gtv009",
-        "4gtv-4gtv066",
         "4gtv-4gtv040",
         "4gtv-4gtv041",
-        "4gtv-4gtv051",
         "4gtv-4gtv052",
         "4gtv-4gtv074",
         "4gtv-4gtv084",
