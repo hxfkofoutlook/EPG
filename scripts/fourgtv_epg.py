@@ -173,6 +173,11 @@ def generate_xml(channels, programs, filename):
     for channel in channels:
         channel_name = channel["channelName"]
         
+        # 跳過被封鎖的頻道
+        if channel_name in BLOCKED_CHANNELS:
+            logger.debug(f"跳過被封鎖頻道: {channel_name}")
+            continue
+        
         # 使用channelName作為id
         channel_elem = ET.SubElement(tv, "channel", id=channel_name)
         display_name = ET.SubElement(channel_elem, "display-name", lang="zh")
@@ -193,9 +198,8 @@ def generate_xml(channels, programs, filename):
             
             for program in sorted_programs:
                 try:
-                    # 格式化時區信息 (+0800)
-                    start_str = program["start"].strftime("%Y%m%d%H%M%S %z").replace(" ", "")
-                    end_str = program["end"].strftime("%Y%m%d%H%M%S %z").replace(" ", "")
+                    start_str = program["start"].strftime("%Y%m%d%H%M%S %z")
+                    end_str = program["end"].strftime("%Y%m%d%H%M%S %z")
                     
                     programme = ET.SubElement(tv, "programme")
                     programme.set("channel", channel_name)
@@ -213,7 +217,13 @@ def generate_xml(channels, programs, filename):
     
     # 生成XML檔案
     tree = ET.ElementTree(tv)
-    tree.write(filename, encoding="utf-8", xml_declaration=True)
+    
+    # 使用更美觀的格式寫入XML
+    from xml.dom import minidom
+    xmlstr = minidom.parseString(ET.tostring(tv)).toprettyxml(indent="  ", encoding="utf-8")
+    with open(filename, "wb") as f:
+        f.write(xmlstr)
+    
     logger.info(f"電子節目表單已生成: {filename}")
 
 if __name__ == "__main__":
@@ -245,4 +255,3 @@ if __name__ == "__main__":
         logger.critical(f"EPG生成失敗: {str(e)}")
         logger.exception(e)
         exit(1)
-
