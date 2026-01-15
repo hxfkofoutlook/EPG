@@ -102,12 +102,6 @@
     "description": ""
   },
   {
-    "channelName": "龍華洋片台",
-    "id": "litv-longturn02",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn02_mobile.png",
-    "description": ""
-  },
-  {
     "channelName": "龍華電影台",
     "id": "litv-xinchuang03",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn03_mobile.png",
@@ -117,18 +111,6 @@
     "channelName": "寰宇新聞台",
     "id": "litv-longturn14",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn14_mobile.png",
-    "description": ""
-  },
-  {
-    "channelName": "龍華戲劇台",
-    "id": "litv-longturn18",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn18_mobile.png",
-    "description": ""
-  },
-  {
-    "channelName": "龍華經典台",
-    "id": "litv-longturn21",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn21_mobile.png",
     "description": ""
   },
   {
