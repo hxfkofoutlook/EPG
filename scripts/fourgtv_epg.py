@@ -61,11 +61,6 @@ def get_4gtv_epg():
         channel_id = channel['channelId']
         channel_name = channel['channelName']
         
-        # 跳過被封鎖的頻道
-        if channel_name in BLOCKED_CHANNELS:
-            logger.debug(f"跳過被封鎖頻道: {channel_name}")
-            continue
-        
         # 添加隨機延遲減少請求頻率
         delay = random.uniform(1.0, 3.0)
         logger.debug(f"等待 {delay:.2f} 秒後獲取 {channel_name} 節目表")
@@ -87,7 +82,7 @@ def get_4gtv_channels():
     local_file = os.path.join(OUTPUT_DIR, 'fourgtv.json')
     if os.path.exists(local_file):
         try:
-            logger.info(f"從本地檔案讀取頻道清單: {local_file}")
+            logger.info(f"從本地檔案讀取頻道列表: {local_file}")
             with open(local_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
             
@@ -99,7 +94,6 @@ def get_4gtv_channels():
                     "description": item.get("fsDESCRIPTION", "")
                 }
                 for item in data
-                if item["fsNAME"] not in BLOCKED_CHANNELS  # 過濾被封鎖的頻道
             ]
             return channels
         
@@ -162,30 +156,15 @@ def get_4gtv_programs_scraper(channel_id, channel_name, scraper):
         return None
 
 def generate_xml(channels, programs, filename):
-    # 建立根元素
     tv = ET.Element("tv")
     
-    # 先處理所有頻道
-    for channel in channels:
-        channel_name = channel["channelName"]
-        
-        # 跳過被封鎖的頻道（再次確認）
-        if channel_name in BLOCKED_CHANNELS:
-            continue
-            
-        # 建立頻道元素
-        channel_elem = ET.SubElement(tv, "channel", id=channel_name)
-        
-        # 添加頻道名稱
-        display_name = ET.SubElement(channel_elem, "display-name")
-        display_name.text = channel_name
-        
-        # 添加頻道圖標
-        if channel.get("logo"):
-            icon = ET.SubElement(channel_elem, "icon")
-            icon.set("src", channel["logo"])
+    # 添加所有屬性
+    tv.set("source-info-name", "4gtv EPG")
+    tv.set("source-info-url", "https://www.4gtv.tv")
+    tv.set("generator-info-name", "4gtv EPG Generator")
+    tv.set("generator-info-url", "")
     
-    # 按頻道分組節目
+    # 按頻道名稱分組節目
     programs_by_channel = {}
     for program in programs:
         channel_name = program["channelName"]
@@ -193,48 +172,64 @@ def generate_xml(channels, programs, filename):
             programs_by_channel[channel_name] = []
         programs_by_channel[channel_name].append(program)
     
-    # 處理節目
-    for channel_name, channel_programs in programs_by_channel.items():
+    # 添加頻道和節目信息 - 改為正常的排列格式
+    for channel in channels:
+        channel_name = channel["channelName"]
+        
         # 跳過被封鎖的頻道
         if channel_name in BLOCKED_CHANNELS:
+            logger.debug(f"跳過被封鎖頻道: {channel_name}")
             continue
-            
-        # 按開始時間排序節目
-        sorted_programs = sorted(channel_programs, key=lambda x: x["start"])
         
-        for program in sorted_programs:
-            try:
-                # 格式化時間
-                start_str = program["start"].strftime("%Y%m%d%H%M%S +0800")
-                end_str = program["end"].strftime("%Y%m%d%H%M%S +0800")
-                
-                # 建立節目元素
-                programme = ET.SubElement(tv, "programme")
-                programme.set("start", start_str)
-                programme.set("stop", end_str)
-                programme.set("channel", channel_name)
-                
-                # 節目標題
-                title = ET.SubElement(programme, "title")
-                title.text = program["programName"]
-                title.set("lang", "zh")
-                
-                # 節目描述
-                if program.get("description"):
-                    desc = ET.SubElement(programme, "desc")
-                    desc.text = program["description"]
-                    desc.set("lang", "zh")
+        # 使用channelName作為id
+        channel_elem = ET.SubElement(tv, "channel", id=channel_name)
+        
+        # 頻道顯示名稱
+        display_name = ET.SubElement(channel_elem, "display-name", lang="zh")
+        display_name.text = channel_name
+        
+        # 頻道圖標
+        if channel.get("logo"):
+            icon = ET.SubElement(channel_elem, "icon")
+            icon.set("src", channel["logo"])
+        
+        # 添加頻道描述
+        if channel.get("description"):
+            channel_desc = ET.SubElement(channel_elem, "desc", lang="zh")
+            channel_desc.text = channel["description"]
+        
+        # 添加該頻道的節目
+        if channel_name in programs_by_channel:
+            # 節目按開始時間排序
+            sorted_programs = sorted(programs_by_channel[channel_name], key=lambda x: x["start"])
+            
+            for program in sorted_programs:
+                try:
+                    # 格式化時間為標準格式：YYYYMMDDHHMMSS +0000
+                    start_str = program["start"].strftime("%Y%m%d%H%M%S +0800")
+                    end_str = program["end"].strftime("%Y%m%d%H%M%S +0800")
                     
-            except Exception as e:
-                logger.error(f"生成節目 {program.get('programName', '未知節目')} XML 失敗: {e}")
+                    programme = ET.SubElement(tv, "programme")
+                    programme.set("start", start_str)
+                    programme.set("stop", end_str)
+                    programme.set("channel", channel_name)
+                    
+                    title = ET.SubElement(programme, "title", lang="zh")
+                    title.text = program["programName"]
+                    
+                    if program.get("description"):
+                        desc = ET.SubElement(programme, "desc", lang="zh")
+                        desc.text = program["description"]
+                        
+                except Exception as e:
+                    logger.error(f"生成節目 {program.get('programName', '未知節目')} XML 失敗: {e}")
     
     # 生成XML檔案
     tree = ET.ElementTree(tv)
     
     # 使用更美觀的格式寫入XML
     from xml.dom import minidom
-    xmlstr = minidom.parseString(ET.tostring(tv, encoding='utf-8')).toprettyxml(indent="  ", encoding="utf-8")
-    
+    xmlstr = minidom.parseString(ET.tostring(tv)).toprettyxml(indent="  ", encoding="utf-8")
     with open(filename, "wb") as f:
         f.write(xmlstr)
     
@@ -259,16 +254,11 @@ if __name__ == "__main__":
         logger.info(f"輸出目錄: {OUTPUT_DIR}")
         
         channels, programs = get_4gtv_epg()
+        logger.info(f"共獲取 {len(channels)} 個頻道, {len(programs)} 個節目")
         
-        # 過濾被封鎖的頻道
-        filtered_channels = [c for c in channels if c['channelName'] not in BLOCKED_CHANNELS]
-        filtered_programs = [p for p in programs if p['channelName'] not in BLOCKED_CHANNELS]
-        
-        logger.info(f"共獲取 {len(filtered_channels)} 個頻道, {len(filtered_programs)} 個節目")
-        
-        # 設置XML輸出路徑 - 改為標準的 epg.xml
+        # 設置XML輸出路徑
         xml_file = os.path.join(OUTPUT_DIR, '4g.xml')
-        generate_xml(filtered_channels, filtered_programs, xml_file)
+        generate_xml(channels, programs, xml_file)
         logger.success(f"EPG生成完成: {xml_file}")
     except Exception as e:
         logger.critical(f"EPG生成失敗: {str(e)}")
