@@ -157,8 +157,10 @@ def get_4gtv_programs_scraper(channel_id, channel_name, scraper):
 
 def generate_xml(channels, programs, filename):
     tv = ET.Element("tv", attrib={
-        "info-name": "四季線上電子節目表單",
-        "info-url": "https://www.4gtv.tv"
+        "source-info-name": "4gtv EPG",
+        "source-info-url": "https://www.4gtv.tv",
+        "generator-info-name": "4gtv EPG",
+        "generator-info-url=": ""
     })
     
     # 按頻道名稱分組節目
@@ -255,3 +257,4 @@ if __name__ == "__main__":
         logger.critical(f"EPG生成失敗: {str(e)}")
         logger.exception(e)
         exit(1)
+
