@@ -2336,10 +2336,6 @@
     <title lang="zh">神選之人</title>
     <desc lang="zh">改編自耶穌生平。以聖經故事為根基，背景設定於西元一世紀的以色列，在猶太人受到羅馬政府壓迫的環境下，讓觀眾看見一個有別於過往以耶穌為主軸的信仰影集，透過那些「遇見耶穌之人的雙眼」來描繪耶穌的生活和行事。</desc>
   </programme>
-  <programme start="20260120040500 +0800" stop="20260120043500 +0800" channel="4gtv-4gtv048">
-    <title lang="zh">非凡新聞通</title>
-    <desc lang="zh">第一手的盤後數字揭曉，明日盤前不得不知的教戰守則，股市數字不再艱深難懂，讓您投資理財即時通。</desc>
-  </programme>
   <programme start="20260120043500 +0800" stop="20260120050000 +0800" channel="4gtv-4gtv048">
     <title lang="zh">全球新觀點</title>
     <desc lang="zh">一同掌握全球經濟脈絡，探討哪些新的觀題造成全球經濟的變化，而這樣的變化又會為未來帶來什麼樣的影響呢?</desc>
@@ -5670,9 +5666,6 @@
   <programme start="20260122230000 +0800" stop="20260123000000 +0800" channel="4gtv-4gtv051">
     <title lang="zh">台視夜線新聞</title>
     <desc lang="zh">台視新聞團隊整合當天即時新聞，讓觀眾掌握時事脈動。</desc>
-  </programme>
-  <programme start="20260120040300 +0800" stop="20260120041200 +0800" channel="4gtv-4gtv018">
-    <title lang="zh">柔伊與麥洛的世界之旅－阿拉斯加之旅</title>
   </programme>
   <programme start="20260120041200 +0800" stop="20260120041800 +0800" channel="4gtv-4gtv018">
     <title lang="zh">柔伊與麥洛的世界之旅－捷克共和國之旅</title>
@@ -10655,9 +10648,6 @@
     <title lang="zh">濁水漂流</title>
     <desc lang="zh">無家可歸的輝哥（吳鎮宇）剛出獄，就回到烏煙瘴氣的深水埗街角，與一幫街友再次重遇。未料，當晚食環署人員突擊洗地及打掃，更強勢將露宿者的家當清掃丟棄，憤怒的輝哥與警察當街起衝突。這一群家當盡失的街友在剛畢業的社工何姑娘的幫助下，決定與政府打官司，不僅要申請索償，更要求政府道歉…</desc>
   </programme>
-  <programme start="20260120040500 +0800" stop="20260120050000 +0800" channel="4gtv-4gtv013">
-    <title lang="zh">江湖少女</title>
-  </programme>
   <programme start="20260120050000 +0800" stop="20260120060000 +0800" channel="4gtv-4gtv013">
     <title lang="zh">青春的進擊１－你現在幾K？</title>
   </programme>
@@ -12799,10 +12789,6 @@
   <programme start="20260122230000 +0800" stop="20260123000000 +0800" channel="4gtv-4gtv058">
     <title lang="zh">台灣啟示錄</title>
     <desc lang="zh">為您統整介紹台灣社會近年來重大案件與名人軼事的始末，以及相關的新聞分析與報導。</desc>
-  </programme>
-  <programme start="20260120040500 +0800" stop="20260120060000 +0800" channel="4gtv-4gtv061">
-    <title lang="zh">鎖命女拳霸</title>
-    <desc lang="zh">她是全球綜合格鬥的明日之星，父親無故被殺後，在骯髒的地下格鬥世界中戰鬥就成為活下來唯一目標 – 用拳頭與血淚來復仇！</desc>
   </programme>
   <programme start="20260120060000 +0800" stop="20260120074500 +0800" channel="4gtv-4gtv061">
     <title lang="zh">漂流:羅興亞故事</title>
@@ -21934,9 +21920,6 @@
   </programme>
   <programme start="20260122230000 +0800" stop="20260123000000 +0800" channel="litv-ftv15">
     <title lang="zh">蘇格蘭懸案實錄：奧斯卡斯萊特</title>
-  </programme>
-  <programme start="20260120041000 +0800" stop="20260120053000 +0800" channel="litv-ftv10">
-    <title lang="zh">少年獵手:貝文頓的野獸</title>
   </programme>
   <programme start="20260120053000 +0800" stop="20260120065500 +0800" channel="litv-ftv10">
     <title lang="zh">珠寶大匠</title>
