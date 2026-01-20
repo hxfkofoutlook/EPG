@@ -249,11 +249,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3443_ofiii113_mobile_20240906.png",
     "戲劇"
   ],
-  "ofiii114": [
-    "九重紫",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3512_ofiii120_mobile_20241104.png",
-    "戲劇"
-  ],
   "ofiii115": [
     "私藏浪漫",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3444_ofiii115_mobile_20240906.png",
@@ -372,11 +367,6 @@
   "ofiii139": [
     "名模出任務",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3603_ofiii139_mobile_20250103.png",
-    "綜藝"
-  ],
-  "ofiii140": [
-    "木曜4超玩 一日系列",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3694_ofiii140_tv_20250331.png",
     "綜藝"
   ],
   "ofiii141": [
@@ -664,6 +654,11 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3885_ofiii212_tv_20250924.png",
     "新聞‧財經"
   ],
+  "ofiii215": [
+    "電動車時代",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3475_ofiii215_mobile_20240930.png",
+    "綜合"
+  ],
   "ofiii216": [
     "SiCAR愛車酷",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3521_ofiii216_mobile_20241104.png",
@@ -874,10 +869,60 @@
     "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-ftv17_mobile.png",
     "綜合"
   ],
+  "litv-xinchuang01": [
+    "龍華卡通台",
+    "https://p-cdnstatic.svc.litv.tv/pics/logo_4gtv_litv-longturn01_tv.png",
+    "卡通‧兒童"
+  ],
+  "litv-xinchuang02": [
+    "龍華洋片台",
+    "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn02_tv.png",
+    "電影"
+  ],
+  "litv-xinchuang03": [
+    "龍華電影台",
+    "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn03_tv.png",
+    "電影"
+  ],
+  "litv-xinchuang11": [
+    "龍華日韓台",
+    "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn11_tv.png",
+    "戲劇"
+  ],
+  "litv-xinchuang12": [
+    "龍華偶像台",
+    "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn12_tv.png",
+    "戲劇"
+  ],
   "litv-longturn14": [
     "寰宇新聞台",
     "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn14_mobile.png",
     "新聞‧財經"
+  ],
+  "litv-xinchuang18": [
+    "龍華戲劇台",
+    "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn18_tv.png",
+    "戲劇"
+  ],
+  "litv-xinchuang19": [
+    "Smart知識台",
+    "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn19_tv.png",
+    "綜合"
+  ],
+  "litv-xinchuang20": [
+    "ELTV生活英語台",
+    "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn20_tv.png",
+    "綜合"
+  ],
+  "litv-xinchuang21": [
+    "龍華經典台",
+    "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn21_tv.png",
+    "電影"
+  ],
+  "litv-xinchuang22": [
+    "台灣戲劇台",
+    "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn22_tv.png",
+    "戲劇"
   ],
   "iNEWS": [
     "三立新聞iNEWS",
