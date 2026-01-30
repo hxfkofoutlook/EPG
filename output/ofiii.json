@@ -18,6 +18,12 @@
     "description": ""
   },
   {
+    "channelName": "華視",
+    "id": "4gtv-4gtv041",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv041_mobile.png",
+    "description": ""
+  },
+  {
     "channelName": "華視新聞",
     "id": "4gtv-4gtv052",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv052_mobile.png",
@@ -39,6 +45,12 @@
     "channelName": "國會頻道2台",
     "id": "4gtv-4gtv085",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv085_mobile.png",
+    "description": ""
+  },
+  {
+    "channelName": "亞洲旅遊台",
+    "id": "4gtv-4gtv076",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/logo_4gtv_litv-longturn17_mobile.png",
     "description": ""
   },
   {
@@ -195,6 +207,12 @@
     "channelName": "毛茸茸親子台",
     "id": "ofiii25",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3952_ofiii25_mobile_20251223.png",
+    "description": ""
+  },
+  {
+    "channelName": "東森娛樂台",
+    "id": "ofiii32",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_2985_ofiii32_mobile_20230720.png",
     "description": ""
   },
   {
@@ -447,6 +465,12 @@
     "channelName": "宴遇永安",
     "id": "ofiii112",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3923_ofiii112_mobile_20251126.png",
+    "description": ""
+  },
+  {
+    "channelName": "步步驚心",
+    "id": "ofiii113",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3443_ofiii113_mobile_20250221.png",
     "description": ""
   },
   {
@@ -822,6 +846,12 @@
     "description": ""
   },
   {
+    "channelName": "JOJO 的奇妙冒險",
+    "id": "ofiii178",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3238_ofiii178_mobile_20250221.png",
+    "description": ""
+  },
+  {
     "channelName": "葬送的芙莉蓮",
     "id": "ofiii179",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3268_ofiii179_mobile_20250221.png",
@@ -864,6 +894,12 @@
     "description": ""
   },
   {
+    "channelName": "生命的贏家",
+    "id": "ofiii192",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_ofiii192_mobile_20230329.png",
+    "description": ""
+  },
+  {
     "channelName": "轉角遇到愛",
     "id": "ofiii197",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3906_ofiii197_mobile_20251028.png",
@@ -888,9 +924,21 @@
     "description": ""
   },
   {
+    "channelName": "寰宇全視界",
+    "id": "ofiii204",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_2942_ofiii204_mobile_20250221.png",
+    "description": ""
+  },
+  {
     "channelName": "大大平評理",
     "id": "ofiii207",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3961_ofiii207_mobile_20251216.png",
+    "description": ""
+  },
+  {
+    "channelName": "政治琳龍SAY",
+    "id": "ofiii208",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3962_ofiii208_mobile_20251216.png",
     "description": ""
   },
   {
