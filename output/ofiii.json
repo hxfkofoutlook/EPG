@@ -300,6 +300,12 @@
     "description": ""
   },
   {
+    "channelName": "華語金選台",
+    "id": "ofiii79",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4015_ofiii79_mobile_20260123.png",
+    "description": ""
+  },
+  {
     "channelName": "全民星攻略 知識開箱",
     "id": "ofiii81",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3719_ofiii81_mobile_20250506.png",
@@ -444,15 +450,15 @@
     "description": ""
   },
   {
-    "channelName": "落花時節又逢君《2/4即將下架》",
+    "channelName": "錦繡芳華",
     "id": "ofiii109",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3779_ofiii109_mobile_20250626.png",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4019_ofiii109_mobile_20260123.png",
     "description": ""
   },
   {
-    "channelName": "楚喬傳《2/4即將下架》",
+    "channelName": "大生意人",
     "id": "ofiii110",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3113_ofiii110_mobile_20250221.png",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4022_ofiii110_mobile_20260123.png",
     "description": ""
   },
   {
@@ -672,9 +678,9 @@
     "description": ""
   },
   {
-    "channelName": "月升之江《2/4即將下架》",
-    "id": "ofiii148",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3882_ofiii148_mobile_20250924.png",
+    "channelName": "頭腦共助",
+    "id": "ofiii149",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4024_ofiii149_mobile_20260123.png",
     "description": ""
   },
   {
@@ -891,6 +897,12 @@
     "channelName": "超人力霸王台",
     "id": "ofiii187",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3843_ofiii187_mobile_20250827.png",
+    "description": ""
+  },
+  {
+    "channelName": "超人力霸王劇場版",
+    "id": "ofiii188",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4016_ofiii188_mobile_20260123.png",
     "description": ""
   },
   {
