@@ -15,7 +15,7 @@ from Crypto.Util.Padding import unpad
 import requests
 import logging
 
-# 關閉所有警告和日志
+# 关闭所有警告和日志
 warnings.filterwarnings("ignore")
 
 # 配置日志
@@ -24,25 +24,25 @@ log = logging.getLogger('werkzeug')
 log.setLevel(logging.ERROR)
 log.disabled = True
 
-# 默認配置
+# 默认配置
 DEFAULT_USER_AGENT = "%E5%9B%9B%E5%AD%A3%E7%B7%9A%E4%B8%8A/4 CFNetwork/3826.500.131 Darwin/24.5.0"
-DEFAULT_TIMEOUT = 30  # 增加超時時間
-CHANNEL_DELAY = 1  # 增加頻道之間的延遲時間（秒）
-MAX_RETRIES = 2  # 增加最大重試次數
+DEFAULT_TIMEOUT = 30  # 增加超时时间
+CHANNEL_DELAY = 1  # 增加频道之间的延迟时间（秒）
+MAX_RETRIES = 1  # 最大重试次数
 
-# 默認賬號（可被環境變量覆蓋）
+# 默认账号（可被环境变量复盖）
 DEFAULT_USER = os.environ.get('GTV_USER', '')
 DEFAULT_PASS = os.environ.get('GTV_PASS', '')
 
-# 代理設置（從環境變量讀取）
+# 代理设置（从环境变量读取）
 HTTP_PROXY = os.environ.get('http_proxy', '') or os.environ.get('HTTP_PROXY', '')
 HTTPS_PROXY = os.environ.get('https_proxy', '') or os.environ.get('HTTPS_PROXY', '')
 
-# 內存緩存
+# 内存缓存
 cache_play_urls = {}
-CACHE_EXPIRATION_TIME = 86400  # 24小時有效期
+CACHE_EXPIRATION_TIME = 86400  # 24小时有效期
 
-# 額外添加的博斯頻道列表
+# 额外添加的博斯频道清单
 EXTRA_CHANNELS = [
     {
         "fs4GTV_ID": "4gtv-live404",
@@ -76,12 +76,12 @@ EXTRA_CHANNELS = [
 
 
 def is_github_actions():
-    """檢查是否在 GitHub Actions 環境中運行"""
+    """检查是否在 GitHub Actions 环境中运行"""
     return os.environ.get('GITHUB_ACTIONS') == 'true'
 
 
 def get_proxies():
-    """從環境變量獲取代理設置"""
+    """从环境变量获取代理设置"""
     proxies = {}
     if HTTP_PROXY:
         proxies['http'] = HTTP_PROXY
@@ -90,59 +90,59 @@ def get_proxies():
 
     if proxies:
         if is_github_actions():
-            print(f"🔌 GitHub Actions 環境中使用代理: {proxies}")
+            print(f"🔌 GitHub Actions 环境中使用代理: {proxies}")
         else:
             print(f"🔌 使用代理: {proxies}")
     else:
         if is_github_actions():
-            print("🔌 GitHub Actions 環境中未設置代理，使用直接連接")
+            print("🔌 GitHub Actions 环境中未设置代理，使用直接连接")
         else:
-            print("🔌 未設置代理，使用直接連接")
+            print("🔌 未设置代理，使用直接连接")
 
     return proxies if proxies else None
 
 
 def test_proxy_connection(scraper, timeout=10):
-    """測試代理連接是否正常"""
+    """测试代理连接是否正常"""
     try:
         test_url = "https://httpbin.org/ip"
         response = scraper.get(test_url, timeout=timeout)
         if response.status_code == 200:
-            print("✅ 代理連接測試成功")
+            print("✅ 代理连接测试成功")
             return True
         else:
-            print(f"⚠️ 代理連接測試失敗，狀態碼: {response.status_code}")
+            print(f"⚠️ 代理连接测试失败，状态码: {response.status_code}")
             return False
     except Exception as e:
-        print(f"⚠️ 代理連接測試失敗: {e}")
+        print(f"⚠️ 代理连接测试失败: {e}")
         return False
 
 
 def create_scraper_with_proxy(ua):
-    """創建帶有代理設置的 scraper"""
+    """创建带有代理设置的 scraper"""
     scraper = cloudscraper.create_scraper()
     scraper.headers.update({"User-Agent": ua})
 
-    # 設置代理
+    # 设置代理
     proxies = get_proxies()
     if proxies:
         try:
             scraper.proxies.update(proxies)
 
-            # 在非 GitHub Actions 環境中測試代理連接
+            # 在非 GitHub Actions 环境中测试代理连接
             if not is_github_actions():
                 if not test_proxy_connection(scraper):
-                    print("⚠️ 代理連接測試失敗，將使用直接連接")
+                    print("⚠️ 代理连接测试失败，将使用直接连接")
                     scraper.proxies.clear()
         except Exception as e:
-            print(f"⚠️ 代理設置失敗: {e}，將使用直接連接")
+            print(f"⚠️ 代理设置失败: {e}，将使用直接连接")
             scraper.proxies.clear()
 
     return scraper
 
 
 def generate_uuid(user):
-    """根據賬號和當前日期生成唯一 UUID，確保不同用戶每天 UUID 不同"""
+    """根据账号和当前日期生成唯一 UUID，确保不同用户每天 UUID 不同"""
     today = datetime.datetime.utcnow().strftime('%Y-%m-%d')
     name = f"{user}-{today}"
     return str(uuid.uuid5(uuid.NAMESPACE_DNS, name)).upper()
@@ -182,13 +182,13 @@ def sign_in_4gtv(user, password, fsenc_key, auth_val, ua, timeout):
 
 
 def get_all_channels(ua, timeout):
-    """獲取所有頻道集合的頻道，並去除重覆頻道"""
-    channel_sets = [1, 4]  # 已知的頻道集合ID
+    """获取所有频道集合的频道，并去除重复频道"""
+    channel_sets = [1, 4]  # 已知的频道集合ID
     all_channels = []
-    seen_channel_ids = set()  # 用於跟蹤已看到的頻道ID
+    seen_channel_ids = set()  # 用于跟踪已看到的频道ID
 
     for set_id in channel_sets:
-        print(f"📡 正在獲取頻道集合 {set_id}...")
+        print(f"📡 正在获取频道集合 {set_id}...")
         url = f'https://api2.4gtv.tv/Channel/GetChannelBySetId/{set_id}/pc/L/V'
         headers = {"accept": "*/*", "origin": "https://www.4gtv.tv", "referer": "https://www.4gtv.tv/", "User-AAgent": ua}
         scraper = create_scraper_with_proxy(ua)
@@ -201,23 +201,23 @@ def get_all_channels(ua, timeout):
                 channels = data.get("Data", [])
                 for channel in channels:
                     channel_id = channel.get("fs4GTV_ID", "")
-                    # 檢查是否已經處理過這個頻道
+                    # 检查是否已经处理过这个频道
                     if channel_id not in seen_channel_ids:
                         seen_channel_ids.add(channel_id)
                         all_channels.append(channel)
-                        print(f"   ✅ 添加頻道: {channel.get('fsNAME', '未知')}")
+                        print(f"   ✅ 添加频道: {channel.get('fsNAME', '未知')}")
                     else:
-                        print(f"   ⏭️  跳過重覆頻道: {channel.get('fsNAME', '未知')}")
+                        print(f"   ⏭️  跳过重复频道: {channel.get('fsNAME', '未知')}")
         except Exception as e:
-            print(f"   ❌ 獲取頻道集合 {set_id} 失敗: {e}")
+            print(f"   ❌ 获取频道集合 {set_id} 失败: {e}")
             continue
 
     return all_channels
 
 
 def get_4gtv_channel_url_with_retry(channel_id, fnCHANNEL_ID, fsVALUE, fsenc_key, auth_val, ua, timeout, max_retries=MAX_RETRIES):
-    """帶重試機制的獲取頻道URL函數"""
-    # 檢查緩存
+    """带重试机制的获取频道URL函数"""
+    # 检查缓存
     current_time = time.time()
     cache_key = f"{channel_id}_{fnCHANNEL_ID}"
     if cache_key in cache_play_urls:
@@ -246,69 +246,49 @@ def get_4gtv_channel_url_with_retry(channel_id, fnCHANNEL_ID, fsVALUE, fsenc_key
             }
             scraper = create_scraper_with_proxy(ua)
 
-            print(f"   📡 請求參數: channel_id={channel_id}, fnCHANNEL_ID={fnCHANNEL_ID}")
-            
             resp = scraper.post('https://api2.4gtv.tv/App/GetChannelUrl2', headers=headers, json=payload, timeout=timeout)
-            
-            # 檢查響應狀態
-            print(f"   📊 響應狀態碼: {resp.status_code}")
-            
             resp.raise_for_status()
             data = resp.json()
-            
-            # 打印調試信息
-            if not data.get('Success'):
-                print(f"   ❌ API返回失敗: {data.get('Message', '未知錯誤')}")
-                print(f"   🔍 響應數據: {json.dumps(data, ensure_ascii=False)[:200]}...")
-                
-                # 檢查是否是權限問題
-                if data.get('Message') and ('授權' in data.get('Message') or 'auth' in data.get('Message', '').lower()):
-                    print("   ⚠️  可能是權限問題，該頻道可能需要特殊訂閱")
-            
             if data.get('Success') and 'flstURLs' in data.get('Data', {}):
                 url = data['Data']['flstURLs'][1]
-                print(f"   ✅ 獲取URL成功: {url[:80]}...")
-                # 更新緩存
+                # 更新缓存
                 cache_play_urls[cache_key] = (current_time, url)
                 return url
             return None
         except Exception as e:
             if attempt < max_retries - 1:
-                print(f"⚠️ 獲取頻道 {channel_id} 失敗，正在重試 ({attempt + 1}/{max_retries}): {e}")
-                time.sleep(3)  # 重試前等待3秒
+                print(f"⚠️ 获取频道 {channel_id} 失败，正在重试 ({attempt + 1}/{max_retries})")
+                time.sleep(2)  # 重试前等待2秒
             else:
-                print(f"❌ 獲取頻道 {channel_id} 失敗，已達到最大重試次數: {e}")
-                # 打印詳細的錯誤信息
-                import traceback
-                print(f"   🔍 詳細錯誤: {traceback.format_exc()[:300]}")
+                print(f"❌ 获取频道 {channel_id} 失败，已达到最大重试次数")
                 return None
     return None
 
 
 def get_highest_bitrate_url(master_url):
-    """嘗試獲取更高質量的URL - 只對特定開頭的網址進行處理"""
-    # 只對以 "https://4gtvfree-mozai.4gtv.tv" 開頭的網址進行處理
-    if master_url and master_url.startswith("https://4gtvfree-mozai.4gtv.tv") and 'index.m3u8' in master_url:
-        print(f"   📶 嘗試獲取高質量URL (1080p)...")
+    """尝试获取更高质量的URL - 只对特定开头的网址进行处理"""
+    # 只对以 "https://4gtvfree-mozai.4gtv.tv" 开头的网址进行处理
+    if master_url.startswith("https://4gtvfree-mozai.4gtv.tv") and 'index.m3u8' in master_url:
+        print(f"   📶 尝试获取高质量URL (1080p)...")
         return master_url.replace('index.m3u8', '1080.m3u8')
 
-    # 對於其他網址，保持原樣
-    print(f"   📶 使用原始URL")
+    # 对于其他网址，保持原样
+    print(f"   📶 使用原始URL（非4gtvfree-mozai域名）")
     return master_url
 
 
 def print_progress_bar(iteration, total, prefix='', suffix='', decimals=1, length=50, fill='█', print_end="\r"):
     """
-    打印進度條
+    打印进度条
     @params:
-        iteration   - 當前進度 (Int)
-        total       - 總數 (Int)
-        prefix      - 前綴字符串 (Str)
-        suffix      - 後綴字符串 (Str)
-        decimals    - 小數位數 (Int)
-        length      - 進度條長度 (Int)
-        fill        - 進度條填充字符 (Str)
-        print_end   - 結束字符 (Str)
+        iteration   - 当前进度 (Int)
+        total       - 总数 (Int)
+        prefix      - 前缀字符串 (Str)
+        suffix      - 后缀字符串 (Str)
+        decimals    - 小数位数 (Int)
+        length      - 进度条长度 (Int)
+        fill        - 进度条填充字符 (Str)
+        print_end   - 结束字符 (Str)
     """
     percent = ("{0:." + str(decimals) + "f}").format(100 * (iteration / float(total)))
     filled_length = int(length * iteration // total)
@@ -320,57 +300,57 @@ def print_progress_bar(iteration, total, prefix='', suffix='', decimals=1, lengt
 
 
 def generate_m3u_playlist(user, password, ua, timeout, output_dir="playlist", delay=CHANNEL_DELAY):
-    """生成M3U播放列表"""
+    """生成M3U播放清单"""
     try:
-        # 創建輸出目錄
+        # 创建输出目录
         os.makedirs(output_dir, exist_ok=True)
 
-        print("🔑 正在生成認證信息...")
-        # 生成認證信息
+        print("🔑 正在生成认证信息...")
+        # 生成认证信息
         fsenc_key = generate_uuid(user)
         auth_val = generate_4gtv_auth()
         fsVALUE = sign_in_4gtv(user, password, fsenc_key, auth_val, ua, timeout)
 
         if not fsVALUE:
-            print("❌ 登錄失敗")
+            print("❌ 登录失败")
             return False
 
-        print("📡 正在獲取頻道列表...")
-        # 獲取所有頻道
+        print("📡 正在获取频道清单...")
+        # 获取所有频道
         channels = get_all_channels(ua, timeout)
 
         if not channels:
-            print("❌ 無法獲取頻道列表")
+            print("❌ 无法获取频道清单")
             return False
 
-        print(f"📺 共找到 {len(channels)} 個頻道")
-        
-        # 添加額外指定的博斯頻道到頻道列表
-        print("📡 添加額外博斯運動頻道...")
+        print(f"📺 共找到 {len(channels)} 个频道")
+
+        # 添加额外指定的博斯频道到频道清单
+        print("📡 添加额外博斯运动频道...")
         for extra_channel in EXTRA_CHANNELS:
-            # 檢查是否已經存在相同的頻道
+            # 检查是否已经存在相同的频道
             existing = False
             for channel in channels:
                 if channel.get("fs4GTV_ID") == extra_channel["fs4GTV_ID"]:
                     existing = True
                     break
-            
+
             if not existing:
                 channels.append(extra_channel)
-                print(f"   ✅ 添加額外頻道: {extra_channel['fsNAME']}")
+                print(f"   ✅ 添加额外频道: {extra_channel['fsNAME']}")
             else:
-                print(f"   ⏭️  跳過已存在的額外頻道: {extra_channel['fsNAME']}")
-        
-        print(f"📺 添加額外頻道後，總共 {len(channels)} 個頻道")
+                print(f"   ⏭️  跳过已存在的额外频道: {extra_channel['fsNAME']}")
 
-        # 創建M3U文件
+        print(f"📺 添加额外频道后，总共 {len(channels)} 个频道")
+
+        # 创建M3U文件
         m3u_content = "#EXTM3U\n"
         successful_channels = 0
         failed_channels = 0
         failed_list = []
 
-        # 顯示進度條
-        print("🚀 開始處理頻道:")
+        # 显示进度条
+        print("🚀 开始处理频道:")
         total_channels = len(channels)
 
         for index, channel in enumerate(channels):
@@ -380,117 +360,100 @@ def generate_m3u_playlist(user, password, ua, timeout, output_dir="playlist", de
             channel_logo = channel.get("fsLOGO_MOBILE", "")
             fnCHANNEL_ID = channel.get("fnID", "")
 
-            # 處理頻道類型
+            # 处理频道类型
             if channel_type:
-                # 分割字符串並取第一部分
+                # 分割字符串并取第一部分
                 channel_type = channel_type.split(',')[0]
 
-            # 檢查是否為fast-live開頭，如果是則修改類型為FastTV飛速看
+            # 检查是否为fast-live开头，如果是则修改类型为FastTV飞速看
             if channel_id.startswith('fast-live'):
-                channel_type = "FastTV飛速看"
+                channel_type = "FastTV飞速看"
 
-            # 顯示當前處理的頻道信息
-            print(f"\n[{index+1}/{total_channels}] 處理頻道: {channel_name}")
-            print(f"   📺 頻道類型: {channel_type}")
+            # 显示当前处理的频道信息
+            print(f"\n[{index+1}/{total_channels}] 处理频道: {channel_name}")
+            print(f"   📺 频道类型: {channel_type}")
 
-            # 添加延遲
+            # 添加延迟
             time.sleep(delay)
 
-            # 獲取頻道URL（帶重試機制）
+            # 获取频道URL（带重试机制）
             try:
-                print(f"   🔗 獲取頻道URL...")
+                print(f"   🔗 获取频道URL...")
                 stream_url = get_4gtv_channel_url_with_retry(channel_id, fnCHANNEL_ID, fsVALUE, fsenc_key, auth_val, ua, timeout)
-                
                 if not stream_url:
-                    # 如果是博斯頻道，嘗試使用備用方法
-                    if channel_id in ["4gtv-live404", "4gtv-live405", "4gtv-live406", "4gtv-live407"]:
-                        print(f"   ⚠️  博斯頻道 {channel_name} 無法獲取URL，嘗試使用備用方案...")
-                        # 這里可以添加備用URL，如果有的話
-                        # 例如：stream_url = f"https://example.com/backup/{channel_id}.m3u8"
-                        print(f"   ℹ️  目前沒有備用URL，需要手動添加")
-                    
-                    print(f"   ❌ 無法獲取頻道 {channel_name} 的URL")
+                    print(f"   ❌ 无法获取频道 {channel_name} 的URL")
                     failed_channels += 1
-                    failed_list.append((channel_name, "無法獲取URL"))
+                    failed_list.append((channel_name, "无法获取URL"))
                     continue
 
-                # 嘗試獲取更高質量的URL（僅對特定域名）
+                # 尝试获取更高质量的URL（仅对特定域名）
                 highest_url = get_highest_bitrate_url(stream_url)
 
-                # 添加到M3U內容
+                # 添加到M3U内容
                 m3u_content += f'#EXTINF:-1 tvg-id="{channel_name}" tvg-name="{channel_name}" tvg-logo="{channel_logo}" group-title="{channel_type}",{channel_name}\n'
                 m3u_content += f"{highest_url}\n"
 
-                print(f"   ✅ 已添加頻道: {channel_name}")
+                print(f"   ✅ 已添加频道: {channel_name}")
                 successful_channels += 1
 
             except Exception as e:
-                print(f"   ❌ 處理頻道 {channel_name} 時出錯: {e}")
+                print(f"   ❌ 处理频道 {channel_name} 时出错: {e}")
                 failed_channels += 1
                 failed_list.append((channel_name, str(e)))
                 continue
 
-            # 更新進度條
-            print_progress_bar(index + 1, total_channels, prefix='進度:', suffix=f'完成 {index+1}/{total_channels}')
+            # 更新进度条
+            print_progress_bar(index + 1, total_channels, prefix='进度:', suffix=f'完成 {index+1}/{total_channels}')
 
-        # 寫入文件
+        # 写入文件
         output_path = os.path.join(output_dir, "4gtv.m3u")
         with open(output_path, "w", encoding="utf-8") as f:
             f.write(m3u_content)
 
-        print(f"\n🎉 播放列表生成完成: {output_path}")
-        print(f"✅ 成功處理: {successful_channels} 個頻道")
-        print(f"❌ 失敗處理: {failed_channels} 個頻道")
+        print(f"\n🎉 播放清单生成完成: {output_path}")
+        print(f"✅ 成功处理: {successful_channels} 个频道")
+        print(f"❌ 失败处理: {failed_channels} 个频道")
 
         if failed_list:
-            print("\n📋 失敗頻道清單:")
+            print("\n📋 失败频道清单:")
             for channel_name, error in failed_list:
                 print(f"   - {channel_name}: {error}")
-                
-            # 如果有失敗的博斯頻道，顯示額外信息
-            bos_channels = [ch for ch in failed_list if "博斯" in ch[0]]
-            if bos_channels:
-                print(f"\n⚠️  博斯頻道獲取失敗可能原因:")
-                print(f"   1. 需要特殊訂閱或套餐")
-                print(f"   2. 頻道ID可能已更改")
-                print(f"   3. 地區限制或IP限制")
-                print(f"   4. 您可以嘗試手動登錄4gtv網站查看這些頻道是否可用")
 
         return True
 
     except Exception as e:
-        print(f"❌ 生成播放列表時出錯: {e}")
+        print(f"❌ 生成播放清单时出错: {e}")
         import traceback
         traceback.print_exc()
         return False
 
 
 def main():
-    """主函數，提供命令行界面"""
+    """主函数，提供命令行界面"""
     import argparse
 
-    parser = argparse.ArgumentParser(description='4GTV 流媒體獲取工具')
-    parser.add_argument('--generate-playlist', action='store_true', help='生成M3U播放列表')
-    parser.add_argument('--user', type=str, default=DEFAULT_USER, help='用戶名')
-    parser.add_argument('--password', type=str, default=DEFAULT_PASS, help='密碼')
-    parser.add_argument('--ua', type=str, default=DEFAULT_USER_AGENT, help='用戶代理')
-    parser.add_argument('--timeout', type=int, default=DEFAULT_TIMEOUT, help='超時時間(秒)')
-    parser.add_argument('--output-dir', type=str, default="playlist", help='輸出目錄')
-    parser.add_argument('--delay', type=float, default=CHANNEL_DELAY, help='頻道之間的延遲時間(秒)')
-    parser.add_argument('--retries', type=int, default=MAX_RETRIES, help='最大重試次數')
-    parser.add_argument('--verbose', action='store_true', help='顯示詳細處理信息')
-    parser.add_argument('--proxy', type=str, help='代理服務器（例如: http://username:password@proxy.com:port）')
-    parser.add_argument('--no-proxy', action='store_true', help='強制不使用代理')
+    parser = argparse.ArgumentParser(description='4GTV 流媒体获取工具')
+    parser.add_argument('--generate-playlist', action='store_true', help='生成M3U播放清单')
+    parser.add_argument('--user', type=str, default=DEFAULT_USER, help='用户名')
+    parser.add_argument('--password', type=str, default=DEFAULT_PASS, help='密码')
+    parser.add_argument('--ua', type=str, default=DEFAULT_USER_AGENT, help='用户代理')
+    parser.add_argument('--timeout', type=int, default=DEFAULT_TIMEOUT, help='超时时间(秒)')
+    parser.add_argument('--output-dir', type=str, default="playlist", help='输出目录')
+    parser.add_argument('--delay', type=float, default=CHANNEL_DELAY, help='频道之间的延迟时间(秒)')
+    parser.add_argument('--retries', type=int, default=MAX_RETRIES, help='最大重试次数')
+    parser.add_argument('--verbose', action='store_true', help='显示详细处理信息')
+    parser.add_argument('--proxy', type=str, help='代理服务器（例如: http://username:password@proxy.com:port）')
+    parser.add_argument('--no-proxy', action='store_true', help='强制不使用代理')
 
     args = parser.parse_args()
 
-    # 設置代理（命令行參數優先於環境變量）
+    # 设置代理（命令行参数优先于环境变量）
     global HTTP_PROXY, HTTPS_PROXY
 
     if args.no_proxy:
         HTTP_PROXY = ''
         HTTPS_PROXY = ''
-        print("🔌 強制禁用代理")
+        print("🔌 强制禁用代理")
     elif args.proxy:
         HTTP_PROXY = args.proxy
         HTTPS_PROXY = args.proxy
