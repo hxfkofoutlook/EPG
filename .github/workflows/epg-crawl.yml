@@ -3,7 +3,7 @@ name: LiTV EPG Daily Crawler
 on:
   schedule:
     # 每日 UTC 時間 12:00 (台灣時間 20:00) 執行
-    - cron: '0 12 * * *'
+    - cron: '0 08 * * *'
   workflow_dispatch:  # 允許手動觸發
   push:
     branches: [ main ]
