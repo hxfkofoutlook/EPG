@@ -512,7 +512,6 @@ SiCAR愛車酷,#genre#
 【Andy老爹試駕】中型休旅新選擇！配備、科技一樣不少 還有鏡像功能可連接多項設備！？唯獨後座功能少嫌可惜！｜FORD Territory 1.5T Per4mance Hybrid 驚豔版｜,http://localhost:5000/ofiii216/index.m3u8?episode_id=vod59791-000240M001
 【艾兒試駕】甜到心坎裡！3萬多就能入手！宏佳騰 Ai-4 Ever｜小隻女必看，設計大師級的零壓力代步車！,http://localhost:5000/ofiii216/index.m3u8?episode_id=vod59791-000241M001
 WTO姐妹會,#genre#
-第3301集 出國旅遊別再吃老梗料理!! 這些才是真正的隱藏版美味?!,http://localhost:5000/ofiii129/index.m3u8?episode_id=vod9985-003301M001
 第3302集 各國社會現象的蛛絲馬跡... 從各國OO指數就能見端倪?!,http://localhost:5000/ofiii129/index.m3u8?episode_id=vod9985-003302M001
 第3303集 台灣這東西大得驚人 外國人全被嚇壞了?!,http://localhost:5000/ofiii129/index.m3u8?episode_id=vod9985-003303M001
 第3304集 各國人的被騙關鍵字!! 遇到這些秒上當受騙?!,http://localhost:5000/ofiii129/index.m3u8?episode_id=vod9985-003304M001
@@ -608,7 +607,11 @@ WTO姐妹會,#genre#
 第3394集 各國隱藏的貼心服務 這些竟然都能免費拿?!,http://localhost:5000/ofiii129/index.m3u8?episode_id=vod9985-003394M001
 第3395集 天氣冷颼颼需要溫暖一下!! 外國人竟在台灣找到溫暖?!,http://localhost:5000/ofiii129/index.m3u8?episode_id=vod9985-003395M001
 第3396集 出國旅遊買買買別錯過!! 這些貼心商品買到就賺到?!,http://localhost:5000/ofiii129/index.m3u8?episode_id=vod9985-003396M001
+第3397集 各國超強行銷花招!! 保證讓你把錢掏出來?!,http://localhost:5000/ofiii129/index.m3u8?episode_id=vod9985-003397M001
 Yes娛樂,#genre#
+2025娛樂圈紅色炸彈盤點！典LU cp成真 許瑋甯 劉品言都當媽咪了~鼓鼓大元長跑12年,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod83118-000000M001
+柾國爆熱戀Winter讓YG「經典緋聞回應 」被重挖！「如果是真的就祝福」還甩鍋給SM,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod83117-000000M001
+2025必看台劇盤點！柯佳嬿2部上榜《回魂計》埋伏筆？張鈞甯強搭金鐘影帝,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod83116-000000M001
 情人節直擊「童協」婚禮賓客也大放閃！ 陳喬恩甜牽帥老公～《海角七號》CP首次同框見習婚禮!!,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod83110-000000M001
 孫協志 夏宇童婚禮賓客地獄哽滿滿! 「希望不要有下次」上次沒參加到這次一定要來!!,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod83109-000000M001
 童協大婚！米可白身邊不見男友是來見習？曾國城豪包「上萬禮金」虧：希望是最後一次,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod83108-000000M001
@@ -641,9 +644,6 @@ AI造臉侵權從周星馳到普通人 誰該為數字時代買單,http://localh
 李榮浩楊丞琳機場牽手 同色系穿搭細節拉滿真夫妻就是好嗑,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod83044-000000M001
 張學友又贏麻了一輪巡演票房破44億 這才是真正的演藝圈印鈔機,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod83041-000000M001
 馬筱梅回台北待產許願寶寶似學霸 玥兒箖箖回京會碰撞啥火花,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod83050-000000M001
-袁詠儀張智霖25年銀婚 娛樂圈愛情典範甜爆全網,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod83049-000000M001
-舒淇林心如林熙蕾立春同框 三大女神素顏出遊狀態絕了,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod83048-000000M001
-胡定欣立春官宣離巢感恩過往 勇敢奔赴新未來引淚目,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod83047-000000M001
 一字千金,#genre#
 第1季第1集 高學歷藝人(上),http://localhost:5000/ofiii142/index.m3u8?episode_id=vod64324-010001M001
 第1季第2集 高學歷藝人(下),http://localhost:5000/ofiii142/index.m3u8?episode_id=vod64324-010002M001
@@ -3163,7 +3163,6 @@ LiTV偶像專題特企-Passion Sisters 林可、畇二小專訪,http://localhost
 OVA1,http://localhost:5000/ofiii174/index.m3u8?episode_id=vod8760-068001M001
 OVA2,http://localhost:5000/ofiii174/index.m3u8?episode_id=vod8760-068002M001
 大大平評理,#genre#
-再蓋5廠換關稅降至15%台積電與魔鬼交易划算嗎？,http://localhost:5000/ofiii207/index.m3u8?episode_id=vod69896-000342M001
 川普唐羅主義瞎忙一場？中國冷眼旁觀 讓子彈飛？,http://localhost:5000/ofiii207/index.m3u8?episode_id=vod69896-000343M001
 川普晶片關稅暗藏陷阱？中國識破 拒買H200？,http://localhost:5000/ofiii207/index.m3u8?episode_id=vod69896-000344M001
 川普大鬧西半球！歐盟翻臉 中國賺翻？,http://localhost:5000/ofiii207/index.m3u8?episode_id=vod69896-000345M001
@@ -3175,6 +3174,18 @@ OVA2,http://localhost:5000/ofiii174/index.m3u8?episode_id=vod8760-068002M001
 台灣淪列強拿捏中國軟肋！習近平整肅解放軍要動武？,http://localhost:5000/ofiii207/index.m3u8?episode_id=vod69896-000352M001
 黃金關鍵支撐價位4800？Fed新舵手恐加速去美元化？,http://localhost:5000/ofiii207/index.m3u8?episode_id=vod69896-000353M001
 台美軍售擋習連任？川普被逼對台海表態？,http://localhost:5000/ofiii207/index.m3u8?episode_id=vod69896-000354M001
+川習通話 台美軍購生變？軟體股崩 AI焦慮引拋售？,http://localhost:5000/ofiii207/index.m3u8?episode_id=vod69896-000355M001
+大新聞大爆卦,#genre#
+綠1詭異動作暗挺中天復台？賴清德忍不住求韓國瑜？郭正亮看1現象罕見轟爆藍白！柯建銘柯文哲聯手弄垮綠？,http://localhost:5000/ofiii201/index.m3u8?episode_id=vod48369-001172M001
+黃揚明揭穿賴民調造王虛招了！郭正亮罵醒藍獅群開始整軍了！謝寒冰再打爆曹興誠的臉了？賴瑞隆548088要貼到投票那天了？,http://localhost:5000/ofiii201/index.m3u8?episode_id=vod48369-001173M001
+鄭麗文對賴開戰要幫他收驚了！郭正亮發現威廉失言大秘密了！蔡正元入獄前給藍白2026必勝錦囊了！,http://localhost:5000/ofiii201/index.m3u8?episode_id=vod48369-001174M001
+郭正亮獻策解鄭麗文三都危機了！賴桑被川習熱線偷襲了打矇了！吳子嘉諷小賴是綠最弱參選人了,http://localhost:5000/ofiii201/index.m3u8?episode_id=vod48369-001175M001
+韓國瑜連春聯也輾壓賴清德了？他跟柯文哲要聯手挺柯志恩奪回高雄了！立陶宛打了民進黨一巴掌了！,http://localhost:5000/ofiii201/index.m3u8?episode_id=vod48369-001176M001
+郭正亮驚爆小賴打電話向他求救了！他綠黨內仇結深了做甚麼都沒用了！綠北弱南亂七大地雷要爆了！,http://localhost:5000/ofiii201/index.m3u8?episode_id=vod48369-001177M001
+郭正亮說中了？高金素梅遭搜索驚爆這恐怖單位出手？韓國瑜雷霆出手？賴清德還未上茶綠委就造反？,http://localhost:5000/ofiii201/index.m3u8?episode_id=vod48369-001178M001
+郭正亮爆綠拿3小案卡高金這時會有大動作？彭文正籲韓國瑜這招反擊！賴清德催預算白點頭綠白合了？,http://localhost:5000/ofiii201/index.m3u8?episode_id=vod48369-001179M001
+郭正亮給侯友宜挺李四川出線100分了！盧媽也要出手橋江啟臣楊瓊瓔了？北檢起訴罵賴XX娘的白委表忠了！,http://localhost:5000/ofiii201/index.m3u8?episode_id=vod48369-001180M001
+2026-02-13,http://localhost:5000/ofiii201/index.m3u8?episode_id=vod48369-001181M001
 大生意人,#genre#
 第1集,http://localhost:5000/ofiii110/index.m3u8?episode_id=vod81584-000001M001
 第2集,http://localhost:5000/ofiii110/index.m3u8?episode_id=vod81584-000002M001
@@ -3216,8 +3227,6 @@ OVA2,http://localhost:5000/ofiii174/index.m3u8?episode_id=vod8760-068002M001
 第38集,http://localhost:5000/ofiii110/index.m3u8?episode_id=vod81584-000038M001
 第39集,http://localhost:5000/ofiii110/index.m3u8?episode_id=vod81584-000039M001
 第40集,http://localhost:5000/ofiii110/index.m3u8?episode_id=vod81584-000040M001
-大自然流水聲,#genre#
-【白噪音系列，流水聲】,http://localhost:5000/ofiii255/index.m3u8?episode_id=vod79031-000001M001
 天才答不答,#genre#
 第1集 張艾亞笨到遭眾人唾棄！郭鑫與猛男尬舞超享受？！,http://localhost:5000/ofiii136/index.m3u8?episode_id=vod78648-000001M001
 第2集 請問正常情況下，哪隻手指頭的指甲長得最快？,http://localhost:5000/ofiii136/index.m3u8?episode_id=vod78648-000002M001
@@ -4070,16 +4079,13 @@ OVA2,http://localhost:5000/ofiii174/index.m3u8?episode_id=vod8760-068002M001
 第99集,http://localhost:5000/ofiii199/index.m3u8?episode_id=vod11066-000099M001
 第100集,http://localhost:5000/ofiii199/index.m3u8?episode_id=vod11066-000100M001
 掏掏新聞,#genre#
-大大平評理-台美軍售擋習連任？川普被逼對台海表態？,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod69896-000354M001
-幸福空間-第七十二集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod70063-000072M001
-大大平評理-台灣淪列強拿捏中國軟肋！習近平整肅解放軍要動武？,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod69896-000352M001
-台灣1001個故事-第五集-為市場氤氳的深夜食堂,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod64567-000005M001
 大大平評理-川習通話 台美軍購生變？軟體股崩 AI焦慮引拋售？,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod69896-000355M001
 大雲時堂-無法迎合眾人不如迎合自心來賓樂樂律師,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod51575-000316M001
 52直播間-在野陣營2026勝選越來越艱困？松信新人參選爆炸將爆內訌？,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod69643-010097M001
 人生從此不一樣-第一集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod57381-000001M001
 大大平評理-大動作清肅解放軍中國對東亞動武前兆大大總動員,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod69896-000356M001
 健康大錢線-減肥停滯期與勃起功能保養,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod79599-000012M001
+大大平評理-台灣淪列強拿捏中國軟肋！習近平整肅解放軍要動武？,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod69896-000352M001
 現代啟示錄-台灣陰廟傳說,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod64568-000002M001
 大大平評理-日本大選「高市早苗」大獲全勝！亞洲地緣政治與財經局勢將迎來大變數？,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod69896-000357M001
 健康大錢線-洗腦防失智+失智症+阿茲海默新藥,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod79599-000007M001
@@ -4090,7 +4096,9 @@ OVA2,http://localhost:5000/ofiii174/index.m3u8?episode_id=vod8760-068002M001
 大雲時堂-從零到卓越的電巴築夢之路華德動能蔡裕慶,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod51575-000314M001
 政治琳龍SAY-10藍綠立委被起訴 只要緩刑就不能選卡選舉爆爆陰謀論？美跨黨派37議員聯名致函籲盡速通過1.25兆軍費 急分潤？,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod70083-000071M001
 台灣啟示錄-第二十二集-史上最多他被判十個死刑,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod64374-000022M001
+大大平評理-台美軍售擋習連任？川普被逼對台海表態？,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod69896-000354M001
 健康大錢線-肺癌與逆轉糖尿病前期,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod79599-000010M001
+幸福空間-第一百零一集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod70063-000101M001
 擁有超常技能的異世界流浪美食家,#genre#
 第1季第1集 超常技能很有用,http://localhost:5000/ofiii160/index.m3u8?episode_id=vod60388-010001M001
 第1季第2集 引人注目的從魔是活著的傳說,http://localhost:5000/ofiii160/index.m3u8?episode_id=vod60388-010002M001
@@ -6011,18 +6019,14 @@ M3 Touring，我們終於等到你了...(淚流滿面）,http://localhost:5000/o
 第4季第15集 日本：前往日本海的秘境 體驗不同的海岸風情,http://localhost:5000/ofiii248/index.m3u8?episode_id=vod20116-040015M001
 第4季第16集 日本：日本美食之都大阪 體驗茶道文化,http://localhost:5000/ofiii248/index.m3u8?episode_id=vod20116-040016M001
 空中英語教室HD頻道,#genre#
-空中英語教室-Cupcake Sabotage  杯子蛋糕破壞事件（上）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-260212M001
-Info Cloud,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-231208M001
-大家說英語-The Winter Olympics  冬季奧運會（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-260213M001
-Calendar Phrase,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-190508M001
 空中英語教室-Cupcake Sabotage  杯子蛋糕破壞事件（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-260213M001
-大家說英語-Saturday Review本週課程複習,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-260214M001
-空中英語教室-Morning Coffee  晨間咖啡,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-260211M001
-大家說英語-The Winter Olympics  冬季奧運會（上）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-260212M001
-空中英語教室-Celebrating Lunar New Year  農曆新年慶團圓（上）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-260216M001
 Info Cloud,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-231209M001
-大家說英語-Fun Facts About Coffee  有趣的咖啡冷知識,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-260216M001
+大家說英語-Saturday Review本週課程複習,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-260214M001
 Calendar Phrase,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-190509M001
+空中英語教室-Celebrating Lunar New Year  農曆新年慶團圓（上）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-260216M001
+大家說英語-Fun Facts About Coffee  有趣的咖啡冷知識,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-260216M001
+空中英語教室-Cupcake Sabotage  杯子蛋糕破壞事件（上）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-260212M001
+大家說英語-The Winter Olympics  冬季奧運會（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-260213M001
 空中英語教室-Celebrating Lunar New Year  農曆新年慶團圓（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-260217M001
 Info Cloud,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-231211M001
 大家說英語-Good Relationships  良好的人際關係小撇步（上）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-260217M001
@@ -6039,6 +6043,9 @@ Calendar Phrase,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-190
 Info Cloud,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-231214M001
 大家說英語-Dream Big! Skate Fast!  做大夢！速滑冰！（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-260220M001
 Calendar Phrase,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-190516M001
+Info Cloud,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-231215M001
+大家說英語-Saturday Review本週課程複習,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-260221M001
+Calendar Phrase,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-190517M001
 第1財經,#genre#
 鉅亨加密世界-價值儲存：從黃金到比特幣！再到區塊鏈黃金！,http://localhost:5000/ofiii64/index.m3u8?episode_id=vod50513-000195M001
 港股大講堂-中國超預期政策支持，港股急漲還有空間？,http://localhost:5000/ofiii64/index.m3u8?episode_id=vod39117-000194M001
@@ -6232,12 +6239,6 @@ Calendar Phrase,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-190
 【白噪音系列，雷雨聲】,http://localhost:5000/ofiii250/index.m3u8?episode_id=vod73056-000001M001
 【白噪音系列，雷雨聲－房間版】,http://localhost:5000/ofiii250/index.m3u8?episode_id=vod73056-000002M001
 經典劇場,#genre#
-白色強人(國語配音)-第25集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod70272-000025M001
-我家無難事(國語配音)-第1集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod50027-000001M001
-宮心計-第25集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod72350-000025M001
-宮心計-第26集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod72350-000026M001
-法言人-第22集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod70853-000022M001
-法言人-第23集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod70853-000023M001
 我家無難事(國語配音)-第2集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod50027-000002M001
 我家無難事(國語配音)-第3集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod50027-000003M001
 宮心計-第27集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod72350-000027M001
@@ -6268,8 +6269,13 @@ Calendar Phrase,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-190
 下海-第3集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod57124-000003M001
 神耆小子-第7集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod75301-000007M001
 神耆小子-第8集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod75301-000008M001
+我家無難事(國語配音)-第12集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod50027-000012M001
+我家無難事(國語配音)-第13集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod50027-000013M001
+下海-第4集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod57124-000004M001
+下海-第5集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod57124-000005M001
+神耆小子-第9集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod75301-000009M001
+神耆小子-第10集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod75301-000010M001
 綜藝大集合,#genre#
-第1160集 馬國畢、阿虎一對廢棒！郭忠祐太帥會作怪？瓜哥已經年近70？被苗栗南霸天挑釁！籃籃要被潑水怕到不行？(苗栗三義),http://localhost:5000/ofiii125/index.m3u8?episode_id=vod9838-001160M001
 第1161集 瓜哥30年前照片大曝光！現場缽缽雞！阿翔、綠茶對戰不知道在忙什麼！籃籃男朋友200cm？小Call玩遊戲玩到鬥雞眼？(新竹芎林),http://localhost:5000/ofiii125/index.m3u8?episode_id=vod9838-001161M001
 第1162集 藝人組競爭1秒之差！慧慈登場大集合？瓜哥撞衫現場脫了！製作人也下場玩遊戲！ROCK嫌瓜哥訪問煩？藝人隊被稱臭魚爛蝦？(新北新莊),http://localhost:5000/ofiii125/index.m3u8?episode_id=vod9838-001162M001
 第1163集 瓜哥重挫頂尖選手？平時拒賽只因實力過度強勢！(雲林台西),http://localhost:5000/ofiii125/index.m3u8?episode_id=vod9838-001163M001
@@ -6365,6 +6371,7 @@ Calendar Phrase,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-190
 第1253集 音樂來了瓜哥來一個大跳！？董哥太搶戲啦主持都被說完了！？害到隊友檸檬原本計畫不是這樣！阿翔看到學弟妹優秀為之動容！(台南安定),http://localhost:5000/ofiii125/index.m3u8?episode_id=vod9838-001253M001
 第1254集 唐從聖超狂速度撞出新紀錄！？膽大包天！郭忠祐一句話讓瓜哥當場變臉？亦凱帶來關鍵一刻！？妖嬌做什麼都會怕但什麼都贏！？(屏東潮州),http://localhost:5000/ofiii125/index.m3u8?episode_id=vod9838-001254M001
 第1255集 初五倒垃圾瓜哥被挨打！？佩德羅舞蹈出超難題！媽媽直接傻眼 關卡開打 藝人遇到對手了？(雲林麥寮),http://localhost:5000/ofiii125/index.m3u8?episode_id=vod9838-001255M001
+第1256集 戲曲身段破氣球 爆笑連連！花招有了，但氣球沒破耶！,http://localhost:5000/ofiii125/index.m3u8?episode_id=vod9838-001256M001
 脖子解說 Mr. Neck,#genre#
 車友改什麼53│FOCUS LOMMEL車友分享下麗寶賽道經驗!? 熱熔胎與街胎差異!? 變速箱鎖檔?中冷是什麼東西?,http://localhost:5000/ofiii218/index.m3u8?episode_id=vod70202-000034M001
 車友來交車11│納智捷N⁷首批交車!! 車主使用不到一週滿滿的優缺點心得分享! 開過電車真的回不去了??,http://localhost:5000/ofiii218/index.m3u8?episode_id=vod70202-000035M001
