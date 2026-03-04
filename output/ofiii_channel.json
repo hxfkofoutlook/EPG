@@ -9,14 +9,19 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3720_ofiii16_tv_20250506.png",
     "綜合"
   ],
+  "ofiii22": [
+    "哆啦Ａ夢台",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_litv-vchannel22_mobile_20190902.png",
+    "熱門收視頻道"
+  ],
+  "ofiii23": [
+    "新哆啦A夢(中文版)",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3386_ofiii23_mobile_20240709.png",
+    "卡通‧兒童"
+  ],
   "ofiii24": [
     "新哆啦A夢(中文版)2台",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3841_ofiii24_tv_20250827.png",
-    "卡通‧兒童"
-  ],
-  "ofiii25": [
-    "毛茸茸親子台",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3952_ofiii25_tv_20251223.png",
     "卡通‧兒童"
   ],
   "ofiii32": [
@@ -44,29 +49,14 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_ofiii47_mobile_20230707.png",
     "新聞‧財經"
   ],
-  "ofiii50": [
-    "掏掏新聞",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_litv-playout50_mobile_20211124.png",
-    "新聞‧財經"
-  ],
   "ofiii55": [
     "國際大小事",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3560_ofiii55_mobile_20241202.png",
     "新聞‧財經"
   ],
-  "ofiii64": [
-    "第1財經",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_ofiii64_mobile_20221110.png",
-    "新聞‧財經"
-  ],
   "ofiii70": [
     "Golden 強片台",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3562_ofiii70_mobile_20241203.png",
-    "電影"
-  ],
-  "ofiii73": [
-    "周星馳台",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3202_ofiii73_mobile_20240105.png",
     "電影"
   ],
   "ofiii74": [
@@ -99,6 +89,16 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4015_ofiii79_tv_20260123.png",
     "電影"
   ],
+  "ofiii81": [
+    "全民星攻略 知識開箱",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3719_ofiii81_tv_20250506.png",
+    "綜合"
+  ],
+  "ofiii82": [
+    "Focus探索新知台",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_ofiii82_mobile_20221213.png",
+    "綜合"
+  ],
   "ofiii83": [
     "鄉民大學問",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3407_ofiii83_mobile_20240731.png",
@@ -127,11 +127,6 @@
   "ofiii89": [
     "泰可愛旋風",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3526_ofiii89_mobile_20241114.png",
-    "綜合"
-  ],
-  "ofiii91": [
-    "演唱會直擊",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3525_ofiii91_mobile_20241108.png",
     "綜合"
   ],
   "ofiii92": [
@@ -174,13 +169,18 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_ofiii101_mobile_20230329.png",
     "戲劇"
   ],
+  "ofiii103": [
+    "三國",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3383_ofiii103_mobile_20240626.png",
+    "戲劇"
+  ],
   "ofiii104": [
     "武媚娘傳奇",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3412_ofiii104_mobile_20240731.png",
     "戲劇"
   ],
   "ofiii105": [
-    "長樂曲",
+    "長樂曲《3/9即將下架》",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3476_ofiii105_mobile_20240930.png",
     "戲劇"
   ],
@@ -189,14 +189,14 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3070_ofiii106_mobile_20230920.png",
     "戲劇"
   ],
+  "ofiii107": [
+    "軍師聯盟2 虎嘯龍吟",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3071_ofiii107_mobile_20230920.png",
+    "戲劇"
+  ],
   "ofiii108": [
     "國色芳華",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3264_ofiii108_mobile_20240301.png",
-    "戲劇"
-  ],
-  "ofiii109": [
-    "錦繡芳華",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3112_ofiii109_mobile_20231019.png",
     "戲劇"
   ],
   "ofiii110": [
@@ -255,8 +255,13 @@
     "戲劇"
   ],
   "ofiii121": [
-    "我的差評女友",
+    "我的差評女友《3/9即將下架》",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3599_ofiii121_mobile_20250103.png",
+    "戲劇"
+  ],
+  "ofiii122": [
+    "不眠日",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3445_ofiii122_mobile_20240906.png",
     "戲劇"
   ],
   "ofiii123": [
@@ -334,16 +339,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3571_ofiii137_mobile_20241211.png",
     "綜藝"
   ],
-  "ofiii139": [
-    "名模出任務",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3603_ofiii139_mobile_20250103.png",
-    "綜藝"
-  ],
-  "ofiii140": [
-    "木曜4超玩 一日系列",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3694_ofiii140_tv_20250331.png",
-    "綜藝"
-  ],
   "ofiii141": [
     "月曜1起玩",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3749_ofiii141_tv_20250529.png",
@@ -382,6 +377,11 @@
   "ofiii149": [
     "頭腦共助",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3517_ofiii149_mobile_20241104.png",
+    "戲劇"
+  ],
+  "ofiii150": [
+    "台灣靈異事件",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3385_litv-vchannel146_mobile_20240626.png",
     "戲劇"
   ],
   "ofiii151": [
@@ -464,6 +464,21 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_2991_ofiii165_mobile_20230802.png",
     "動漫"
   ],
+  "ofiii167": [
+    "獵人(中文版)",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_2991_ofiii165_mobile_20230802.png",
+    "動漫"
+  ],
+  "ofiii168": [
+    "中華一番(中文版)",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_2991_ofiii165_mobile_20230802.png",
+    "動漫"
+  ],
+  "ofiii169": [
+    "隊長小翼(中文版)",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_2991_ofiii165_mobile_20230802.png",
+    "動漫"
+  ],
   "ofiii170": [
     "SPY X FAMILY 間諜家家酒",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_2991_ofiii165_mobile_20230802.png",
@@ -534,11 +549,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3966_ofiii185_tv_20251216.png",
     "動漫"
   ],
-  "ofiii186": [
-    "城市獵人",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3751_ofiii186_tv_20250529.png",
-    "動漫"
-  ],
   "ofiii187": [
     "超人力霸王台",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3843_ofiii187_tv_20250827.png",
@@ -553,11 +563,6 @@
     "生命的贏家",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_ofiii192_mobile_20230329.png",
     "綜合"
-  ],
-  "ofiii197": [
-    "轉角遇到愛",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3906_ofiii197_tv_20251028.png",
-    "戲劇"
   ],
   "ofiii198": [
     "白袍之戀",
@@ -608,6 +613,11 @@
     "新聞觀測站",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3885_ofiii212_tv_20250924.png",
     "新聞‧財經"
+  ],
+  "ofiii215": [
+    "電動車時代",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3475_ofiii215_mobile_20240930.png",
+    "綜合"
   ],
   "ofiii216": [
     "SiCAR愛車酷",
@@ -694,20 +704,25 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3665_ofiii244_tv_20250305.png",
     "綜藝"
   ],
+  "ofiii245": [
+    "台灣壹百種味道",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3666_ofiii245_tv_20250305.png",
+    "綜藝"
+  ],
   "ofiii246": [
     "中國美食大探索",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3784_ofiii246_tv_20250626.png",
+    "綜藝"
+  ],
+  "ofiii247": [
+    "中國旅遊大探索",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3813_ofiii247_tv_20250729.png",
     "綜藝"
   ],
   "ofiii248": [
     "秘境不思溢",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3812_ofiii248_tv_20250729.png",
     "綜藝"
-  ],
-  "ofiii250": [
-    "紓壓雷雨聲",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3437_ofiii250_mobile_20240816.png",
-    "綜合"
   ],
   "ofiii251": [
     "療癒下雨聲",
@@ -759,6 +774,11 @@
     "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv074_mobile.png",
     "新聞‧財經"
   ],
+  "4gtv-4gtv084": [
+    "國會頻道1台",
+    "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv084_mobile.png",
+    "新聞‧財經"
+  ],
   "4gtv-4gtv085": [
     "國會頻道2台",
     "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv085_mobile.png",
@@ -793,6 +813,11 @@
     "寰宇財經台",
     "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn23_mobile.png",
     "新聞‧財經"
+  ],
+  "litv-ftv16": [
+    "好消息",
+    "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-ftv16_mobile.png",
+    "綜合"
   ],
   "litv-ftv17": [
     "好消息2台",
@@ -858,10 +883,5 @@
     "三立新聞iNEWS",
     "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_iNEWS_mobile.png",
     "新聞‧財經"
-  ],
-  "daystar": [
-    "DayStar",
-    "https://p-cdnstatic.svc.litv.tv/pics/Daystar_128x72.png",
-    "綜合"
   ]
 }
