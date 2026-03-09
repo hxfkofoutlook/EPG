@@ -426,9 +426,9 @@
     "description": ""
   },
   {
-    "channelName": "長樂曲《3/9即將下架》",
+    "channelName": "水龍吟",
     "id": "ofiii105",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3476_ofiii105_mobile_20250221.png",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4029_ofiii105_mobile_20260303.png",
     "description": ""
   },
   {
@@ -522,9 +522,9 @@
     "description": ""
   },
   {
-    "channelName": "我的差評女友《3/9即將下架》",
+    "channelName": "仁心俱樂部",
     "id": "ofiii121",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3781_ofiii121_mobile_20250626.png",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4030_ofiii121_mobile_20260303.png",
     "description": ""
   },
   {
@@ -675,6 +675,12 @@
     "channelName": "好搭檔",
     "id": "ofiii147",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3516_ofiii147_mobile_20250225.png",
+    "description": ""
+  },
+  {
+    "channelName": "完美的家族",
+    "id": "ofiii148",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4031_ofiii148_mobile_20260303.png",
     "description": ""
   },
   {
@@ -870,6 +876,12 @@
     "description": ""
   },
   {
+    "channelName": "夢幻遊戲(中文版)",
+    "id": "ofiii181",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4032_ofiii181_mobile_20260303.png",
+    "description": ""
+  },
+  {
     "channelName": "膽大黨",
     "id": "ofiii183",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3604_ofiii183_mobile_20250221.png",
@@ -909,6 +921,12 @@
     "channelName": "生命的贏家",
     "id": "ofiii192",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_ofiii192_mobile_20230329.png",
+    "description": ""
+  },
+  {
+    "channelName": "出境事務所",
+    "id": "ofiii196",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4033_ofiii196_mobile_20260303.png",
     "description": ""
   },
   {
