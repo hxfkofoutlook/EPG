@@ -49,6 +49,11 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3689_ofiii39_tv_20250328.png",
     "戲劇"
   ],
+  "ofiii47": [
+    "Yes娛樂",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_ofiii47_mobile_20230707.png",
+    "新聞‧財經"
+  ],
   "ofiii50": [
     "掏掏新聞",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_litv-playout50_mobile_20211124.png",
@@ -205,8 +210,13 @@
     "戲劇"
   ],
   "ofiii105": [
-    "長樂曲《3/9即將下架》",
+    "水龍吟",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3476_ofiii105_mobile_20240930.png",
+    "戲劇"
+  ],
+  "ofiii106": [
+    "軍師聯盟",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3070_ofiii106_mobile_20230920.png",
     "戲劇"
   ],
   "ofiii107": [
@@ -280,7 +290,7 @@
     "戲劇"
   ],
   "ofiii121": [
-    "我的差評女友《3/9即將下架》",
+    "仁心俱樂部",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3599_ofiii121_mobile_20250103.png",
     "戲劇"
   ],
@@ -407,6 +417,11 @@
   "ofiii147": [
     "好搭檔",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3516_ofiii147_mobile_20241104.png",
+    "戲劇"
+  ],
+  "ofiii148": [
+    "完美的家族",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_ofiii148_mobile_20230515.png",
     "戲劇"
   ],
   "ofiii149": [
@@ -569,6 +584,11 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_2991_ofiii165_mobile_20230802.png",
     "動漫"
   ],
+  "ofiii181": [
+    "夢幻遊戲(中文版)",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_2991_ofiii165_mobile_20230802.png",
+    "動漫"
+  ],
   "ofiii183": [
     "膽大黨",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_2991_ofiii165_mobile_20230802.png",
@@ -603,6 +623,11 @@
     "生命的贏家",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_ofiii192_mobile_20230329.png",
     "綜合"
+  ],
+  "ofiii196": [
+    "出境事務所",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4033_ofiii196_tv_20260303.png",
+    "戲劇"
   ],
   "ofiii197": [
     "轉角遇到愛",
@@ -789,10 +814,10 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3441_ofiii254_mobile_20240816.png",
     "綜合"
   ],
-  "nnews-zh": [
-    "倪珍播新聞",
-    "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_nnews_mobile.png",
-    "新聞‧財經"
+  "ofiii255": [
+    "大自然流水聲",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3785_ofiii255_tv_20250703.png",
+    "綜合"
   ],
   "4gtv-4gtv009": [
     "中天新聞台",
