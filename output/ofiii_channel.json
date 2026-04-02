@@ -14,11 +14,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_litv-vchannel22_mobile_20190902.png",
     "熱門收視頻道"
   ],
-  "ofiii23": [
-    "新哆啦A夢(中文版)",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3386_ofiii23_mobile_20240709.png",
-    "卡通‧兒童"
-  ],
   "ofiii24": [
     "新哆啦A夢(中文版)2台",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3841_ofiii24_mobile_20250827.png",
@@ -27,6 +22,11 @@
   "ofiii25": [
     "毛茸茸親子台",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3952_ofiii25_mobile_20251223.png",
+    "卡通‧兒童"
+  ],
+  "ofiii26": [
+    "親子探索台",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4056_ofiii26_tv_20260325.png",
     "卡通‧兒童"
   ],
   "ofiii32": [
@@ -270,7 +270,7 @@
     "熱門收視頻道"
   ],
   "ofiii117": [
-    "佔有姜西《4/2即將下架》",
+    "雙軌",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3780_ofiii117_mobile_20250626.png",
     "戲劇"
   ],
@@ -369,11 +369,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3956_ofiii136_mobile_20251216.png",
     "綜藝"
   ],
-  "ofiii137": [
-    "我愛大小姐《4/2即將下架》",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3957_ofiii137_mobile_20251216.png",
-    "綜藝"
-  ],
   "ofiii139": [
     "名模出任務",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3958_ofiii139_mobile_20251216.png",
@@ -394,20 +389,10 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3168_ofiii142_mobile_20250220.png",
     "綜藝"
   ],
-  "ofiii143": [
-    "超級同學會《4/2即將下架》",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3959_ofiii143_mobile_20251216.png",
-    "綜藝"
-  ],
   "ofiii144": [
     "麥卡貝網路電視",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3750_ofiii144_mobile_20250529.png",
     "綜藝"
-  ],
-  "ofiii145": [
-    "回到20歲",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3661_ofiii145_mobile_20250305.png",
-    "戲劇"
   ],
   "ofiii146": [
     "白雪公主非死不可",
@@ -452,6 +437,11 @@
   "ofiii154": [
     "一把青",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3077_ofiii154_mobile_20250220.png",
+    "戲劇"
+  ],
+  "ofiii155": [
+    "茶金",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3119_ofiii155_mobile_20250220.png",
     "戲劇"
   ],
   "ofiii156": [
@@ -614,6 +604,11 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4016_ofiii188_mobile_20260123.png",
     "動漫"
   ],
+  "ofiii189": [
+    "真珠美人魚(中文版)",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4058_ofiii189_tv_20260325.png",
+    "卡通‧兒童"
+  ],
   "ofiii192": [
     "生命的贏家",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_ofiii192_mobile_20230329.png",
@@ -714,6 +709,11 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3965_ofiii232_mobile_20251216.png",
     "綜藝"
   ],
+  "ofiii233": [
+    "大胃王來了！",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4059_ofiii233_tv_20260325.png",
+    "綜藝"
+  ],
   "ofiii234": [
     "非凡大探索",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3553_ofiii234_mobile_20250220.png",
@@ -792,11 +792,6 @@
   "ofiii250": [
     "紓壓雷雨聲",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3437_ofiii250_mobile_20250305.png",
-    "綜合"
-  ],
-  "ofiii251": [
-    "療癒下雨聲",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3438_ofiii251_mobile_20250305.png",
     "綜合"
   ],
   "ofiii252": [
