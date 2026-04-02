@@ -210,6 +210,12 @@
     "description": ""
   },
   {
+    "channelName": "親子探索台",
+    "id": "ofiii26",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4056_ofiii26_mobile_20260325.png",
+    "description": ""
+  },
+  {
     "channelName": "東森娛樂台",
     "id": "ofiii32",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_2985_ofiii32_mobile_20230720.png",
@@ -498,9 +504,9 @@
     "description": ""
   },
   {
-    "channelName": "佔有姜西《4/2即將下架》",
+    "channelName": "雙軌",
     "id": "ofiii117",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3780_ofiii117_mobile_20250626.png",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4057_ofiii117_mobile_20260325.png",
     "description": ""
   },
   {
@@ -618,12 +624,6 @@
     "description": ""
   },
   {
-    "channelName": "我愛大小姐《4/2即將下架》",
-    "id": "ofiii137",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3957_ofiii137_mobile_20251216.png",
-    "description": ""
-  },
-  {
     "channelName": "名模出任務",
     "id": "ofiii139",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3958_ofiii139_mobile_20251216.png",
@@ -645,12 +645,6 @@
     "channelName": "一字千金",
     "id": "ofiii142",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3168_ofiii142_mobile_20250221.png",
-    "description": ""
-  },
-  {
-    "channelName": "超級同學會《4/2即將下架》",
-    "id": "ofiii143",
-    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3959_ofiii143_mobile_20251216.png",
     "description": ""
   },
   {
@@ -918,6 +912,12 @@
     "description": ""
   },
   {
+    "channelName": "真珠美人魚(中文版)",
+    "id": "ofiii189",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4058_ofiii189_mobile_20260325.png",
+    "description": ""
+  },
+  {
     "channelName": "生命的贏家",
     "id": "ofiii192",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_ofiii192_mobile_20230329.png",
@@ -1035,6 +1035,12 @@
     "channelName": "舌尖之福",
     "id": "ofiii232",
     "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3965_ofiii232_mobile_20251216.png",
+    "description": ""
+  },
+  {
+    "channelName": "大胃王來了！",
+    "id": "ofiii233",
+    "logo": "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4059_ofiii233_mobile_20260325.png",
     "description": ""
   },
   {
