@@ -15,6 +15,10 @@ from Crypto.Util.Padding import unpad
 import requests
 import logging
 
+# 禁用不安全请求警告
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
 # 关闭所有警告和日志
 warnings.filterwarnings("ignore")
 
