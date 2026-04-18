@@ -15,10 +15,6 @@ from Crypto.Util.Padding import unpad
 import requests
 import logging
 
-# 禁用不安全请求警告
-import urllib3
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-
 # 关闭所有警告和日志
 warnings.filterwarnings("ignore")
 
@@ -43,38 +39,27 @@ DEFAULT_PASS = os.environ.get('GTV_PASS', '')
 # 支持的环境变量：
 #   HTTP_PROXY / http_proxy
 #   HTTPS_PROXY / https_proxy
-#   SOCKS5_PROXY / socks5_proxy  (标准 SOCKS5，本地 DNS)
-#   SOCKS5H_PROXY / socks5h_proxy (SOCKS5 with remote DNS)
+#   SOCKS5_PROXY / socks5_proxy
+#   SOCKS5H_PROXY / socks5h_proxy
 #   ALL_PROXY / all_proxy（同时用于 http 和 https）
 PROXY_SETTINGS = {
     'http': os.environ.get('http_proxy') or os.environ.get('HTTP_PROXY', ''),
     'https': os.environ.get('https_proxy') or os.environ.get('HTTPS_PROXY', ''),
 }
 
-# 读取 SOCKS5 环境变量（保持原样，不转换协议）
+# 读取 SOCKS5 环境变量，覆盖默认的 http/https 代理（如果未单独设置）
 socks5_proxy = os.environ.get('socks5_proxy') or os.environ.get('SOCKS5_PROXY', '')
 socks5h_proxy = os.environ.get('socks5h_proxy') or os.environ.get('SOCKS5H_PROXY', '')
-
-# 注意：先检查 socks5h，再检查 socks5，以便 socks5h 优先（如果同时设置）
 if socks5h_proxy:
-    # 确保协议前缀存在，如果没有则添加 socks5h://
-    if not socks5h_proxy.startswith(('socks5h://', 'socks5://')):
-        socks5h_proxy = f'socks5h://{socks5h_proxy}'
     PROXY_SETTINGS['http'] = socks5h_proxy
     PROXY_SETTINGS['https'] = socks5h_proxy
 elif socks5_proxy:
-    # 确保协议前缀存在，如果没有则添加 socks5://
-    if not socks5_proxy.startswith(('socks5://', 'socks5h://')):
-        socks5_proxy = f'socks5://{socks5_proxy}'
     PROXY_SETTINGS['http'] = socks5_proxy
     PROXY_SETTINGS['https'] = socks5_proxy
 
-# ALL_PROXY 兜底（同样保留原始协议）
+# ALL_PROXY 兜底
 all_proxy = os.environ.get('all_proxy') or os.environ.get('ALL_PROXY', '')
 if all_proxy and not (PROXY_SETTINGS['http'] or PROXY_SETTINGS['https']):
-    # 自动补全协议头（如果缺失，默认 http://）
-    if not re.match(r'^(http|https|socks5|socks5h)://', all_proxy):
-        all_proxy = f'http://{all_proxy}'
     PROXY_SETTINGS['http'] = all_proxy
     PROXY_SETTINGS['https'] = all_proxy
 
@@ -89,19 +74,23 @@ def is_github_actions():
 
 
 def get_proxies():
-    """从环境变量或命令行参数获取代理设置，完全保留用户指定的协议（socks5 和 socks5h 分开）"""
+    """从环境变量或命令行参数获取代理设置，支持 HTTP/HTTPS/SOCKS5/SOCKS5h"""
     proxies = {}
     for scheme in ('http', 'https'):
         proxy_url = PROXY_SETTINGS.get(scheme, '')
         if proxy_url:
-            # 确保有协议头
-            if not re.match(r'^(http|https|socks5|socks5h)://', proxy_url):
-                proxy_url = f'http://{proxy_url}'
-            proxies[scheme] = proxy_url
+            # 允许 socks5:// 和 socks5h:// 协议
+            if proxy_url.startswith(('socks5://', 'socks5h://', 'http://', 'https://')):
+                proxies[scheme] = proxy_url
+            else:
+                # 如果用户只写了 host:port，自动补全 http://
+                proxies[scheme] = f'http://{proxy_url}'
 
     if proxies:
-        for k, v in proxies.items():
-            print(f"🔌 代理 {k}: {v}")
+        if is_github_actions():
+            print(f"🔌 GitHub Actions 环境中使用代理: {proxies}")
+        else:
+            print(f"🔌 使用代理: {proxies}")
     else:
         if is_github_actions():
             print("🔌 GitHub Actions 环境中未设置代理，使用直接连接")
@@ -112,7 +101,7 @@ def get_proxies():
 
 
 def test_proxy_connection(scraper, timeout=10):
-    """测试代理连接是否正常（支持 SOCKS5/SOCKS5h）"""
+    """测试代理连接是否正常（支持 SOCKS5）"""
     try:
         test_url = "https://httpbin.org/ip"
         response = scraper.get(test_url, timeout=timeout)
@@ -128,7 +117,7 @@ def test_proxy_connection(scraper, timeout=10):
 
 
 def create_scraper_with_proxy(ua):
-    """创建带有代理设置的 scraper（支持 socks5 和 socks5h 分开）"""
+    """创建带有代理设置的 scraper（支持 SOCKS5）"""
     scraper = cloudscraper.create_scraper()
     scraper.headers.update({"User-Agent": ua})
 
@@ -447,7 +436,7 @@ def main():
         print("🔌 强制禁用代理")
     elif args.proxy:
         proxy_url = args.proxy
-        # 自动补全协议（如果用户只输入了 host:port，默认 http://）
+        # 自动补全协议（如果用户只输入了 host:port）
         if not re.match(r'^(http|https|socks5|socks5h)://', proxy_url):
             proxy_url = f'http://{proxy_url}'
         PROXY_SETTINGS['http'] = proxy_url
