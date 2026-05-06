@@ -1,9 +1,4 @@
 {
-  "ofiii13": [
-    "公視金獎台《5/6即將下架》",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3068_ofiii13_mobile_20230920.png",
-    "戲劇"
-  ],
   "ofiii16": [
     "空中英語教室HD頻道",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3720_ofiii16_mobile_20250506.png",
@@ -279,11 +274,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3780_ofiii117_mobile_20250626.png",
     "戲劇"
   ],
-  "ofiii118": [
-    "深情眼",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3903_ofiii118_mobile_20251028.png",
-    "戲劇"
-  ],
   "ofiii119": [
     "以家人之名",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3023_ofiii119_mobile_20250220.png",
@@ -369,11 +359,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_2936_ofiii135_mobile_20250220.png",
     "綜藝"
   ],
-  "ofiii136": [
-    "天才答不答《5/6即將下架》",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3956_ofiii136_mobile_20251216.png",
-    "綜藝"
-  ],
   "ofiii139": [
     "名模出任務",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3958_ofiii139_mobile_20251216.png",
@@ -392,6 +377,11 @@
   "ofiii142": [
     "一字千金",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3168_ofiii142_mobile_20250220.png",
+    "綜藝"
+  ],
+  "ofiii143": [
+    "哈哈台",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3959_ofiii143_mobile_20251216.png",
     "綜藝"
   ],
   "ofiii144": [
@@ -444,16 +434,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3028_ofiii153_mobile_20250220.png",
     "戲劇"
   ],
-  "ofiii154": [
-    "一把青《5/6即將下架》",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3077_ofiii154_mobile_20250220.png",
-    "戲劇"
-  ],
-  "ofiii155": [
-    "茶金《5/6即將下架》",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3119_ofiii155_mobile_20250220.png",
-    "戲劇"
-  ],
   "ofiii156": [
     "苦力",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3478_ofiii156_mobile_20250220.png",
@@ -462,11 +442,6 @@
   "ofiii157": [
     "俗女養成記",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3358_ofiii157_mobile_20250220.png",
-    "戲劇"
-  ],
-  "ofiii158": [
-    "麻醉風暴《5/6即將下架》",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3415_ofiii158_mobile_20250220.png",
     "戲劇"
   ],
   "ofiii159": [
@@ -482,11 +457,6 @@
   "ofiii161": [
     "離開A級隊伍的我，和從前的弟子往迷宮深處邁進",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3883_ofiii161_mobile_20250924.png",
-    "動漫"
-  ],
-  "ofiii162": [
-    "在異世界獲得超強能力的我，在現實世界照樣無敵～等級提升改變人生命運～",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3303_ofiii162_mobile_20250220.png",
     "動漫"
   ],
   "ofiii163": [
@@ -619,6 +589,11 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4058_ofiii189_tv_20260325.png",
     "卡通‧兒童"
   ],
+  "ofiii190": [
+    "酷洛米的繽紛旅程 (中文版)",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4085_ofiii190_tv_20260429.png",
+    "卡通‧兒童"
+  ],
   "ofiii192": [
     "生命的贏家",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_ofiii192_mobile_20230329.png",
@@ -703,6 +678,16 @@
     "脖子解說 Mr. Neck",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3523_ofiii218_mobile_20250220.png",
     "綜合"
+  ],
+  "ofiii225": [
+    "好運來",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4086_ofiii225_tv_20260429.png",
+    "戲劇"
+  ],
+  "ofiii226": [
+    "黃金歲月",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4087_ofiii226_tv_20260429.png",
+    "戲劇"
   ],
   "ofiii230": [
     "歡迎光琳",
@@ -797,6 +782,11 @@
   "ofiii248": [
     "秘境不思溢",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3812_ofiii248_mobile_20250729.png",
+    "綜藝"
+  ],
+  "ofiii249": [
+    "怪奇研究室",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4088_ofiii249_tv_20260429.png",
     "綜藝"
   ],
   "ofiii250": [
