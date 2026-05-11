@@ -609,6 +609,8 @@ WTO姐妹會,#genre#
 第3434集 詐騙猖獗別落入陷阱!! 你能識破這些詐騙手法嗎?!,http://localhost:5000/ofiii129/index.m3u8?episode_id=vod9985-003434M001
 第3435集 台灣美食享譽國際!! 外國人的口袋名單不藏私!!,http://localhost:5000/ofiii129/index.m3u8?episode_id=vod9985-003435M001
 Yes娛樂,#genre#
+王陽明一夜狂掉5萬粉？ PO文求助 網：喜爺在搞,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84321-000000M001
+台灣粉絲親送獎盃被認證！ 「手作12小時」暖哭孫藝珍,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84320-000000M001
 黃子佼涉未成年影像案終審落槌 獲緩刑四年無需入獄,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84319-000000M001
 馬龍許昕夫婦自費赴英助陣國乒 逛大英博物館遭粉絲圍堵簽名,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84318-000000M001
 前體操運動員吳柳芳再回應擦邊風波：“把債還完了，我才能把體面重新撿起來”,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84317-000000M001
@@ -642,8 +644,6 @@ GD開唱 台下開打！ 手燈互K扯頭髮 最後全GG,http://localhost:5000/o
 孫德榮中風請假出院現身 腦血栓75% 血壓飆到203！,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84229-000000M001
 恭喜！NCT在玹正式退伍 水蜜桃肌引熱議：確定有當兵？,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84231-000000M001
 李亞鵬香港再辦嫣然慈善晚宴 籌款 336 萬港幣 13 年落差引唏噓,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84227-000000M001
-周瓊喊話前夫嚴軍法庭見 曝嚴浩翔已纍計支付 300 餘萬元,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84226-000000M001
-范姜彥豐告贏粿王現身認還沒離婚！被反告「偷iPad」冷嗆：他們沒招了,http://localhost:5000/ofiii47/index.m3u8?episode_id=vod84225-000000M001
 一字千金,#genre#
 第1季第1集 高學歷藝人(上),http://localhost:5000/ofiii142/index.m3u8?episode_id=vod64324-010001M001
 第1季第2集 高學歷藝人(下),http://localhost:5000/ofiii142/index.m3u8?episode_id=vod64324-010002M001
@@ -4242,9 +4242,6 @@ DeepSeek不靠黃仁勳！昇騰晶片撐起AI 中國算力全面去美國化,ht
 第100集,http://localhost:5000/ofiii199/index.m3u8?episode_id=vod11066-000100M001
 掏掏新聞,#genre#
 大大平評理-美伊荷姆茲危機延燒！中美醞釀麻六甲鎖喉戰？,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod69896-000387M001
-幸福空間-格局不完美設計補位 多角宅優雅重生,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod70063-000110M001
-2026大車拚-京華城案恐變世紀冤案？326宣判 金流破口在哪？,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod83720-000009M001
-台灣1001個故事-第十六集-翻轉台東山村的七年級女力,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod64567-000016M001
 幸福空間-第八十三集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod70063-000083M001
 2026大車拚-王美惠沒那麼強 2024藍白合早預判結果?,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod83720-000012M001
 政治琳龍SAY-過度刺激大陸 逼阿共不得不出手?賴清德故意的?,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod70083-000078M001
@@ -4263,6 +4260,9 @@ DeepSeek不靠黃仁勳！昇騰晶片撐起AI 中國算力全面去美國化,ht
 健康大錢線-姜宜妮醫師-男性更年期 + 江守山醫師-10大保健食品,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod79599-000016M001
 【52直播間｜黃揚明】-第108集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod69643-010108M001
 大雲時堂-從零到卓越的電巴築夢之路華德動能蔡裕慶,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod51575-000314M001
+健康大錢線-洗腦防失智+失智症+阿茲海默新藥,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod79599-000007M001
+【52直播間｜歷史哥】-第107集,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod69643-020107M001
+健康大錢線-養肝養命與骨質疏鬆與粒線體抗癌,http://localhost:5000/ofiii50/index.m3u8?episode_id=vod79599-000009M001
 擁有超常技能的異世界流浪美食家,#genre#
 第1季第1集 超常技能很有用,http://localhost:5000/ofiii160/index.m3u8?episode_id=vod60388-010001M001
 第1季第2集 引人注目的從魔是活著的傳說,http://localhost:5000/ofiii160/index.m3u8?episode_id=vod60388-010002M001
@@ -6290,15 +6290,13 @@ M3 Touring，我們終於等到你了...(淚流滿面）,http://localhost:5000/o
 第4季第16集 日本：日本美食之都大阪 體驗茶道文化,http://localhost:5000/ofiii248/index.m3u8?episode_id=vod20116-040016M001
 空中英語教室HD頻道,#genre#
 空中英語教室-Mysterious Glowing Waters  神祕發光水域（上）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-260507M001
-Calendar Phrase,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-190906M001
+Info Cloud,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-240315M001
+大家說英語-Visiting Cape Town  走訪開普敦（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-260508M001
+Calendar Phrase,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-190909M001
 空中英語教室-Mysterious Glowing Waters  神祕發光水域（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-260508M001
+大家說英語-Saturday Review本週課程複習,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-260509M001
 空中英語教室-Tuesdays with Morrie: An Old Man, a Young Man, and Life’s Greatest Lesson  最後14堂星期二的課（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-260506M001
 大家說英語-Visiting Cape Town  走訪開普敦（上）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-260507M001
-Info Cloud,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-240314M001
-大家說英語-Visiting Cape Town  走訪開普敦（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-260508M001
-大家說英語-Saturday Review本週課程複習,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-260509M001
-Info Cloud,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-240315M001
-Calendar Phrase,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-190909M001
 空中英語教室-The Next Pitch: How Robots Will Change Baseball  機器人將如何改變棒球,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-260511M001
 Info Cloud,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-240316M001
 大家說英語-I See a . . . Aaah!  我看到一個⋯⋯啊啊啊！,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-260511M001
@@ -6315,6 +6313,10 @@ Calendar Phrase,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-190
 Info Cloud,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-240320M001
 大家說英語-Reading and Leaving Reviews  讀和寫評論（上）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-260514M001
 Calendar Phrase,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-190916M001
+空中英語教室-Dynamic Pricing  動態定價（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34440-260515M001
+Info Cloud,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34558-240321M001
+大家說英語-Reading and Leaving Reviews  讀和寫評論（下）,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34441-260515M001
+Calendar Phrase,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-190917M001
 第1財經,#genre#
 鉅亨加密世界-比特幣崩跌！幣圈極度恐懼！？掌握熊市三大對策！,http://localhost:5000/ofiii64/index.m3u8?episode_id=vod50513-000209M001
 財經皓角-第276集 什麼都漲 唯獨七巨頭？,http://localhost:5000/ofiii64/index.m3u8?episode_id=vod40896-000276M001
@@ -6468,12 +6470,6 @@ Calendar Phrase,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-190
 【白噪音系列，雷雨聲】,http://localhost:5000/ofiii250/index.m3u8?episode_id=vod73056-000001M001
 【白噪音系列，雷雨聲－房間版】,http://localhost:5000/ofiii250/index.m3u8?episode_id=vod73056-000002M001
 經典劇場,#genre#
-親親我好媽(國語配音)-第11集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod40233-000011M001
-親親我好媽(國語配音)-第12集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod40233-000012M001
-歲月如金-第37集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod37442-000037M001
-歲月如金-第38集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod37442-000038M001
-女人不哭-第28集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod61757-000028M001
-女人不哭-第29集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod61757-000029M001
 親親我好媽(國語配音)-第13集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod40233-000013M001
 親親我好媽(國語配音)-第14集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod40233-000014M001
 歲月如金-第39集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod37442-000039M001
@@ -6504,6 +6500,12 @@ Calendar Phrase,http://localhost:5000/ofiii16/index.m3u8?episode_id=vod34548-190
 宮心計-第6集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod72350-000006M001
 我家無難事(國語配音)-第4集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod50027-000004M001
 我家無難事(國語配音)-第5集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod50027-000005M001
+神耆小子-第3集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod75301-000003M001
+神耆小子-第4集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod75301-000004M001
+宮心計-第7集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod72350-000007M001
+宮心計-第8集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod72350-000008M001
+我家無難事(國語配音)-第6集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod50027-000006M001
+我家無難事(國語配音)-第7集,http://localhost:5000/ofiii38/index.m3u8?episode_id=vod50027-000007M001
 綜藝大集合,#genre#
 第1172集 燙燙燙葫蘆蘆蘆 牛奶氣憤變酸奶 EROS=矮騾子是來搞笑的？籃籃阿翔默契講好的！？金剛決戰國際名模！？(台中梧棲),http://localhost:5000/ofiii125/index.m3u8?episode_id=vod9838-001172M001
 第1173集 短今看猛男驚呆！郭忠祐真的是遊戲王 瓜哥竟然被籃籃踩臉！(雲林古坑),http://localhost:5000/ofiii125/index.m3u8?episode_id=vod9838-001173M001
@@ -7351,6 +7353,25 @@ Cubie建築隊-第3集,http://localhost:5000/ofiii26/index.m3u8?episode_id=vod81
 第129集 濟公律師正義化身、布袋戲美聲第一人,http://localhost:5000/ofiii126/index.m3u8?episode_id=vod43535-000129M001
 第130集 亞洲首胖減重計畫、偶像就要天生反骨,http://localhost:5000/ofiii126/index.m3u8?episode_id=vod43535-000130M001
 第131集 台灣國寶級黑手、成功背後真心話,http://localhost:5000/ofiii126/index.m3u8?episode_id=vod43535-000131M001
+超人力霸王劇場版,#genre#
+怪獸大戰爭超銀河傳說 The Movie(中文版),http://localhost:5000/ofiii188/index.m3u8?episode_id=vod58176-000000M001
+怪獸大戰爭超銀河傳說 The Movie,http://localhost:5000/ofiii188/index.m3u8?episode_id=vod58175-000000M001
+超人力霸王德卡最終章：旅途的彼方…(中文版),http://localhost:5000/ofiii188/index.m3u8?episode_id=vod67769-000000M001
+超人力霸王羅布劇場版 決定了！羈絆的水晶(中文版)-超人力霸王R/B(羅布) 選擇！羈絆的水晶,http://localhost:5000/ofiii188/index.m3u8?episode_id=vod61232-000000M001
+超人力霸王X劇場版(中文版)-來了！我們的超人力霸王,http://localhost:5000/ofiii188/index.m3u8?episode_id=vod61228-000000M001
+超人力霸王傳奇(中文版),http://localhost:5000/ofiii188/index.m3u8?episode_id=vod60603-000000M001
+超銀河傳說外傳 超人力霸王傑洛 VS 黑暗獨眼傑洛(中文版),http://localhost:5000/ofiii188/index.m3u8?episode_id=vod60601-000000M001
+超人力霸王銀河S 劇場版(中文版)-劇場版 ウルトラマンギンガＳ 決戦! ウルトラ10勇士!!,http://localhost:5000/ofiii188/index.m3u8?episode_id=vod60047-000000M001
+超人力霸王捷德 劇場版(中文版)-劇場版 ウルトラマンジード つなぐぜ!願い!!,http://localhost:5000/ofiii188/index.m3u8?episode_id=vod59763-000000M001
+超人力霸王傑洛 FIGHT(中文版),http://localhost:5000/ofiii188/index.m3u8?episode_id=vod59754-000000M001
+超人力霸王傑洛 THE MOVIE 超決戰！貝利爾銀河帝國(中文版),http://localhost:5000/ofiii188/index.m3u8?episode_id=vod59752-000000M001
+超人力霸王勝利 超級戰鬥(中文版),http://localhost:5000/ofiii188/index.m3u8?episode_id=vod59150-000000M001
+超人力霸王歐布 格鬥歐布(中文版),http://localhost:5000/ofiii188/index.m3u8?episode_id=vod59148-000000M001
+超人力霸王歐布劇場版 請賜予我羈絆的力量！(中文版),http://localhost:5000/ofiii188/index.m3u8?episode_id=vod59144-000000M001
+超人力霸王銀河大戰 ：新世代英雄(中文版),http://localhost:5000/ofiii188/index.m3u8?episode_id=vod58392-000000M001
+超人力霸王銀河大戰：命運的衝突(中文版),http://localhost:5000/ofiii188/index.m3u8?episode_id=vod58390-000000M001
+超人力霸王銀河大戰 - 巨大陰謀(中文版),http://localhost:5000/ofiii188/index.m3u8?episode_id=vod58178-000000M001
+劇場版 超人力霸王特利卡：特別篇Z(中文版)-劇場版 超人力霸王特利卡： Episode Z,http://localhost:5000/ofiii188/index.m3u8?episode_id=vod58147-000000M001
 超人力霸王台,#genre#
 超人力霸王歐布(中文版)-第1季第1集 夕陽下的流浪者,http://localhost:5000/ofiii187/index.m3u8?episode_id=vod67040-010001M001
 超人力霸王歐布(中文版)-第1季第2集 土塊魔王,http://localhost:5000/ofiii187/index.m3u8?episode_id=vod67040-010002M001
