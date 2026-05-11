@@ -60,10 +60,10 @@
     "fsDESCRIPTION": "TVBS精采台每天準時順播校園夯劇由謝祖武、王宇婕等人主演的《機智校園生活》、小禎、小賴、六月等人主持的《食尚玩家食尚玩家熱血48小時》、《食尚玩家呷PLAY》，沈玉琳主持的《11點熱吵店》，想看戲劇、綜藝、旅遊、時尚通通任你挑!"
   },
   {
-    "fsNAME": "愛爾達娛樂台",
+    "fsNAME": "愛爾達寵物運動台",
     "fs4GTV_ID": "4gtv-4gtv070",
-    "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv070_mobile.png",
-    "fsDESCRIPTION": "愛爾達自製節目包含旅遊、美食、休閒運動、財經、座談等多種類優質內容。推薦節目： 《體壇最前線》、 《BWF世界羽球雜誌》、《倚天屠龍記》、 《大話紅娘》、 《醫師好辣》、 《好運呷透透》"
+    "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/頻道LOGO去背.png",
+    "fsDESCRIPTION": "全台首個專注於毛孩運動的頻道，主打內容包括獨家引進的「Crufts英國克拉福茲頂級犬展大賽」（寵物奧林匹克），以及多項毛孩相關的競技、訓練與科普節目，提供差異化的媒體內容。"
   },
   {
     "fsNAME": "靖天綜合台",
@@ -688,5 +688,59 @@
     "fs4GTV_ID": "4gtv-live024",
     "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live024_mobile.png",
     "fsDESCRIPTION": "播映《滑板小子》、《快盜戰隊vs警察戰隊》、《卡片戰鬥!!先導者》等日本流行動畫。"
+  },
+  {
+    "fsNAME": "精選動漫台",
+    "fs4GTV_ID": "4gtv-live024",
+    "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live024_mobile.png",
+    "fsDESCRIPTION": "播映《滑板小子》、《快盜戰隊vs警察戰隊》、《卡片戰鬥!!先導者》等日本流行動畫。"
+  },
+  {
+    "fsNAME": "博斯魅力台",
+    "fs4GTV_ID": "litv-xinchuang04",
+    "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn04_mobile.png",
+    "fsDESCRIPTION": "博斯魅力台專注於 WTA 女子網球與高爾夫菁英賽，為「頂尖女子賽事與優雅運動的殿堂」。 不僅聚焦全球最高水準的女子競技，也兼顧了高爾夫等講求細節與質感的運動。"
+  },
+  {
+    "fsNAME": "博斯高球台",
+    "fs4GTV_ID": "litv-xinchuang05",
+    "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn05_mobile.png",
+    "fsDESCRIPTION": "博斯高球台為您全天候直擊 PGA 與 LPGA 等頂尖巡迴賽，是高球迷沉浸於全球果嶺大師巔峰對決的唯一首選。"
+  },
+  {
+    "fsNAME": "博斯高球二台",
+    "fs4GTV_ID": "litv-xinchuang06",
+    "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn06_mobile.png",
+    "fsDESCRIPTION": "專門為重度高爾夫迷打造的全天候高球頻道，主要作為高球一台的強力補充，確保全球多場賽事同時進行時，觀眾能完整捕捉每一洞的精采時刻。"
+  },
+  {
+    "fsNAME": "博斯運動一台",
+    "fs4GTV_ID": "litv-xinchuang07",
+    "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn07_mobile.png",
+    "fsDESCRIPTION": "博斯運動一台全天候放送歐冠男排聯賽與企業女壘的熱血對決，並搭配四大網球公開賽精華與中華職棒盛事，是您一次掌握多元職業競技的首選運動旗艦。"
+  },
+  {
+    "fsNAME": "博斯運動二台",
+    "fs4GTV_ID": "litv-xinchuang08",
+    "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn08_mobile.png",
+    "fsDESCRIPTION": "博斯運動二台為您轉播台灣職籃 TPBL 與亞足聯頂級足球賽的核心主場，為您串連本土熱血與亞洲競技的每一個高光時刻。"
+  },
+  {
+    "fsNAME": "博斯網球台",
+    "fs4GTV_ID": "litv-xinchuang09",
+    "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn09_mobile.png",
+    "fsDESCRIPTION": "博斯網球台為您全天候直擊 ATP 與 WTA 全球巡迴賽，轉播澳網、法網、美網、溫布頓網球錦標賽事，從大滿貫到大師賽，是網球迷守候頂尖球星巔峰對決的唯一聖殿。"
+  },
+  {
+    "fsNAME": "博斯無限台",
+    "fs4GTV_ID": "litv-xinchuang10",
+    "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn10_mobile.png",
+    "fsDESCRIPTION": "博斯無限台帶您直擊司諾克與花式撞球的優雅對抗，是喜愛精準競技迷的獨家首選。"
+  },
+  {
+    "fsNAME": "博斯無限二台",
+    "fs4GTV_ID": "litv-xinchuang13",
+    "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn13_mobile.png",
+    "fsDESCRIPTION": "博斯無限二台是極限運動與世界斯諾克的狂熱基地，帶您跨越傳統體育邊界，領略最硬派的熱血對決。"
   }
 ]
