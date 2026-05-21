@@ -21,12 +21,15 @@ jobs:
       - name: 安裝相依套件
         run: |
           pip install requests beautifulsoup4 pytz loguru
-          # 如需 SOCKS5 代理，請取消下面註解並設定 PROXY_URL 環境變數
+          # 若需要使用 SOCKS5 代理，安裝 socks 支援
           # pip install 'requests[socks]'
 
       - name: 執行 EPG 抓取腳本
         env:
-          PROXY_URL: ${{ secrets.PROXY_URL }}
+          # 代理環境變數 (請在 GitHub Secrets 中設定)
+          HTTP_PROXY: ${{ secrets.HTTP_PROXY }}
+          HTTPS_PROXY: ${{ secrets.HTTPS_PROXY }}
+          SOCKS5_PROXY: ${{ secrets.SOCKS5_PROXY }}
           OUTPUT_DIR: ./output
         run: python scripts/tbc.py
 
