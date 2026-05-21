@@ -3,7 +3,7 @@
 """
 TBC EPG 抓取器
 支援 HTTP_PROXY, HTTPS_PROXY, SOCKS5_PROXY 環境變數
-輸出 XMLTV 格式檔案至 /output 目錄
+包含重試、並發控制、隨機延遲，輸出 XMLTV 格式檔案至 /output 目錄
 """
 
 import asyncio
@@ -12,12 +12,17 @@ import html
 import os
 import re
 import sys
+import random
+import time
 from datetime import datetime, timedelta
+from functools import wraps
 
 import pytz
 import requests
 from bs4 import BeautifulSoup as bs
 from loguru import logger
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 # ---------- 全域設定 ----------
 TAIPEI_TZ = pytz.timezone('Asia/Taipei')
@@ -38,14 +43,11 @@ https_proxy = os.environ.get("HTTPS_PROXY")
 if https_proxy:
     PROXIES["https"] = https_proxy
 elif http_proxy and not https_proxy:
-    # 若未單獨設定 HTTPS_PROXY，則沿用 HTTP_PROXY
     PROXIES["https"] = http_proxy
 
 socks5_proxy = os.environ.get("SOCKS5_PROXY")
 if socks5_proxy:
-    # requests 支援 socks5 協議，需安裝 requests[socks]
     PROXIES["socks5"] = socks5_proxy
-    # 同時設定 socks5h (強制透過代理解析 DNS)
     PROXIES["socks5h"] = socks5_proxy
 
 if PROXIES:
@@ -56,6 +58,50 @@ else:
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
 }
+
+# 並發控制：同時最多 10 個請求
+SEMAPHORE = asyncio.Semaphore(10)
+
+# 重試配置
+RETRY_COUNT = 3
+RETRY_BACKOFF = 2  # 指數退避基數（秒）
+
+
+def async_retry(max_retries=RETRY_COUNT, backoff=RETRY_BACKOFF):
+    """非同步函數重試裝飾器"""
+    def decorator(func):
+        @wraps(func)
+        async def wrapper(*args, **kwargs):
+            last_exception = None
+            for attempt in range(max_retries):
+                try:
+                    return await func(*args, **kwargs)
+                except Exception as e:
+                    last_exception = e
+                    wait_time = backoff ** attempt + random.uniform(0, 1)
+                    logger.warning(f"重試 {func.__name__} (嘗試 {attempt+1}/{max_retries})，等待 {wait_time:.2f} 秒，錯誤: {str(e)}")
+                    await asyncio.sleep(wait_time)
+            raise last_exception
+        return wrapper
+    return decorator
+
+
+def create_retry_session():
+    """建立帶重試機制的 requests Session"""
+    session = requests.Session()
+    retries = Retry(
+        total=RETRY_COUNT,
+        backoff_factor=RETRY_BACKOFF,
+        status_forcelist=[500, 502, 503, 504],
+        allowed_methods=["GET"]
+    )
+    adapter = HTTPAdapter(max_retries=retries)
+    session.mount("http://", adapter)
+    session.mount("https://", adapter)
+    session.proxies.update(PROXIES)
+    session.headers.update(HEADERS)
+    return session
+
 
 # ---------- 工具函數 ----------
 def clean_invalid_xml_chars(text):
@@ -70,23 +116,23 @@ def time_stamp_to_timezone_str(dt, target_tz):
     return dt.astimezone(target_tz).strftime('%Y%m%d%H%M%S %z')
 
 
+@async_retry(max_retries=RETRY_COUNT)
+async def fetch_url(session, url, timeout=30):
+    """非同步 GET 請求，帶重試"""
+    response = await asyncio.to_thread(session.get, url, timeout=timeout)
+    response.raise_for_status()
+    return response
+
+
 async def get_channels_tbc():
     """獲取 TBC 所有頻道清單"""
     channels = []
     try:
-        session = requests.Session()
-        session.proxies.update(PROXIES)
-        session.headers.update(HEADERS)
-
+        session = create_retry_session()
         init_url = "https://www.tbc.net.tw/EPG/Epg/IndexV2/0/1"
-        init_response = await asyncio.to_thread(session.get, init_url, timeout=10)
-
-        if init_response.status_code != 200:
-            logger.error(f"頻道清單請求失敗: HTTP {init_response.status_code}")
-            return []
-
-        init_response.encoding = "utf-8"
-        soup = bs(init_response.text, "html.parser")
+        response = await fetch_url(session, init_url, timeout=10)
+        response.encoding = "utf-8"
+        soup = bs(response.text, "html.parser")
 
         channel_list = soup.select("ul.list_tv > li")
         if not channel_list:
@@ -118,81 +164,79 @@ async def get_channels_tbc():
     return channels
 
 
+@async_retry(max_retries=RETRY_COUNT)
 async def get_epgs_tbc(channel_id, date_str, channel_name):
-    """獲取指定頻道和日期的節目表"""
+    """獲取指定頻道和日期的節目表（已套用重試）"""
     url = f"https://www.tbc.net.tw/EPG/epg/ChannelV2?channelId={channel_id}"
     programs = []
     special_channel_ids = [str(i) for i in range(404, 421)]
 
-    try:
-        session = requests.Session()
-        session.proxies.update(PROXIES)
-        session.headers.update(HEADERS)
+    async with SEMAPHORE:  # 控制並發
+        try:
+            session = create_retry_session()
+            response = await fetch_url(session, url, timeout=30)
+            response.encoding = "utf-8"
+            soup = bs(response.text, "html.parser")
+            uls = soup.find_all("ul", class_="list_program2")
+            if not uls:
+                logger.error(f"頻道 {channel_name} 無節目表")
+                return programs
 
-        response = await asyncio.to_thread(session.get, url, timeout=30)
+            for ul in uls:
+                actual_channel_name = ul.get("channelname", channel_name)
+                for li in ul.find_all("li"):
+                    program_date = li.get("date", "").strip()
+                    if program_date != date_str:
+                        continue
 
-        if response.status_code != 200:
-            logger.error(f"頻道 {channel_id} 請求失敗: HTTP {response.status_code}")
+                    time_range = li.get("time", "").strip()
+                    time_match = re.search(r"(\d+:\d+)~(\d+:\d+)", time_range)
+                    if not time_match:
+                        continue
+
+                    start_str, end_str = time_match.groups()
+                    try:
+                        start_time = datetime.strptime(f"{program_date} {start_str}", "%Y/%m/%d %H:%M")
+                        end_time = datetime.strptime(f"{program_date} {end_str}", "%Y/%m/%d %H:%M")
+                        if end_time <= start_time:
+                            end_time += timedelta(days=1)
+
+                        start_time = TAIPEI_TZ.localize(start_time)
+                        end_time = TAIPEI_TZ.localize(end_time)
+
+                        if channel_id in special_channel_ids:
+                            title = li.get("data.name", "").strip()
+                        else:
+                            title = li.get("title", "").strip()
+
+                        if not title:
+                            p_tag = li.find("p")
+                            if p_tag:
+                                title = p_tag.get_text(strip=True)
+
+                        desc = li.get("desc", "").strip()
+
+                        if title:
+                            programs.append({
+                                "channelName": actual_channel_name,
+                                "programName": title,
+                                "description": desc,
+                                "start": start_time,
+                                "end": end_time
+                            })
+                        else:
+                            logger.warning(f"頻道 {actual_channel_name} 發現無名稱節目: {time_range}")
+
+                    except Exception as e:
+                        logger.error(f"處理節目時間出錯: {program_date} {time_range} - {str(e)}")
+
+            # 隨機延遲，避免單一頻道內請求過快（但因為每個頻道只請求一次，此延遲用於不同頻道之間）
+            await asyncio.sleep(random.uniform(0.5, 2.0))
+
+        except Exception as e:
+            logger.error(f"解析頻道 {channel_id} ({channel_name}) 失敗: {str(e)}")
+            # 不中斷其他頻道，回傳空列表
             return programs
-
-        response.encoding = "utf-8"
-        soup = bs(response.text, "html.parser")
-        uls = soup.find_all("ul", class_="list_program2")
-        if not uls:
-            logger.error(f"頻道 {channel_name} 無節目表")
-            return programs
-
-        for ul in uls:
-            actual_channel_name = ul.get("channelname", channel_name)
-            for li in ul.find_all("li"):
-                program_date = li.get("date", "").strip()
-                if program_date != date_str:
-                    continue
-
-                time_range = li.get("time", "").strip()
-                time_match = re.search(r"(\d+:\d+)~(\d+:\d+)", time_range)
-                if not time_match:
-                    continue
-
-                start_str, end_str = time_match.groups()
-                try:
-                    start_time = datetime.strptime(f"{program_date} {start_str}", "%Y/%m/%d %H:%M")
-                    end_time = datetime.strptime(f"{program_date} {end_str}", "%Y/%m/%d %H:%M")
-                    if end_time <= start_time:
-                        end_time += timedelta(days=1)
-
-                    start_time = TAIPEI_TZ.localize(start_time)
-                    end_time = TAIPEI_TZ.localize(end_time)
-
-                    # 節目名稱處理
-                    if channel_id in special_channel_ids:
-                        title = li.get("data.name", "").strip()
-                    else:
-                        title = li.get("title", "").strip()
-
-                    if not title:
-                        p_tag = li.find("p")
-                        if p_tag:
-                            title = p_tag.get_text(strip=True)
-
-                    desc = li.get("desc", "").strip()
-
-                    if title:
-                        programs.append({
-                            "channelName": actual_channel_name,
-                            "programName": title,
-                            "description": desc,
-                            "start": start_time,
-                            "end": end_time
-                        })
-                    else:
-                        logger.warning(f"頻道 {actual_channel_name} 發現無名稱節目: {time_range}")
-
-                except Exception as e:
-                    logger.error(f"處理節目時間出錯: {program_date} {time_range} - {str(e)}")
-
-    except Exception as e:
-        logger.error(f"解析頻道 {channel_id} 失敗: {str(e)}")
 
     return programs
 
@@ -205,7 +249,7 @@ async def get_tbc_epg(total_days=6):
         logger.error("無法獲取頻道清單，終止")
         return [], []
 
-    skip_ids = [str(i) for i in range(300, 330)]   # 跳過 300~329
+    skip_ids = [str(i) for i in range(300, 330)]  # 跳過 300~329
     all_programs = []
 
     for day_offset in range(total_days):
@@ -213,6 +257,7 @@ async def get_tbc_epg(total_days=6):
         date_str = dt.strftime('%Y/%m/%d')
         logger.info(f"正在獲取 {date_str} 節目表")
 
+        # 過濾出需要抓取的頻道
         tasks = []
         for channel in channels:
             cid = channel["id"][0]
@@ -224,12 +269,18 @@ async def get_tbc_epg(total_days=6):
             logger.warning(f"{date_str} 沒有可獲取的頻道")
             continue
 
+        # 並行執行所有任務（內部已經有 Semaphore 控制並發）
         results = await asyncio.gather(*tasks, return_exceptions=True)
+
         for res in results:
             if isinstance(res, Exception):
                 logger.error(f"抓取節目表異常: {str(res)}")
             elif res:
                 all_programs.extend(res)
+
+        # 兩天之間增加較長延遲，避免觸發速率限制
+        if day_offset < total_days - 1:
+            await asyncio.sleep(random.uniform(3, 6))
 
     # 統計
     channel_counts = {}
@@ -247,13 +298,11 @@ def generate_epg_xml(channels, programs):
     import xml.etree.ElementTree as ET
     tv = ET.Element("tv", {"info-name": "Taiwan-Broadband-EPG"})
 
-    # 按頻道分組
     channel_programs = {}
     for prog in programs:
         ch_name = prog["channelName"]
         channel_programs.setdefault(ch_name, []).append(prog)
 
-    # 寫入頻道與節目
     for channel_info in channels:
         ch_name = channel_info["channelName"]
         channel_elem = ET.SubElement(tv, "channel", id=ch_name)
@@ -280,7 +329,6 @@ def generate_epg_xml(channels, programs):
 
 
 async def main():
-    """主函數"""
     logger.add(os.path.join(OUTPUT_DIR, "epg_generator.log"), rotation="1 day", retention="7 days")
     logger.info("========== 開始抓取 TBC EPG ==========")
 
@@ -299,6 +347,6 @@ async def main():
 
 
 if __name__ == "__main__":
-    # 依賴安裝: pip install requests beautifulsoup4 pytz loguru
-    # 如需 SOCKS5 代理支援: pip install 'requests[socks]'
+    # 依賴安裝: pip install requests beautifulsoup4 pytz loguru urllib3
+    # 若需 SOCKS5 代理支援: pip install 'requests[socks]'
     asyncio.run(main())
