@@ -2,9 +2,8 @@ name: tbc_epg
 
 on:
   schedule:
-    # 每天 UTC 21:00 (台北時間 05:00)
-    - cron: '21 21 * * *'
-  workflow_dispatch:   # 允許手動觸發
+    - cron: '21 21 * * *'   # 每天 UTC 21:00 (台北 05:00)
+  workflow_dispatch:
 
 jobs:
   generate-epg:
@@ -21,48 +20,28 @@ jobs:
       - name: 安裝相依套件
         run: |
           pip install requests beautifulsoup4 pytz loguru urllib3
-          # 若需要使用 SOCKS5 代理，安裝 socks 支援
+          # 若需要 SOCKS5 代理，請取消下面註解
           # pip install 'requests[socks]'
 
       - name: 執行 EPG 抓取腳本
         env:
-          # 代理環境變數 (請在 GitHub Secrets 中設定)
           HTTP_PROXY: ${{ secrets.HTTP_PROXY }}
           HTTPS_PROXY: ${{ secrets.HTTPS_PROXY }}
           SOCKS5_PROXY: ${{ secrets.SOCKS5_PROXY }}
-          OUTPUT_DIR: ./output
+          OUTPUT_DIR: ./output      # 相對於工作空間的目錄
         run: python scripts/tbc.py
 
-      - name: 上傳 EPG 檔案作為 Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: epg_tbc
-          path: output/epg_tbc.xml
-          retention-days: 7
-
-      - name: 提交到 gh-pages 分支 (選用)
+      - name: 提交並推送 output 目錄到倉庫
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           
-          # 嘗試切換到 gh-pages 分支，若不存在則建立（從當前提交）
-          if git ls-remote --heads origin gh-pages | grep -q gh-pages; then
-            git fetch origin gh-pages
-            git checkout gh-pages
-          else
-            git checkout --orphan gh-pages
-            git rm -rf . > /dev/null 2>&1 || true
-          fi
-          
-          # 確保目錄存在並複製檔案
-          mkdir -p epg
-          cp output/epg_tbc.xml epg/
-          
-          # 添加並提交
-          git add epg/epg_tbc.xml
+          # 確保 output 目錄存在（腳本已建立）
+          git add output/
+          # 若有變更則提交
           git diff --staged --quiet || git commit -m "自動更新 EPG $(date '+%Y-%m-%d')"
           
-          # 推送（首次推送需設定上游）
-          git push origin HEAD:gh-pages --force-with-lease
+          # 推送到目前分支（預設 main/master）
+          git push origin HEAD:${GITHUB_REF_NAME}
