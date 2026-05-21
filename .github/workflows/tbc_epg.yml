@@ -20,7 +20,7 @@ jobs:
 
       - name: 安裝相依套件
         run: |
-          pip install requests beautifulsoup4 pytz loguru
+          pip install requests beautifulsoup4 pytz loguru urllib3
           # 若需要使用 SOCKS5 代理，安裝 socks 支援
           # pip install 'requests[socks]'
 
