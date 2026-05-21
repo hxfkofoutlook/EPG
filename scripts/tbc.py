@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-大大寬頻 EPG 抓取器
-支持 HTTP/HTTPS/SOCKS5 代理，輸出 XMLTV 格式文件
+TBC EPG 抓取器
+支援 HTTP/HTTPS/SOCKS5 代理，輸出 XMLTV 格式檔案至 /output 目錄
 """
 
 import asyncio
@@ -18,22 +18,22 @@ import requests
 from bs4 import BeautifulSoup as bs
 from loguru import logger
 
-# ---------- 全局配置 ----------
+# ---------- 全域設定 ----------
 TAIPEI_TZ = pytz.timezone('Asia/Taipei')
 SHANGHAI_TZ = pytz.timezone('Asia/Shanghai')
 
-# 代理配置（從環境變量讀取，格式如 http://user:pass@host:port 或 socks5://...）
+# 輸出目錄 (由環境變數或預設)
+OUTPUT_DIR = os.environ.get("OUTPUT_DIR", "/output")
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+# 代理設定 (環境變數 PROXY_URL, 格式 http://user:pass@host:port 或 socks5://...)
 PROXY_URL = os.environ.get("PROXY_URL", None)
 PROXIES = {}
 if PROXY_URL:
-    # 支持 http, https, socks5
-    PROXIES = {
-        "http": PROXY_URL,
-        "https": PROXY_URL,
-    }
+    PROXIES = {"http": PROXY_URL, "https": PROXY_URL}
     logger.info(f"使用代理: {PROXY_URL}")
 else:
-    logger.info("未配置代理，使用直連")
+    logger.info("未設定代理，使用直連")
 
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
@@ -41,30 +41,30 @@ HEADERS = {
 
 # ---------- 工具函數 ----------
 def clean_invalid_xml_chars(text):
-    """移除 XML 非法字符"""
+    """移除 XML 非法字元"""
     return re.sub(r'[^\x09\x0A\x0D\x20-\uD7FF\uE000-\uFFFD]', '', text)
 
 
 def time_stamp_to_timezone_str(dt, target_tz):
-    """將帶時區的 datetime 轉換為 XMLTV 要求的格式"""
+    """將帶時區的 datetime 轉為 XMLTV 要求的格式"""
     if dt.tzinfo is None:
         dt = pytz.utc.localize(dt)
     return dt.astimezone(target_tz).strftime('%Y%m%d%H%M%S %z')
 
 
 async def get_channels_tbc():
-    """獲取 TBC 所有頻道列表"""
+    """獲取 TBC 所有頻道清單"""
     channels = []
     try:
         session = requests.Session()
-        session.proxies.update(PROXIES)   # 應用代理
+        session.proxies.update(PROXIES)
         session.headers.update(HEADERS)
 
         init_url = "https://www.tbc.net.tw/EPG/Epg/IndexV2/0/1"
         init_response = await asyncio.to_thread(session.get, init_url, timeout=10)
 
         if init_response.status_code != 200:
-            logger.error(f"頻道列表請求失敗: HTTP {init_response.status_code}")
+            logger.error(f"頻道清單請求失敗: HTTP {init_response.status_code}")
             return []
 
         init_response.encoding = "utf-8"
@@ -72,7 +72,7 @@ async def get_channels_tbc():
 
         channel_list = soup.select("ul.list_tv > li")
         if not channel_list:
-            logger.error("頻道列表解析失敗，未找到列表元素")
+            logger.error("頻道清單解析失敗，未找到列表元素")
             return []
 
         for li in channel_list:
@@ -96,7 +96,7 @@ async def get_channels_tbc():
 
         logger.info(f"成功獲取 {len(channels)} 個頻道")
     except Exception as e:
-        logger.error(f"獲取頻道列表失敗: {str(e)}")
+        logger.error(f"獲取頻道清單失敗: {str(e)}")
     return channels
 
 
@@ -168,7 +168,7 @@ async def get_epgs_tbc(channel_id, date_str, channel_name):
                             "end": end_time
                         })
                     else:
-                        logger.warning(f"頻道 {actual_channel_name} 發現無名節目: {time_range}")
+                        logger.warning(f"頻道 {actual_channel_name} 發現無名稱節目: {time_range}")
 
                 except Exception as e:
                     logger.error(f"處理節目時間出錯: {program_date} {time_range} - {str(e)}")
@@ -180,8 +180,8 @@ async def get_epgs_tbc(channel_id, date_str, channel_name):
 
 
 async def get_tbc_epg(total_days=6):
-    """獲取多日 EPG 數據，跳過頻道 300-329"""
-    logger.info("正在獲取大大寬頻 EPG")
+    """獲取多日 EPG 資料，跳過頻道 300-329"""
+    logger.info("正在獲取TBC EPG")
     channels = await get_channels_tbc()
     if not channels:
         logger.error("無法獲取頻道清單，終止")
@@ -227,7 +227,8 @@ async def get_tbc_epg(total_days=6):
 
 
 def generate_epg_xml(channels, programs):
-    """生成 XMLTV 格式的 EPG 數據"""
+    """生成 XMLTV 格式的 EPG 資料"""
+    import xml.etree.ElementTree as ET
     tv = ET.Element("tv", {"info-name": "Taiwan-Broadband-EPG"})
 
     # 按頻道分組
@@ -236,7 +237,7 @@ def generate_epg_xml(channels, programs):
         ch_name = prog["channelName"]
         channel_programs.setdefault(ch_name, []).append(prog)
 
-    # 寫頻道和節目
+    # 寫入頻道與節目
     for channel_info in channels:
         ch_name = channel_info["channelName"]
         channel_elem = ET.SubElement(tv, "channel", id=ch_name)
@@ -264,28 +265,24 @@ def generate_epg_xml(channels, programs):
 
 async def main():
     """主函數"""
-    logger.add("epg_generator.log", rotation="1 day", retention="7 days")
+    logger.add(os.path.join(OUTPUT_DIR, "epg_generator.log"), rotation="1 day", retention="7 days")
     logger.info("========== 開始抓取 TBC EPG ==========")
 
     channels, programs = await get_tbc_epg(total_days=6)
     if not channels or not programs:
-        logger.error("沒有獲取到任何 EPG 數據")
+        logger.error("沒有獲取到任何 EPG 資料")
         sys.exit(1)
 
     xml_data = generate_epg_xml(channels, programs)
-    output_file = "epg_tbc.xml"
+    output_file = os.path.join(OUTPUT_DIR, "epg_tbc.xml")
     with open(output_file, "wb") as f:
         f.write(xml_data)
     logger.info(f"EPG 已保存到 {output_file}")
-
-    # 可選：同時輸出一份不帶時區偏移的簡單版本（用於調試）
-    # with open("epg_tbc_debug.xml", "w", encoding="utf-8") as f:
-    #     f.write(xml_data.decode('utf-8'))
 
     logger.info("========== 抓取完成 ==========")
 
 
 if __name__ == "__main__":
-    # 需要安裝依賴：pip install requests beautifulsoup4 pytz loguru
-    # 如需 SOCKS5 代理支持：pip install 'requests[socks]'
+    # 依賴安裝: pip install requests beautifulsoup4 pytz loguru
+    # 如需 SOCKS5 代理支援: pip install 'requests[socks]'
     asyncio.run(main())
