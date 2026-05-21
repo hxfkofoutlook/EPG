@@ -46,10 +46,23 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git fetch origin gh-pages
-          git checkout gh-pages || git checkout -b gh-pages
+          
+          # 嘗試切換到 gh-pages 分支，若不存在則建立（從當前提交）
+          if git ls-remote --heads origin gh-pages | grep -q gh-pages; then
+            git fetch origin gh-pages
+            git checkout gh-pages
+          else
+            git checkout --orphan gh-pages
+            git rm -rf . > /dev/null 2>&1 || true
+          fi
+          
+          # 確保目錄存在並複製檔案
           mkdir -p epg
           cp output/epg_tbc.xml epg/
+          
+          # 添加並提交
           git add epg/epg_tbc.xml
           git diff --staged --quiet || git commit -m "自動更新 EPG $(date '+%Y-%m-%d')"
-          git push origin gh-pages
+          
+          # 推送（首次推送需設定上游）
+          git push origin HEAD:gh-pages --force-with-lease
