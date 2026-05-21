@@ -1,0 +1,52 @@
+name: tbc_epg
+
+on:
+  schedule:
+    # 每天 UTC 21:00 (台北時間 05:00)
+    - cron: '21 21 * * *'
+  workflow_dispatch:   # 允許手動觸發
+
+jobs:
+  generate-epg:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 檢出程式碼
+        uses: actions/checkout@v4
+
+      - name: 設定 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 安裝相依套件
+        run: |
+          pip install requests beautifulsoup4 pytz loguru
+          # 如需 SOCKS5 代理，請取消下面註解並設定 PROXY_URL 環境變數
+          # pip install 'requests[socks]'
+
+      - name: 執行 EPG 抓取腳本
+        env:
+          PROXY_URL: ${{ secrets.PROXY_URL }}
+          OUTPUT_DIR: ./output
+        run: python scripts/tbc.py
+
+      - name: 上傳 EPG 檔案作為 Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: epg_tbc
+          path: output/epg_tbc.xml
+          retention-days: 7
+
+      - name: 提交到 gh-pages 分支 (選用)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin gh-pages
+          git checkout gh-pages || git checkout -b gh-pages
+          mkdir -p epg
+          cp output/epg_tbc.xml epg/
+          git add epg/epg_tbc.xml
+          git diff --staged --quiet || git commit -m "自動更新 EPG $(date '+%Y-%m-%d')"
+          git push origin gh-pages
