@@ -2,7 +2,8 @@
 # -*- coding: utf-8 -*-
 """
 TBC EPG 抓取器
-支援 HTTP/HTTPS/SOCKS5 代理，輸出 XMLTV 格式檔案至 /output 目錄
+支援 HTTP_PROXY, HTTPS_PROXY, SOCKS5_PROXY 環境變數
+輸出 XMLTV 格式檔案至 /output 目錄
 """
 
 import asyncio
@@ -26,14 +27,31 @@ SHANGHAI_TZ = pytz.timezone('Asia/Shanghai')
 OUTPUT_DIR = os.environ.get("OUTPUT_DIR", "/output")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
-# 代理設定 (環境變數 PROXY_URL, 格式 http://user:pass@host:port 或 socks5://...)
-PROXY_URL = os.environ.get("PROXY_URL", None)
+# ---------- 代理設定 (支援 HTTP_PROXY, HTTPS_PROXY, SOCKS5_PROXY) ----------
 PROXIES = {}
-if PROXY_URL:
-    PROXIES = {"http": PROXY_URL, "https": PROXY_URL}
-    logger.info(f"使用代理: {PROXY_URL}")
+
+http_proxy = os.environ.get("HTTP_PROXY")
+if http_proxy:
+    PROXIES["http"] = http_proxy
+
+https_proxy = os.environ.get("HTTPS_PROXY")
+if https_proxy:
+    PROXIES["https"] = https_proxy
+elif http_proxy and not https_proxy:
+    # 若未單獨設定 HTTPS_PROXY，則沿用 HTTP_PROXY
+    PROXIES["https"] = http_proxy
+
+socks5_proxy = os.environ.get("SOCKS5_PROXY")
+if socks5_proxy:
+    # requests 支援 socks5 協議，需安裝 requests[socks]
+    PROXIES["socks5"] = socks5_proxy
+    # 同時設定 socks5h (強制透過代理解析 DNS)
+    PROXIES["socks5h"] = socks5_proxy
+
+if PROXIES:
+    logger.info(f"使用代理: {PROXIES}")
 else:
-    logger.info("未設定代理，使用直連")
+    logger.info("未設定代理環境變數，使用直連")
 
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
@@ -196,12 +214,10 @@ async def get_tbc_epg(total_days=6):
         logger.info(f"正在獲取 {date_str} 節目表")
 
         tasks = []
-        valid_count = 0
         for channel in channels:
             cid = channel["id"][0]
             if cid in skip_ids:
                 continue
-            valid_count += 1
             tasks.append(get_epgs_tbc(cid, date_str, channel["name"]))
 
         if not tasks:
@@ -277,7 +293,7 @@ async def main():
     output_file = os.path.join(OUTPUT_DIR, "epg_tbc.xml")
     with open(output_file, "wb") as f:
         f.write(xml_data)
-    logger.info(f"EPG 已保存到 {output_file}")
+    logger.info(f"EPG 已儲存到 {output_file}")
 
     logger.info("========== 抓取完成 ==========")
 
