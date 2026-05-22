@@ -26,7 +26,7 @@ from urllib3.util.retry import Retry
 
 # ---------- 全域設定 ----------
 TAIPEI_TZ = pytz.timezone('Asia/Taipei')
-SHANGHAI_TZ = pytz.timezone('Asia/Shanghai')
+#SHANGHAI_TZ = pytz.timezone('Asia/Shanghai')
 
 # 輸出目錄 (由環境變數或預設)
 OUTPUT_DIR = os.environ.get("OUTPUT_DIR", "/output")
@@ -269,7 +269,7 @@ async def get_tbc_epg(total_days=6):
             logger.warning(f"{date_str} 沒有可獲取的頻道")
             continue
 
-        # 並行執行所有任務（內部已經有 Semaphore 控制並發）
+        # 並行執行所有任務
         results = await asyncio.gather(*tasks, return_exceptions=True)
 
         for res in results:
@@ -294,38 +294,55 @@ async def get_tbc_epg(total_days=6):
 
 
 def generate_epg_xml(channels, programs):
-    """生成 XMLTV 格式的 EPG 資料"""
+    """生成 XMLTV 格式的 EPG 資料 (通用排序與美化)"""
     import xml.etree.ElementTree as ET
-    tv = ET.Element("tv", {"info-name": "Taiwan-Broadband-EPG"})
+    from xml.dom import minidom
 
+    # 建立根元素，使用較標準的屬性名稱
+    tv = ET.Element("tv", {"generator-info-name": "Taiwan-Broadband-EPG"})
+
+    # 收集每個頻道的節目
     channel_programs = {}
     for prog in programs:
         ch_name = prog["channelName"]
         channel_programs.setdefault(ch_name, []).append(prog)
 
+    # 1. 先輸出所有 channel 元素
     for channel_info in channels:
         ch_name = channel_info["channelName"]
         channel_elem = ET.SubElement(tv, "channel", id=ch_name)
         ET.SubElement(channel_elem, "display-name", lang="zh").text = ch_name
 
-        if ch_name in channel_programs:
-            for prog in channel_programs[ch_name]:
-                start_str = time_stamp_to_timezone_str(prog["start"], SHANGHAI_TZ)
-                end_str = time_stamp_to_timezone_str(prog["end"], SHANGHAI_TZ)
+    # 2. 再輸出所有 programme 元素，並按開始時間排序（提升可讀性）
+    all_progs = []
+    for ch_name, progs in channel_programs.items():
+        for prog in progs:
+            all_progs.append((prog["start"], prog, ch_name))
 
-                programme = ET.SubElement(
-                    tv, "programme",
-                    channel=ch_name,
-                    start=start_str,
-                    stop=end_str
-                )
-                ET.SubElement(programme, "title", lang="zh").text = prog["programName"]
-                if prog["description"]:
-                    desc_clean = clean_invalid_xml_chars(prog["description"])
-                    desc_clean = html.escape(desc_clean)
-                    ET.SubElement(programme, "desc", lang="zh").text = desc_clean
+    # 按 start 時間排序
+    all_progs.sort(key=lambda x: x[0])
 
-    return ET.tostring(tv, encoding='utf-8', xml_declaration=True)
+    for _, prog, ch_name in all_progs:
+        start_str = time_stamp_to_timezone_str(prog["start"], TAIPEI_TZ)
+        end_str = time_stamp_to_timezone_str(prog["end"], TAIPEI_TZ)
+
+        programme = ET.SubElement(
+            tv, "programme",
+            channel=ch_name,
+            start=start_str,
+            stop=end_str
+        )
+        ET.SubElement(programme, "title", lang="zh").text = prog["programName"]
+        if prog["description"]:
+            desc_clean = clean_invalid_xml_chars(prog["description"])
+            desc_clean = html.escape(desc_clean)
+            ET.SubElement(programme, "desc", lang="zh").text = desc_clean
+
+    # 3. 美化 XML 輸出（含縮排）
+    rough_string = ET.tostring(tv, encoding='utf-8')
+    reparsed = minidom.parseString(rough_string)
+    pretty_xml = reparsed.toprettyxml(indent="  ", encoding='utf-8')
+    return pretty_xml
 
 
 async def main():
