@@ -201,13 +201,7 @@
     "fsNAME": "TVBS新聞",
     "fs4GTV_ID": "media-live072",
     "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv072_mobile.png",
-    "fsDESCRIPTION": "TVBS新聞台於1995年10月2日開播，當時是台灣第一個24小時本土新聞頻道，製播內容包括新聞報導、新聞回顧、娛樂資訊及時事論壇等。熱播節目包含：《十點不一樣》、《新聞夜視界》、《Focus全球新聞》、《一步一腳印 發現新台灣》…等精彩節目。"
-  },
-  {
-    "fsNAME": "TVBS新聞",
-    "fs4GTV_ID": "4gtv-4gtv072",
-    "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv072_mobile.png",
-    "fsDESCRIPTION": "TVBS新聞台於1995年10月2日開播，當時是台灣第一個24小時本土新聞頻道，製播內容包括新聞報導、新聞回顧、娛樂資訊及時事論壇等。熱播節目包含：《十點不一樣》、《新聞夜視界》、《Focus全球新聞》、《一步一腳印 發現新台灣》…等精彩節目。"
+    "fsDESCRIPTION": "TVBS新聞台於1995年10月2日開播，當時是台灣第一個24小時本土新聞頻道，製播內容包括新聞報導、新聞回顧、娛樂資訊及時事論壇等。熱播節目包含：《十點不一樣》、《新聞夜視界》、《Focus全球新聞》、《一步一腳印 發現新台灣》…等精彩節目。
   },
   {
     "fsNAME": "東森財經新聞台",
@@ -254,12 +248,6 @@
   {
     "fsNAME": "TVBS",
     "fs4GTV_ID": "media-live073",
-    "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv073_mobile.png",
-    "fsDESCRIPTION": "提供即時新聞、熱門影音、直播、精彩節目、節目表等深度媒體內容，是您最值得信賴的媒體，您可以一手掌握食尚玩家、女人我最大、健康2.0、11點熱吵店、Focus全球新聞、整點新聞、新聞大白話、少康戰情室、文茜的世界周報、地球黃金線、國民大會、健康2.0、TVBS看板人物等等。"
-  },
-  {
-    "fsNAME": "TVBS",
-    "fs4GTV_ID": "4gtv-4gtv073",
     "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv073_mobile.png",
     "fsDESCRIPTION": "提供即時新聞、熱門影音、直播、精彩節目、節目表等深度媒體內容，是您最值得信賴的媒體，您可以一手掌握食尚玩家、女人我最大、健康2.0、11點熱吵店、Focus全球新聞、整點新聞、新聞大白話、少康戰情室、文茜的世界周報、地球黃金線、國民大會、健康2.0、TVBS看板人物等等。"
   },
@@ -640,12 +628,6 @@
     "fs4GTV_ID": "4gtv-4gtv085",
     "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv085_mobile_0204.png",
     "fsDESCRIPTION": "國會頻道提供大眾一個最直接的管道，審視由大家選票選出的立法委員的議事過程，打破長久以來為人詬病的密室協商，讓全民都能夠直接參與時下最貼近生活的政治。"
-  },
-  {
-    "fsNAME": "FashionTV 時尚頻道",
-    "fs4GTV_ID": "4gtv-live085",
-    "fsLOGO_MOBILE": "https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/頻道LOGO去背fashiontv.png",
-    "fsDESCRIPTION": "全球第一個24小時以HD高畫質呈現的時尚頻道，所有頂尖名模、設計師、品牌、時尚照片拍攝現場和最新時尚走秀全都一網打盡。提供每年超過500小時的時尚節目、每月100支影片和每季300場來自世界時尚之都巴黎、米蘭、倫敦、紐約、東京時裝走秀等最即時的時尚資訊。"
   },
   {
     "fsNAME": "ROCK Xstream搖滾極限頻道",
