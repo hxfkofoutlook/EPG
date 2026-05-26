@@ -29,11 +29,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4056_ofiii26_tv_20260325.png",
     "卡通‧兒童"
   ],
-  "ofiii32": [
-    "東森娛樂台",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_2985_ofiii32_mobile_20230720.png",
-    "綜藝"
-  ],
   "ofiii36": [
     "中天亞洲精采台",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3069_ofiii36_mobile_20230920.png",
@@ -109,11 +104,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4015_ofiii79_tv_20260123.png",
     "電影"
   ],
-  "ofiii81": [
-    "全民星攻略 知識開箱",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3719_ofiii81_mobile_20250506.png",
-    "綜合"
-  ],
   "ofiii82": [
     "Focus探索新知台",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_ofiii82_mobile_20221213.png",
@@ -162,11 +152,6 @@
   "ofiii94": [
     "ASMR行車紀錄",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3691_ofiii94_mobile_20250328.png",
-    "綜合"
-  ],
-  "ofiii95": [
-    "Freeman @台灣",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3204_ofiii111_mobile_20240105.png",
     "綜合"
   ],
   "ofiii96": [
@@ -343,6 +328,11 @@
     "全民星攻略",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_2594_ofiii131_mobile_20250220.png",
     "熱門收視頻道"
+  ],
+  "ofiii132": [
+    "醫學大聯盟",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3955_ofiii132_mobile_20251216.png",
+    "綜藝"
   ],
   "ofiii133": [
     "台灣啟示錄",
@@ -578,6 +568,11 @@
     "城市獵人",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3751_ofiii186_mobile_20250529.png",
     "動漫"
+  ],
+  "ofiii187": [
+    "超人力霸王台",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3843_ofiii187_mobile_20250827.png",
+    "卡通‧兒童"
   ],
   "ofiii188": [
     "超人力霸王劇場版",
@@ -902,11 +897,6 @@
   "litv-xinchuang02": [
     "龍華洋片台",
     "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn02_mobile.png",
-    "電影"
-  ],
-  "litv-xinchuang03": [
-    "龍華電影台",
-    "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn03_mobile.png",
     "電影"
   ],
   "litv-xinchuang11": [
