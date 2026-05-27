@@ -14,17 +14,12 @@ from loguru import logger
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUTPUT_DIR = os.path.join(BASE_DIR, "output")
 
-# API 與回退檔案
 CHANNEL_API_URL = "https://api2.4gtv.tv/Channel/GetAllChannel/pc/L"
 LOCAL_CHANNEL_FILE = os.path.join(OUTPUT_DIR, "fourgtv.json")
-
-# 節目表基礎 URL
 PROG_URL_TEMPLATE = "https://www.4gtv.tv/ProgList/{channel_id}.txt"
-
-# 併發限制
 MAX_CONCURRENT_REQUESTS = 5
 
-# 需要跳過的頻道 ID（不解析、不抓取節目）
+# 不抓取這些頻道ID
 SKIP_CHANNEL_IDS = {
     "4gtv-4gtv038",
     "media-live001",
@@ -38,22 +33,15 @@ SKIP_CHANNEL_IDS = {
 }
 
 def create_ssl_context():
-    """建立創建強制使用 TLS 1.3 的 SSL 上下文"""
     ctx = ssl.create_default_context()
     ctx.minimum_version = ssl.TLSVersion.TLSv1_3
     ctx.check_hostname = True
     return ctx
 
+# 解析頻道數據（支持 API 或本地 JSON），返回簡潔頻道列表
 def parse_channel_data(data):
-    """
-    將 API 返回的數據或本地 JSON 數據解析為統一的頻道列表。
-    自動跳過 SKIP_CHANNEL_IDS 中的頻道。
-    """
     if isinstance(data, dict):
-        if "Data" in data:
-            items = data["Data"]
-        else:
-            items = [data]
+        items = data.get("Data", [data])
     elif isinstance(data, list):
         items = data
     else:
@@ -76,13 +64,13 @@ def parse_channel_data(data):
     return channels
 
 async def fetch_channels_from_api(session):
-    """從 API 獲取頻道列表"""
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
         "Accept": "application/json, text/plain, */*",
     }
     try:
-        async with session.get(CHANNEL_API_URL, headers=headers, timeout=aiohttp.ClientTimeout(total=15)) as resp:
+        async with session.get(CHANNEL_API_URL, headers=headers,
+                               timeout=aiohttp.ClientTimeout(total=15)) as resp:
             if resp.status != 200:
                 logger.error(f"API 返回狀態碼 {resp.status}")
                 return None
@@ -91,18 +79,31 @@ async def fetch_channels_from_api(session):
             if not data.get("Success", False):
                 logger.error("API 返回 Success=false")
                 return None
-            channels = parse_channel_data(data)
+
+            all_items = data["Data"]
+            # 過濾要跳過的頻道
+            filtered_items = [item for item in all_items
+                              if item.get("fs4GTV_ID") not in SKIP_CHANNEL_IDS]
+            # 覆寫本地 fourgtv.json（與 API 結構一致）
+            try:
+                with open(LOCAL_CHANNEL_FILE, "w", encoding="utf-8") as f:
+                    json.dump({"Success": True, "Data": filtered_items},
+                              f, ensure_ascii=False, indent=2)
+                logger.success(f"已更新本地頻道檔案，保存 {len(filtered_items)} 個頻道")
+            except Exception as e:
+                logger.error(f"寫入本地頻道檔案失敗: {e}")
+
+            channels = parse_channel_data({"Data": filtered_items})
             if not channels:
-                logger.warning("API 返回的頻道列表為空（可能全部被過濾）")
+                logger.warning("過濾後頻道列表為空")
                 return None
-            logger.success(f"從 API 獲取到 {len(channels)} 個頻道（已過濾 {len(SKIP_CHANNEL_IDS)} 個）")
+            logger.success(f"從 API 獲取到 {len(channels)} 個頻道（已跳過 {len(all_items)-len(filtered_items)} 個）")
             return channels
     except Exception as e:
         logger.error(f"通過 API 獲取頻道列表失敗: {e}")
         return None
 
 def load_channels_from_local():
-    """從本地檔案回退加載頻道"""
     if not os.path.exists(LOCAL_CHANNEL_FILE):
         logger.error(f"本地頻道檔案不存在: {LOCAL_CHANNEL_FILE}")
         return None
@@ -120,7 +121,6 @@ def load_channels_from_local():
         return None
 
 async def fetch_single_program(session, sem, channel, ssl_context, retries=3):
-    """抓取單個頻道的節目表（帶重試）"""
     ch_id = channel["channelId"]
     ch_name = channel["channelName"]
     url = PROG_URL_TEMPLATE.format(channel_id=ch_id)
@@ -133,7 +133,6 @@ async def fetch_single_program(session, sem, channel, ssl_context, retries=3):
 
     async with sem:
         await asyncio.sleep(random.uniform(0.1, 0.5))
-
         for attempt in range(1, retries + 1):
             try:
                 async with session.get(url, headers=headers, ssl=ssl_context,
@@ -144,8 +143,7 @@ async def fetch_single_program(session, sem, channel, ssl_context, retries=3):
                     if not text.strip().startswith(('[', '{')):
                         raise ValueError("返回的不是有效 JSON")
                     data = json.loads(text)
-                    programs = parse_programs(data, ch_id, ch_name)
-                    return programs
+                    return parse_programs(data, ch_id, ch_name)
             except Exception as e:
                 logger.warning(f"{ch_name} 第 {attempt} 次嘗試失敗: {e}")
                 if attempt < retries:
@@ -155,7 +153,6 @@ async def fetch_single_program(session, sem, channel, ssl_context, retries=3):
                     return None
 
 def parse_programs(raw_data, channel_id, channel_name):
-    """將原始節目 JSON 轉換為統一結構"""
     programs = []
     tz = pytz.timezone("Asia/Taipei")
     for item in raw_data:
@@ -174,7 +171,6 @@ def parse_programs(raw_data, channel_id, channel_name):
     return programs
 
 async def fetch_all_programs(channels):
-    """併發抓取所有頻道的節目表"""
     ssl_ctx = create_ssl_context()
     sem = asyncio.Semaphore(MAX_CONCURRENT_REQUESTS)
     connector = aiohttp.TCPConnector(ssl=ssl_ctx, limit=MAX_CONCURRENT_REQUESTS * 2)
@@ -202,7 +198,6 @@ def generate_xml(channels, programs, filename):
 
     for ch in channels:
         ch_name = ch["channelName"]
-
         ch_elem = ET.SubElement(tv, "channel", id=ch_name)
         dn = ET.SubElement(ch_elem, "display-name", lang="zh")
         dn.text = ch_name
@@ -234,7 +229,6 @@ def generate_xml(channels, programs, filename):
 
 async def main_async():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-
     log_file = os.path.join(OUTPUT_DIR, "epg_generator.log")
     logger.add(log_file, rotation="1 day", retention="7 days", encoding="utf-8",
                format="{time:YYYY-MM-DD HH:mm:ss} | {level} | {message}")
@@ -243,26 +237,27 @@ async def main_async():
     logger.info("開始生成四季線上電子節目單")
     logger.info(f"輸出目錄: {OUTPUT_DIR}")
 
+    # 1. 優先 API，失敗回退本地
     channels = None
     async with aiohttp.ClientSession() as session:
         try:
             channels = await fetch_channels_from_api(session)
         except Exception:
             pass
-
     if not channels:
         logger.warning("API 獲取失敗，嘗試讀取本地檔案")
         channels = load_channels_from_local()
-
     if not channels:
         logger.critical("無法獲取任何頻道信息，流程終止")
         sys.exit(1)
 
     logger.info(f"成功加載 {len(channels)} 個頻道")
 
+    # 2. 併發抓取節目表
     programs = await fetch_all_programs(channels)
     logger.info(f"共獲取 {len(programs)} 個節目")
 
+    # 3. 生成 XML
     xml_file = os.path.join(OUTPUT_DIR, "4g.xml")
     generate_xml(channels, programs, xml_file)
     logger.success("EPG 生成完成")
