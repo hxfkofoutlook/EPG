@@ -69,11 +69,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_ofiii64_mobile_20221110.png",
     "新聞‧財經"
   ],
-  "ofiii70": [
-    "Golden 強片台",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3562_ofiii70_mobile_20241203.png",
-    "電影"
-  ],
   "ofiii73": [
     "周星馳台",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3202_ofiii73_mobile_20240105.png",
@@ -195,7 +190,7 @@
     "戲劇"
   ],
   "ofiii102": [
-    "白髮",
+    "白髮《6/3即將下架》",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3881_ofiii102_mobile_20250924.png",
     "戲劇"
   ],
@@ -245,7 +240,7 @@
     "戲劇"
   ],
   "ofiii112": [
-    "宴遇永安",
+    "宴遇永安《6/3即將下架》",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3923_ofiii112_mobile_20251126.png",
     "戲劇"
   ],
@@ -275,7 +270,7 @@
     "戲劇"
   ],
   "ofiii118": [
-    "深情眼",
+    "深情眼《6/3即將下架》",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3903_ofiii118_mobile_20251028.png",
     "戲劇"
   ],
@@ -285,7 +280,7 @@
     "戲劇"
   ],
   "ofiii120": [
-    "愛上你治癒我",
+    "愛上你治癒我《6/3即將下架》",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3924_ofiii120_mobile_20251126.png",
     "戲劇"
   ],
@@ -380,7 +375,7 @@
     "綜藝"
   ],
   "ofiii142": [
-    "一字千金",
+    "一字千金《6/3即將下架》",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3168_ofiii142_mobile_20250220.png",
     "綜藝"
   ],
@@ -430,17 +425,17 @@
     "戲劇"
   ],
   "ofiii152": [
-    "我的婆婆怎麼那麼可愛",
+    "我的婆婆怎麼那麼可愛《6/3即將下架》",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3027_ofiii152_mobile_20250220.png",
     "戲劇"
   ],
   "ofiii153": [
-    "村裡來了個暴走女外科",
+    "村裡來了個暴走女外科《6/3即將下架》",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3028_ofiii153_mobile_20250220.png",
     "戲劇"
   ],
   "ofiii156": [
-    "苦力",
+    "苦力《6/3即將下架》",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3478_ofiii156_mobile_20250220.png",
     "戲劇"
   ],
@@ -455,12 +450,12 @@
     "動漫"
   ],
   "ofiii160": [
-    "擁有超常技能的異世界流浪美食家",
+    "擁有超常技能的異世界流浪美食家《6/3即將下架》",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3331_ofiii160_mobile_20250220.png",
     "動漫"
   ],
   "ofiii161": [
-    "離開A級隊伍的我，和從前的弟子往迷宮深處邁進",
+    "離開A級隊伍的我，和從前的弟子往迷宮深處邁進《6/3即將下架》",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3883_ofiii161_mobile_20250924.png",
     "動漫"
   ],
@@ -522,11 +517,6 @@
   "ofiii173": [
     "一拳超人(中文版)",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3925_ofiii173_mobile_20251126.png",
-    "動漫"
-  ],
-  "ofiii174": [
-    "夏目友人帳",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3171_ofiii174_mobile_20250220.png",
     "動漫"
   ],
   "ofiii175": [
@@ -684,11 +674,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3522_ofiii217_mobile_20241104.png",
     "綜合"
   ],
-  "ofiii218": [
-    "脖子解說 Mr. Neck",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3523_ofiii218_mobile_20250220.png",
-    "綜合"
-  ],
   "ofiii225": [
     "好運來",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4086_ofiii225_tv_20260429.png",
@@ -698,6 +683,11 @@
     "黃金歲月",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4087_ofiii226_tv_20260429.png",
     "戲劇"
+  ],
+  "ofiii230": [
+    "歡迎光琳",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3963_ofiii230_mobile_20251216.png",
+    "綜藝"
   ],
   "ofiii231": [
     "咱的城 咱的市 咱台灣的味",
@@ -953,11 +943,6 @@
     "台灣戲劇台",
     "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn22_mobile.png",
     "戲劇"
-  ],
-  "iNEWS": [
-    "三立新聞iNEWS",
-    "https://p-cdnstatic.svc.litv.tv/pics/logo_litv_iNEWS_mobile.png",
-    "新聞‧財經"
   ],
   "daystar": [
     "DayStar",
