@@ -74,11 +74,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3562_ofiii70_mobile_20241203.png",
     "電影"
   ],
-  "ofiii73": [
-    "周星馳台",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3202_ofiii73_mobile_20240105.png",
-    "電影"
-  ],
   "ofiii74": [
     "歐飛電影台",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_2748_ofiii74_mobile_20240315.png",
@@ -108,6 +103,11 @@
     "華語金選台",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4015_ofiii79_tv_20260123.png",
     "電影"
+  ],
+  "ofiii81": [
+    "全民星攻略 知識開箱",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3719_ofiii81_mobile_20250506.png",
+    "綜合"
   ],
   "ofiii82": [
     "Focus探索新知台",
@@ -444,11 +444,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3358_ofiii157_mobile_20250220.png",
     "戲劇"
   ],
-  "ofiii159": [
-    "雖然等級只有1級但固有技能是最強的",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3359_ofiii159_mobile_20250220.png",
-    "動漫"
-  ],
   "ofiii160": [
     "擁有超常技能的異世界流浪美食家《6/3即將下架》",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3331_ofiii160_mobile_20250220.png",
@@ -694,11 +689,6 @@
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4087_ofiii226_tv_20260429.png",
     "戲劇"
   ],
-  "ofiii230": [
-    "歡迎光琳",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3963_ofiii230_mobile_20251216.png",
-    "綜藝"
-  ],
   "ofiii231": [
     "咱的城 咱的市 咱台灣的味",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3964_ofiii231_mobile_20251216.png",
@@ -712,11 +702,6 @@
   "ofiii233": [
     "大胃王來了！",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4059_ofiii233_tv_20260325.png",
-    "綜藝"
-  ],
-  "ofiii234": [
-    "非凡大探索",
-    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3553_ofiii234_mobile_20250220.png",
     "綜藝"
   ],
   "ofiii235": [
@@ -793,6 +778,11 @@
     "怪奇研究室",
     "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_4088_ofiii249_tv_20260429.png",
     "綜藝"
+  ],
+  "ofiii250": [
+    "紓壓雷雨聲",
+    "https://p-cdnstatic.svc.litv.tv/pics/vod_channel/logo_3437_ofiii250_mobile_20250305.png",
+    "綜合"
   ],
   "ofiii251": [
     "療癒下雨聲",
