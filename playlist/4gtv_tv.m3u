@@ -1,0 +1,393 @@
+#EXTINF:-1 tvg-id="民視第一台" tvg-name="民視第一台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv003_mobile.png" group-title="綜合",民視第一台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=1&fs4GTV_ID=4gtv-4gtv003&proxy=true
+#EXTINF:-1 tvg-id="民視台灣台" tvg-name="民視台灣台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv001_mobile.png" group-title="綜合",民視台灣台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=2&fs4GTV_ID=4gtv-4gtv001&proxy=true
+#EXTINF:-1 tvg-id="民視" tvg-name="民視" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv002_mobile.png" group-title="綜合",民視
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=3&fs4GTV_ID=4gtv-4gtv002&proxy=true
+#EXTINF:-1 tvg-id="大愛電視" tvg-name="大愛電視" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv007_mobile.png" group-title="綜合",大愛電視
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=209&fs4GTV_ID=4gtv-live007&proxy=true
+#EXTINF:-1 tvg-id="中視" tvg-name="中視" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv040_mobile.png" group-title="綜合",中視
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=4&fs4GTV_ID=4gtv-4gtv040&proxy=true
+#EXTINF:-1 tvg-id="華視" tvg-name="華視" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv041_mobile.png" group-title="綜合",華視
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=6&fs4GTV_ID=4gtv-4gtv041&proxy=true
+#EXTINF:-1 tvg-id="三立綜合台" tvg-name="三立綜合台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live207_mobile.png" group-title="綜合",三立綜合台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=169&fs4GTV_ID=4gtv-live207&proxy=true
+#EXTINF:-1 tvg-id="客家電視台" tvg-name="客家電視台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv043_mobile.png" group-title="綜合",客家電視台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=107&fs4GTV_ID=4gtv-4gtv043&proxy=true
+#EXTINF:-1 tvg-id="八大綜藝台" tvg-name="八大綜藝台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv039_mobile.png" group-title="音樂綜藝",八大綜藝台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=114&fs4GTV_ID=4gtv-4gtv039&proxy=true
+#EXTINF:-1 tvg-id="TVBS精采台" tvg-name="TVBS精采台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live086_mobile.png" group-title="音樂綜藝",TVBS精采台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=227&fs4GTV_ID=4gtv-4gtv067&proxy=true
+#EXTINF:-1 tvg-id="愛爾達寵物運動台" tvg-name="愛爾達寵物運動台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/頻道LOGO去背.png" group-title="綜合",愛爾達寵物運動台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=19&fs4GTV_ID=4gtv-4gtv070&proxy=true
+#EXTINF:-1 tvg-id="靖天綜合台" tvg-name="靖天綜合台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv046_mobile.png" group-title="綜合",靖天綜合台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=21&fs4GTV_ID=4gtv-4gtv046&proxy=true
+#EXTINF:-1 tvg-id="靖天日本台" tvg-name="靖天日本台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv047_mobile.png" group-title="音樂綜藝",靖天日本台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=22&fs4GTV_ID=4gtv-4gtv047&proxy=true
+#EXTINF:-1 tvg-id="新唐人亞太台" tvg-name="新唐人亞太台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live050_mobile.png" group-title="綜合",新唐人亞太台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=223&fs4GTV_ID=4gtv-live050&proxy=true
+#EXTINF:-1 tvg-id="ARIRANG阿里郎頻道" tvg-name="ARIRANG阿里郎頻道" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv079_1_mobile.png" group-title="綜合",ARIRANG阿里郎頻道
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=189&fs4GTV_ID=4gtv-4gtv079&proxy=true
+#EXTINF:-1 tvg-id="Global Trekker" tvg-name="Global Trekker" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live112_mobile.png" group-title="綜合",Global Trekker
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=252&fs4GTV_ID=4gtv-live112&proxy=true
+#EXTINF:-1 tvg-id="原住民族電視台" tvg-name="原住民族電視台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live014_mobile.webp" group-title="綜合",原住民族電視台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=124&fs4GTV_ID=4gtv-4gtv080&proxy=true
+#EXTINF:-1 tvg-id="東森購物四台" tvg-name="東森購物四台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live047_mobile.png" group-title="綜合",東森購物四台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=286&fs4GTV_ID=4gtv-live049&proxy=true
+#EXTINF:-1 tvg-id="LiveABC互動英語頻道" tvg-name="LiveABC互動英語頻道" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live030_mobile.png" group-title="兒童與青少年",LiveABC互動英語頻道
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=188&fs4GTV_ID=4gtv-live030&proxy=true
+#EXTINF:-1 tvg-id="達文西頻道" tvg-name="達文西頻道" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv018_mobile.png" group-title="兒童與青少年",達文西頻道
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=11&fs4GTV_ID=4gtv-4gtv018&proxy=true
+#EXTINF:-1 tvg-id="ELTV生活英語台" tvg-name="ELTV生活英語台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn20_mobile.webp" group-title="兒童與青少年",ELTV生活英語台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=490&fs4GTV_ID=litv-xinchuang20&proxy=true
+#EXTINF:-1 tvg-id="Nick Jr. 兒童頻道" tvg-name="Nick Jr. 兒童頻道" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live032.png" group-title="兒童與青少年",Nick Jr. 兒童頻道
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=219&fs4GTV_ID=4gtv-live032&proxy=true
+#EXTINF:-1 tvg-id="尼克兒童頻道" tvg-name="尼克兒童頻道" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live105.png" group-title="兒童與青少年",尼克兒童頻道
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=185&fs4GTV_ID=4gtv-live105&proxy=true
+#EXTINF:-1 tvg-id="DreamWorks 夢工廠動畫" tvg-name="DreamWorks 夢工廠動畫" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live017_mobile.png" group-title="兒童與青少年",DreamWorks 夢工廠動畫
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=282&fs4GTV_ID=4gtv-live017&proxy=true
+#EXTINF:-1 tvg-id="靖天卡通台" tvg-name="靖天卡通台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv044_mobile.png" group-title="兒童與青少年",靖天卡通台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=15&fs4GTV_ID=4gtv-4gtv044&proxy=true
+#EXTINF:-1 tvg-id="靖洋卡通Nice Bingo" tvg-name="靖洋卡通Nice Bingo" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv057_mobile.png" group-title="兒童與青少年",靖洋卡通Nice Bingo
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=59&fs4GTV_ID=4gtv-4gtv057&proxy=true
+#EXTINF:-1 tvg-id="MOMO親子台" tvg-name="MOMO親子台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live107.png" group-title="兒童與青少年",MOMO親子台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=231&fs4GTV_ID=4gtv-live107&proxy=true
+#EXTINF:-1 tvg-id="東森購物一台" tvg-name="東森購物一台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live047_mobile.png" group-title="綜合",東森購物一台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=173&fs4GTV_ID=4gtv-live047&proxy=true
+#EXTINF:-1 tvg-id="鏡電視新聞台" tvg-name="鏡電視新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv075_mobile.png" group-title="新聞財經",鏡電視新聞台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=268&fs4GTV_ID=4gtv-4gtv075&proxy=true
+#EXTINF:-1 tvg-id="東森新聞台" tvg-name="東森新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-ftv14_mobile.png" group-title="新聞財經",東森新聞台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=292&fs4GTV_ID=4gtv-4gtv152&proxy=true
+#EXTINF:-1 tvg-id="華視新聞" tvg-name="華視新聞" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv052_mobile.png" group-title="新聞財經",華視新聞
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=34&fs4GTV_ID=4gtv-4gtv052&proxy=true
+#EXTINF:-1 tvg-id="民視新聞台" tvg-name="民視新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-ftv13_mobile.png" group-title="新聞財經",民視新聞台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=31&fs4GTV_ID=litv-ftv13&proxy=true
+#EXTINF:-1 tvg-id="三立新聞iNEWS" tvg-name="三立新聞iNEWS" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live089_mobile.png" group-title="新聞財經",三立新聞iNEWS
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=229&fs4GTV_ID=4gtv-live089&proxy=true
+#EXTINF:-1 tvg-id="TVBS新聞" tvg-name="TVBS新聞" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv072_mobile.png" group-title="新聞財經",TVBS新聞
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=291&fs4GTV_ID=4gtv-4gtv072&proxy=true
+#EXTINF:-1 tvg-id="東森財經新聞台" tvg-name="東森財經新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv019_mobile.png" group-title="新聞財經",東森財經新聞台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=293&fs4GTV_ID=4gtv-4gtv153&proxy=true
+#EXTINF:-1 tvg-id="中視新聞" tvg-name="中視新聞" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv074_mobile.png" group-title="新聞財經",中視新聞
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=33&fs4GTV_ID=4gtv-4gtv074&proxy=true
+#EXTINF:-1 tvg-id="中天新聞台" tvg-name="中天新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv009_mobile.png" group-title="新聞財經",中天新聞台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=30&fs4GTV_ID=4gtv-4gtv009&proxy=true
+#EXTINF:-1 tvg-id="Bloomberg TV" tvg-name="Bloomberg TV" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live0_mobile.png" group-title="新聞財經",Bloomberg TV
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=283&fs4GTV_ID=4gtv-live059&proxy=true
+#EXTINF:-1 tvg-id="寰宇新聞台" tvg-name="寰宇新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn14_mobile.png" group-title="新聞財經",寰宇新聞台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=36&fs4GTV_ID=litv-longturn14&proxy=true
+#EXTINF:-1 tvg-id="寰宇新聞台灣台" tvg-name="寰宇新聞台灣台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn15_mobile.png" group-title="新聞財經",寰宇新聞台灣台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=280&fs4GTV_ID=4gtv-4gtv156&proxy=true
+#EXTINF:-1 tvg-id="SBN全球財經台" tvg-name="SBN全球財經台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live060_mobile.png" group-title="新聞財經",SBN全球財經台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=224&fs4GTV_ID=4gtv-live060&proxy=true
+#EXTINF:-1 tvg-id="TVBS" tvg-name="TVBS" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_media-live073_mobile.png" group-title="新聞財經",TVBS
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=472&fs4GTV_ID=media-live073&proxy=true
+#EXTINF:-1 tvg-id="東森購物二台" tvg-name="東森購物二台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live046_mobile.png" group-title="綜合",東森購物二台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=174&fs4GTV_ID=4gtv-live046&proxy=true
+#EXTINF:-1 tvg-id="民視綜藝台" tvg-name="民視綜藝台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv004_mobile.png" group-title="音樂綜藝",民視綜藝台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=16&fs4GTV_ID=4gtv-4gtv004&proxy=true
+#EXTINF:-1 tvg-id="豬哥亮歌廳秀" tvg-name="豬哥亮歌廳秀" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv006_mobile.png" group-title="音樂綜藝",豬哥亮歌廳秀
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=113&fs4GTV_ID=4gtv-4gtv006&proxy=true
+#EXTINF:-1 tvg-id="靖天育樂台" tvg-name="靖天育樂台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv062_mobile.png" group-title="音樂綜藝",靖天育樂台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=83&fs4GTV_ID=4gtv-4gtv062&proxy=true
+#EXTINF:-1 tvg-id="KLT-靖天國際台" tvg-name="KLT-靖天國際台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv063_mobile.png" group-title="音樂綜藝",KLT-靖天國際台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=84&fs4GTV_ID=4gtv-4gtv063&proxy=true
+#EXTINF:-1 tvg-id="Nice TV 靖天歡樂台" tvg-name="Nice TV 靖天歡樂台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv054_mobile.png" group-title="音樂綜藝",Nice TV 靖天歡樂台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=119&fs4GTV_ID=4gtv-4gtv054&proxy=true
+#EXTINF:-1 tvg-id="靖天資訊台" tvg-name="靖天資訊台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv065_mobile.png" group-title="音樂綜藝",靖天資訊台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=88&fs4GTV_ID=4gtv-4gtv065&proxy=true
+#EXTINF:-1 tvg-id="TVBS歡樂台" tvg-name="TVBS歡樂台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv068_mobile.png" group-title="音樂綜藝",TVBS歡樂台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=184&fs4GTV_ID=4gtv-4gtv068&proxy=true
+#EXTINF:-1 tvg-id="韓國娛樂台 KMTV" tvg-name="韓國娛樂台 KMTV" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv016_mobile.png" group-title="音樂綜藝",韓國娛樂台 KMTV
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=446&fs4GTV_ID=4gtv-4gtv016&proxy=true
+#EXTINF:-1 tvg-id="ROCK Entertainment" tvg-name="ROCK Entertainment" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live080_mobile.png" group-title="綜合",ROCK Entertainment
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=275&fs4GTV_ID=4gtv-live080&proxy=true
+#EXTINF:-1 tvg-id="Lifetime 娛樂頻道" tvg-name="Lifetime 娛樂頻道" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live029_mobile.png" group-title="音樂綜藝",Lifetime 娛樂頻道
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=217&fs4GTV_ID=4gtv-live029&proxy=true
+#EXTINF:-1 tvg-id="電影原聲台CMusic" tvg-name="電影原聲台CMusic" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live031_mobile.png" group-title="音樂綜藝",電影原聲台CMusic
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=218&fs4GTV_ID=4gtv-live031&proxy=true
+#EXTINF:-1 tvg-id="TRACE Urban" tvg-name="TRACE Urban" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv082_mobile.png" group-title="音樂綜藝",TRACE Urban
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=78&fs4GTV_ID=4gtv-4gtv082&proxy=true
+#EXTINF:-1 tvg-id="Mezzo Live HD" tvg-name="Mezzo Live HD" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv083_mobile.png" group-title="音樂綜藝",Mezzo Live HD
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=79&fs4GTV_ID=4gtv-4gtv083&proxy=true
+#EXTINF:-1 tvg-id="CLASSICA 古典樂" tvg-name="CLASSICA 古典樂" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv059_mobile.png" group-title="音樂綜藝",CLASSICA 古典樂
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=80&fs4GTV_ID=4gtv-4gtv059&proxy=true
+#EXTINF:-1 tvg-id="東森購物三台" tvg-name="東森購物三台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live047_mobile.png" group-title="綜合",東森購物三台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=287&fs4GTV_ID=4gtv-live048&proxy=true
+#EXTINF:-1 tvg-id="INULTRA" tvg-name="INULTRA" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_INULTRA_mobile.png" group-title="運動健康生活",INULTRA
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=444&fs4GTV_ID=4gtv-live096&proxy=true
+#EXTINF:-1 tvg-id="博斯高球台" tvg-name="博斯高球台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn05_mobile.png" group-title="運動健康生活",博斯高球台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=486&fs4GTV_ID=litv-xinchuang05&proxy=true
+#EXTINF:-1 tvg-id="博斯運動一台" tvg-name="博斯運動一台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn07_mobile.png" group-title="運動健康生活",博斯運動一台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=487&fs4GTV_ID=litv-xinchuang07&proxy=true
+#EXTINF:-1 tvg-id="博斯網球台" tvg-name="博斯網球台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn09_mobile.png" group-title="運動健康生活",博斯網球台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=488&fs4GTV_ID=litv-xinchuang09&proxy=true
+#EXTINF:-1 tvg-id="博斯無限台" tvg-name="博斯無限台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn10_mobile.png" group-title="運動健康生活",博斯無限台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=489&fs4GTV_ID=litv-xinchuang10&proxy=true
+#EXTINF:-1 tvg-id="博斯魅力台" tvg-name="博斯魅力台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-xinchuang04.png" group-title="運動健康生活",博斯魅力台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=493&fs4GTV_ID=litv-xinchuang04&proxy=true
+#EXTINF:-1 tvg-id="博斯高球二台" tvg-name="博斯高球二台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-xinchuang06.png" group-title="運動健康生活",博斯高球二台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=494&fs4GTV_ID=litv-xinchuang06&proxy=true
+#EXTINF:-1 tvg-id="博斯運動二台" tvg-name="博斯運動二台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-xinchuang08.png" group-title="運動健康生活",博斯運動二台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=495&fs4GTV_ID=litv-xinchuang08&proxy=true
+#EXTINF:-1 tvg-id="博斯無限二台" tvg-name="博斯無限二台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-xinchuang13.png" group-title="運動健康生活",博斯無限二台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=496&fs4GTV_ID=litv-xinchuang13&proxy=true
+#EXTINF:-1 tvg-id="TRACE Urban" tvg-name="TRACE Urban" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv082_mobile.png" group-title="音樂綜藝",TRACE Urban
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=78&fs4GTV_ID=4gtv-4gtv082&proxy=true
+#EXTINF:-1 tvg-id="智林體育台" tvg-name="智林體育台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv101_mobile.png" group-title="運動健康生活",智林體育台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=58&fs4GTV_ID=4gtv-4gtv101&proxy=true
+#EXTINF:-1 tvg-id="時尚運動X" tvg-name="時尚運動X" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv411_mobile.png" group-title="運動健康生活",時尚運動X
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=277&fs4GTV_ID=4gtv-live411&proxy=true
+#EXTINF:-1 tvg-id="車迷TV" tvg-name="車迷TV" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live201_mobile.png" group-title="運動健康生活",車迷TV
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=160&fs4GTV_ID=4gtv-live201&proxy=true
+#EXTINF:-1 tvg-id="GINX Esports TV" tvg-name="GINX Esports TV" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv053_mobile.png" group-title="運動健康生活",GINX Esports TV
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=179&fs4GTV_ID=4gtv-4gtv053&proxy=true
+#EXTINF:-1 tvg-id="Pet Club TV" tvg-name="Pet Club TV" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live110_mobile.png" group-title="運動健康生活",Pet Club TV
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=464&fs4GTV_ID=4gtv-4gtv110&proxy=true
+#EXTINF:-1 tvg-id="民視旅遊台" tvg-name="民視旅遊台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-ftv07_mobile.png" group-title="生活旅遊時尚",民視旅遊台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=61&fs4GTV_ID=litv-ftv07&proxy=true
+#EXTINF:-1 tvg-id="滾動力rollor" tvg-name="滾動力rollor" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live012_mobile.png" group-title="生活旅遊時尚",滾動力rollor
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=249&fs4GTV_ID=4gtv-live012&proxy=true
+#EXTINF:-1 tvg-id="亞洲旅遊台" tvg-name="亞洲旅遊台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-longturn17_mobile.png" group-title="生活旅遊時尚",亞洲旅遊台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=261&fs4GTV_ID=4gtv-live417&proxy=true
+#EXTINF:-1 tvg-id="fun探索娛樂台" tvg-name="fun探索娛樂台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live011_mobile.png" group-title="音樂綜藝",fun探索娛樂台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=274&fs4GTV_ID=4gtv-live011&proxy=true
+#EXTINF:-1 tvg-id="幸福空間居家台" tvg-name="幸福空間居家台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live206_mobile.webp" group-title="生活旅遊時尚",幸福空間居家台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=123&fs4GTV_ID=4gtv-4gtv064&proxy=true
+#EXTINF:-1 tvg-id="Love Nature" tvg-name="Love Nature" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/ogo_4gtv_4gtv-live208_mobile.png" group-title="生活旅遊時尚",Love Nature
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=139&fs4GTV_ID=4gtv-live208&proxy=true
+#EXTINF:-1 tvg-id="History 歷史頻道" tvg-name="History 歷史頻道" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live026_mobile.png" group-title="生活旅遊時尚",History 歷史頻道
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=214&fs4GTV_ID=4gtv-live026&proxy=true
+#EXTINF:-1 tvg-id="愛爾達生活旅遊台" tvg-name="愛爾達生活旅遊台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live120_mobile.png" group-title="生活旅遊時尚",愛爾達生活旅遊台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=237&fs4GTV_ID=4gtv-live120&proxy=true
+#EXTINF:-1 tvg-id="LUXE TV Channel" tvg-name="LUXE TV Channel" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live121_mobile.png" group-title="生活旅遊時尚",LUXE TV Channel
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=175&fs4GTV_ID=4gtv-live121&proxy=true
+#EXTINF:-1 tvg-id="TV5MONDE STYLE HD 生活時尚" tvg-name="TV5MONDE STYLE HD 生活時尚" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live122_mobile.png" group-title="生活旅遊時尚",TV5MONDE STYLE HD 生活時尚
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=178&fs4GTV_ID=4gtv-live122&proxy=true
+#EXTINF:-1 tvg-id="MagellanTV頻道 (麥哲倫頻道) " tvg-name="MagellanTV頻道 (麥哲倫頻道) " tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_MGTV_mobile.png" group-title="戲劇、電影與紀錄片",MagellanTV頻道 (麥哲倫頻道) 
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=450&fs4GTV_ID=4gtv-live123&proxy=true
+#EXTINF:-1 tvg-id="ROCK Xstream搖滾極限頻道" tvg-name="ROCK Xstream搖滾極限頻道" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live124.png" group-title="戲劇、電影與紀錄片",ROCK Xstream搖滾極限頻道
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=485&fs4GTV_ID=4gtv-live124&proxy=true
+#EXTINF:-1 tvg-id="公視戲劇" tvg-name="公視戲劇" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv042_mobile.png" group-title="戲劇、電影與紀錄片",公視戲劇
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=7&fs4GTV_ID=4gtv-4gtv042&proxy=true
+#EXTINF:-1 tvg-id="民視影劇台" tvg-name="民視影劇台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-ftv09_mobile.png" group-title="戲劇、電影與紀錄片",民視影劇台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=24&fs4GTV_ID=litv-ftv09&proxy=true
+#EXTINF:-1 tvg-id="HITS頻道" tvg-name="HITS頻道" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live620_mobile.png" group-title="戲劇、電影與紀錄片",HITS頻道
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=186&fs4GTV_ID=4gtv-live620&proxy=true
+#EXTINF:-1 tvg-id="八大精彩台" tvg-name="八大精彩台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv034_mobile_0211.png" group-title="戲劇、電影與紀錄片",八大精彩台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=172&fs4GTV_ID=4gtv-4gtv034&proxy=true
+#EXTINF:-1 tvg-id="靖天戲劇台" tvg-name="靖天戲劇台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv058_mobile.png" group-title="戲劇、電影與紀錄片",靖天戲劇台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=116&fs4GTV_ID=4gtv-4gtv058&proxy=true
+#EXTINF:-1 tvg-id="靖洋戲劇台" tvg-name="靖洋戲劇台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv045_mobile.png" group-title="戲劇、電影與紀錄片",靖洋戲劇台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=118&fs4GTV_ID=4gtv-4gtv045&proxy=true
+#EXTINF:-1 tvg-id="CI 罪案偵查頻道" tvg-name="CI 罪案偵查頻道" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live027_mobile.png" group-title="生活旅遊時尚",CI 罪案偵查頻道
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=215&fs4GTV_ID=4gtv-live027&proxy=true
+#EXTINF:-1 tvg-id="視納華仁紀實頻道" tvg-name="視納華仁紀實頻道" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv013_mobile.png" group-title="戲劇、電影與紀錄片",視納華仁紀實頻道
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=38&fs4GTV_ID=4gtv-4gtv013&proxy=true
+#EXTINF:-1 tvg-id="影迷數位紀實台" tvg-name="影迷數位紀實台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live023_mobile.png" group-title="戲劇、電影與紀錄片",影迷數位紀實台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=445&fs4GTV_ID=litv-ftv15&proxy=true
+#EXTINF:-1 tvg-id="金光布袋戲" tvg-name="金光布袋戲" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live144_mobile.png" group-title="戲劇、電影與紀錄片",金光布袋戲
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=236&fs4GTV_ID=4gtv-live144&proxy=true
+#EXTINF:-1 tvg-id="ROCK Action" tvg-name="ROCK Action" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/live138_mobile.png" group-title="戲劇、電影與紀錄片",ROCK Action
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=180&fs4GTV_ID=4gtv-live138&proxy=true
+#EXTINF:-1 tvg-id="GagaOOLala 精選LGBTQ+好劇" tvg-name="GagaOOLala 精選LGBTQ+好劇" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live139_mobile.png" group-title="戲劇、電影與紀錄片",GagaOOLala 精選LGBTQ+好劇
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=478&fs4GTV_ID=fast-live139&proxy=true
+#EXTINF:-1 tvg-id="采昌影劇台" tvg-name="采昌影劇台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv049_mobile.png" group-title="戲劇、電影與紀錄片",采昌影劇台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=25&fs4GTV_ID=4gtv-4gtv049&proxy=true
+#EXTINF:-1 tvg-id="靖天映畫" tvg-name="靖天映畫" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv055_mobile.png" group-title="戲劇、電影與紀錄片",靖天映畫
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=42&fs4GTV_ID=4gtv-4gtv055&proxy=true
+#EXTINF:-1 tvg-id="靖天電影台" tvg-name="靖天電影台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv061_mobile.png" group-title="戲劇、電影與紀錄片",靖天電影台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=82&fs4GTV_ID=4gtv-4gtv061&proxy=true
+#EXTINF:-1 tvg-id="影迷數位電影台" tvg-name="影迷數位電影台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv011_mobile-1.png" group-title="戲劇、電影與紀錄片",影迷數位電影台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=40&fs4GTV_ID=4gtv-4gtv011&proxy=true
+#EXTINF:-1 tvg-id="amc電影台" tvg-name="amc電影台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv017new_mobile.png" group-title="戲劇、電影與紀錄片",amc電影台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=39&fs4GTV_ID=4gtv-4gtv017&proxy=true
+#EXTINF:-1 tvg-id="CinemaWorld" tvg-name="CinemaWorld" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live069_mobile.png" group-title="戲劇、電影與紀錄片",CinemaWorld
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=225&fs4GTV_ID=4gtv-live069&proxy=true
+#EXTINF:-1 tvg-id="My Cinema Europe HD 我的歐洲電影" tvg-name="My Cinema Europe HD 我的歐洲電影" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/LOGO-MCE.png" group-title="戲劇、電影與紀錄片",My Cinema Europe HD 我的歐洲電影
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=463&fs4GTV_ID=litv-ftv10&proxy=true
+#EXTINF:-1 tvg-id="好消息" tvg-name="好消息" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-ftv16_mobile.png" group-title="綜合",好消息
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=9&fs4GTV_ID=litv-ftv16&proxy=true
+#EXTINF:-1 tvg-id="好消息2台" tvg-name="好消息2台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-ftv17_mobile.png" group-title="綜合",好消息2台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=8&fs4GTV_ID=litv-ftv17&proxy=true
+#EXTINF:-1 tvg-id="大愛二台" tvg-name="大愛二台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live106_mobile.png" group-title="綜合",大愛二台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=230&fs4GTV_ID=4gtv-live106&proxy=true
+#EXTINF:-1 tvg-id="人間衛視" tvg-name="人間衛視" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live008_mobile.png" group-title="綜合",人間衛視
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=210&fs4GTV_ID=4gtv-live008&proxy=true
+#EXTINF:-1 tvg-id="NHK WORLD-JAPAN" tvg-name="NHK WORLD-JAPAN" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live168_mobile.png" group-title="新聞財經",NHK WORLD-JAPAN
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=461&fs4GTV_ID=4gtv-live168&proxy=true
+#EXTINF:-1 tvg-id="FRANCE24 英文台" tvg-name="FRANCE24 英文台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv_mobile.png" group-title="新聞財經",FRANCE24 英文台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=316&fs4GTV_ID=4gtv-live146&proxy=true
+#EXTINF:-1 tvg-id="半島國際新聞台" tvg-name="半島國際新聞台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_litv-ftv10_mobile.png" group-title="新聞財經",半島國際新聞台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=462&fs4GTV_ID=4gtv-live157&proxy=true
+#EXTINF:-1 tvg-id="CNBC Asia 財經台" tvg-name="CNBC Asia 財經台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv130_mobile.png" group-title="新聞財經",CNBC Asia 財經台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=235&fs4GTV_ID=4gtv-live130&proxy=true
+#EXTINF:-1 tvg-id="DW德國之聲" tvg-name="DW德國之聲" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live071_mobile.png" group-title="新聞財經",DW德國之聲
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=226&fs4GTV_ID=4gtv-live071&proxy=true
+#EXTINF:-1 tvg-id="香蕉直擊台" tvg-name="香蕉直擊台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv038_mobile.png" group-title="現場直擊",香蕉直擊台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=94&fs4GTV_ID=4gtv-4gtv038&proxy=true
+#EXTINF:-1 tvg-id="芭樂直擊台" tvg-name="芭樂直擊台" tvg-logo="" group-title="現場直擊",芭樂直擊台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5025/4gtv.php?fnID=290&fs4GTV_ID=4gtv-live302&proxy=true
+#EXTINF:-1 tvg-id="國會頻道1" tvg-name="國會頻道1" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv084_mobile_0204.png" group-title="現場直擊",國會頻道1
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=170&fs4GTV_ID=4gtv-4gtv084&proxy=true
+#EXTINF:-1 tvg-id="國會頻道2" tvg-name="國會頻道2" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-4gtv085_mobile_0204.png" group-title="現場直擊",國會頻道2
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=171&fs4GTV_ID=4gtv-4gtv085&proxy=true
+#EXTINF:-1 tvg-id="TVBS綜藝台" tvg-name="TVBS綜藝台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live087_mobile.png" group-title="音樂綜藝",TVBS綜藝台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=476&fs4GTV_ID=fast-live199&proxy=true
+#EXTINF:-1 tvg-id="TVBS台劇台" tvg-name="TVBS台劇台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live088_mobile.png" group-title="戲劇、電影與紀錄片",TVBS台劇台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=477&fs4GTV_ID=fast-live200&proxy=true
+#EXTINF:-1 tvg-id="經典電影台" tvg-name="經典電影台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live021_mobile.png" group-title="戲劇、電影與紀錄片",經典電影台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=201&fs4GTV_ID=4gtv-live021&proxy=true
+#EXTINF:-1 tvg-id="經典卡通台" tvg-name="經典卡通台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live022_mobile.png" group-title="兒童與青少年",經典卡通台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=202&fs4GTV_ID=4gtv-live022&proxy=true
+#EXTINF:-1 tvg-id="精選動漫台" tvg-name="精選動漫台" tvg-logo="https://4gtvimg2.4gtv.tv/4gtv-Image/Channel/mobile/logo_4gtv_4gtv-live024_mobile.png" group-title="兒童與青少年",精選動漫台
+#EXTVLCOPT:http-user-agent=okhttp/3.12.11
+http://127.0.0.1:5029/4gtv_tv.php?fnID=204&fs4GTV_ID=4gtv-live024&proxy=true
+
+#EXTINF:-1 tvg-id="龍華卡通台" tvg-name="龍華卡通台" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/LTV9.png" group-title="Ofiii系列",龍華卡通台
+http://127.0.0.1:5021/ofiii.php?id=litv-xinchuang01&proxy=true
+#EXTINF:-1 tvg-id="龍華洋片台" tvg-name="龍華洋片台" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/LTV2.png" group-title="Ofiii系列",龍華洋片台
+http://127.0.0.1:5021/ofiii.php?id=litv-xinchuang02&proxy=true
+#EXTINF:-1 tvg-id="龍華電影台" tvg-name="龍華電影台" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/LTV1.png" group-title="Ofiii系列",龍華電影台
+http://127.0.0.1:5021/ofiii.php?id=litv-xinchuang03&proxy=true
+#EXTINF:-1 tvg-id="龍華日韓台" tvg-name="龍華日韓台" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/LTV5.png" group-title="Ofiii系列",龍華日韓台
+http://127.0.0.1:5021/ofiii.php?id=litv-xinchuang11&proxy=true
+#EXTINF:-1 tvg-id="龍華偶像台" tvg-name="龍華偶像台" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/LTV6.png" group-title="Ofiii系列",龍華偶像台
+http://127.0.0.1:5021/ofiii.php?id=litv-xinchuang12&proxy=true
+#EXTINF:-1 tvg-id="龍華經典台" tvg-name="龍華經典台" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/LTV7.png" group-title="Ofiii系列",龍華經典台
+http://127.0.0.1:5021/ofiii.php?id=litv-xinchuang21&proxy=true
+#EXTINF:-1 tvg-id="龍華戲劇台" tvg-name="龍華戲劇台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn18_tv.png" group-title="Ofiii系列",龍華戲劇台
+http://127.0.0.1:5021/ofiii.php?id=litv-xinchuang18&proxy=true
+#EXTINF:-1 tvg-id="台灣戲劇台" tvg-name="台灣戲劇台" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/Taiwanxiju.png" group-title="Ofiii系列",台灣戲劇台
+http://127.0.0.1:5021/ofiii.php?id=litv-xinchuang22&proxy=true
+#EXTINF:-1 tvg-id="寰宇財經台" tvg-name="寰宇財經台" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/Global4.png" group-title="Ofiii系列",寰宇財經台
+http://127.0.0.1:5021/ofiii.php?id=4gtv-4gtv158
+#EXTINF:-1 tvg-id="倪珍播新聞" tvg-name="倪珍播新聞" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_nnews_tv.png" group-title="Ofiii系列",倪珍播新聞
+http://127.0.0.1:5021/ofiii.php?id=nnews-zh
+#EXTINF:-1 tvg-id="第1商業台" tvg-name="第1商業台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv104_tv.png" group-title="Ofiii系列",第1商業台
+http://127.0.0.1:5021/ofiii.php?id=4gtv-4gtv104
+#EXTINF:-1 tvg-id="Smart知識台" tvg-name="Smart知識台" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/smarttv.png" group-title="Ofiii系列",Smart知識台
+http://127.0.0.1:5021/ofiii.php?id=litv-xinchuang19
+#EXTINF:-1 tvg-id="DayStar" tvg-name="DayStar" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/Daystar_128x72.png" group-title="Ofiii系列",DayStar
+http://127.0.0.1:5021/ofiii.php?id=daystar
