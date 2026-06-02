@@ -1,0 +1,26 @@
+#EXTINF:-1 tvg-id="龍華卡通台" tvg-name="龍華卡通台" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/LTV9.png" group-title="Ofiii系列",龍華卡通台
+http://127.0.0.1:5021/ofiii.php?id=litv-xinchuang01&proxy=true
+#EXTINF:-1 tvg-id="龍華洋片台" tvg-name="龍華洋片台" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/LTV2.png" group-title="Ofiii系列",龍華洋片台
+http://127.0.0.1:5021/ofiii.php?id=litv-xinchuang02&proxy=true
+#EXTINF:-1 tvg-id="龍華電影台" tvg-name="龍華電影台" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/LTV1.png" group-title="Ofiii系列",龍華電影台
+http://127.0.0.1:5021/ofiii.php?id=litv-xinchuang03&proxy=true
+#EXTINF:-1 tvg-id="龍華日韓台" tvg-name="龍華日韓台" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/LTV5.png" group-title="Ofiii系列",龍華日韓台
+http://127.0.0.1:5021/ofiii.php?id=litv-xinchuang11&proxy=true
+#EXTINF:-1 tvg-id="龍華偶像台" tvg-name="龍華偶像台" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/LTV6.png" group-title="Ofiii系列",龍華偶像台
+http://127.0.0.1:5021/ofiii.php?id=litv-xinchuang12&proxy=true
+#EXTINF:-1 tvg-id="龍華經典台" tvg-name="龍華經典台" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/LTV7.png" group-title="Ofiii系列",龍華經典台
+http://127.0.0.1:5021/ofiii.php?id=litv-xinchuang21&proxy=true
+#EXTINF:-1 tvg-id="龍華戲劇台" tvg-name="龍華戲劇台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_litv-longturn18_tv.png" group-title="Ofiii系列",龍華戲劇台
+http://127.0.0.1:5021/ofiii.php?id=litv-xinchuang18&proxy=true
+#EXTINF:-1 tvg-id="台灣戲劇台" tvg-name="台灣戲劇台" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/Taiwanxiju.png" group-title="Ofiii系列",台灣戲劇台
+http://127.0.0.1:5021/ofiii.php?id=litv-xinchuang22&proxy=true
+#EXTINF:-1 tvg-id="寰宇財經台" tvg-name="寰宇財經台" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/Global4.png" group-title="Ofiii系列",寰宇財經台
+http://127.0.0.1:5021/ofiii.php?id=4gtv-4gtv158
+#EXTINF:-1 tvg-id="倪珍播新聞" tvg-name="倪珍播新聞" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_nnews_tv.png" group-title="Ofiii系列",倪珍播新聞
+http://127.0.0.1:5021/ofiii.php?id=nnews-zh
+#EXTINF:-1 tvg-id="第1商業台" tvg-name="第1商業台" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/logo_litv_4gtv-4gtv104_tv.png" group-title="Ofiii系列",第1商業台
+http://127.0.0.1:5021/ofiii.php?id=4gtv-4gtv104
+#EXTINF:-1 tvg-id="Smart知識台" tvg-name="Smart知識台" tvg-logo="https://cdn.jsdelivr.net/gh/wanglindl/TVlogo@main/img/smarttv.png" group-title="Ofiii系列",Smart知識台
+http://127.0.0.1:5021/ofiii.php?id=litv-xinchuang19
+#EXTINF:-1 tvg-id="DayStar" tvg-name="DayStar" tvg-logo="https://p-cdnstatic.svc.litv.tv/pics/Daystar_128x72.png" group-title="Ofiii系列",DayStar
+http://127.0.0.1:5021/ofiii.php?id=daystar
